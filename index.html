@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>KLJ</title>
 
+   
+
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/383301aa79.js" crossorigin="anonymous"></script>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="index.css">
+
+
 </head>
 
 <body>
@@ -51,16 +64,17 @@
     </nav>
       
     <!-- KLJ logo -->   
-    <div class="container  ratio ratio-21x9">
+    <div class="container  ratio ratio-21x9 ">
         <div class="row">
             <div class="col  position-absolute top-50 start-50 translate-middle">
-                <h1 class="display-1 text-center text-primary">KLJ</h1>
-                <!-- <h6 class="text-center text-primary">  설명 추가 </h6> -->
+                <div class="logo text-primary">
+                    KLJ
+                </div>
             </div>
         </div>
             
     <!-- search & button -->
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col-xl-6 position-absolute bottom-0 start-50 translate-middle ">
             
               <form action="/action_page.php">
@@ -80,13 +94,191 @@
     </div>
 
 
+    <!-- 배당 TOP 10 -->
+    <section class="review-area" id="review">
+        
+        <div class="title">
+            배당 TOP 10
+        </div>
 
-   
+        <div class="container">
+            <div class="z rounded-pill">
+            <a class="review-prev" id="reviewPrev">&#10094;</a>
+            <a class="review-next" id="reviewNext">&#10095;</a>
 
+    
+    
+            <!-- 배당 TOP 10 기업 내용 -->
+            <div class="review-slide res-show">
+                <div class="image">
+                    <img src="public/kimleejung_minilogo.png">
+                </div>
+                <div class="name">
+                    기업
+                </div>
+                <div class="job">
+                    설명
+                </div>
+                <div class="text">
+                    <i>기업 내용 </i>
+                </div>
 
-      
+            </div>
+
+            <div class="review-slide show">
+                <div class="image">
+                    <img src="public/kimleejung_minilogo.png">
+                </div>
+                <div class="name">
+                    기업2
+                </div>
+                <div class="job">
+                    설명
+                </div>
+                <div class="text">
+                    <i>기업 내용 </i>
+                </div>
+
+            </div>
+
+            <div class="review-slide show">
+                <div class="image">
+                    <img src="public/kimleejung_minilogo.png">
+                </div>
+                <div class="name">
+                    기업3
+                </div>
+                <div class="job">
+                    설명
+                </div>
+                <div class="text">
+                    <i>기업 내용 </i>
+                </div>
+
+            </div>
+
+            <div class="review-slide hide">
+                <div class="image">
+                    <img src="public/kimleejung_minilogo.png">
+                </div>
+                <div class="name">
+                    기업4
+                </div>
+                <div class="job">
+                    설명
+                </div>
+                <div class="text">
+                    <i>기업 내용 </i>
+                </div>
+
+            </div>
+
+            <div class="review-slide hide">
+                <div class="image">
+                    <img src="public/kimleejung_minilogo.png">
+                </div>
+                <div class="name">
+                    기업5
+                </div>
+                <div class="job">
+                    설명
+                </div>
+                <div class="text">
+                    <i>기업 내용 </i>
+                </div>
+ 
+            </div>
+
+            <div class="review-slide hide">
+                <div class="image">
+                    <img src="public/kimleejung_minilogo.png">
+                </div>
+                <div class="name">
+                    기업6
+                </div>
+                <div class="job">
+                    설명
+                </div>
+                <div class="text">
+                    <i>기업 내용 </i>
+                </div>
+ 
+            </div>
+
+            <div class="review-slide hide">
+                <div class="image">
+                    <img src="public/kimleejung_minilogo.png">
+                </div>
+                <div class="name">
+                    기업7
+                </div>
+                <div class="job">
+                    설명
+                </div>
+                <div class="text">
+                    <i>기업 내용 </i>
+                </div>
+
+            </div>
+
+            <div class="review-slide hide">
+                <div class="image">
+                    <img src="public/kimleejung_minilogo.png">
+                </div>
+                <div class="name">
+                    기업8
+                </div>
+                <div class="job">
+                    설명
+                </div>
+                <div class="text">
+                    <i>기업 내용 </i>
+                </div>
+
+            </div>
+
+            <div class="review-slide hide">
+                <div class="image">
+                    <img src="public/kimleejung_minilogo.png">
+                </div>
+                <div class="name">
+                    기업9
+                </div>
+                <div class="job">
+                    설명
+                </div>
+                <div class="text">
+                    <i>기업 내용 </i>
+                </div>
+
+            </div>
+
+            <div class="review-slide hide">
+                <div class="image">
+                    <img src="public/kimleejung_minilogo.png">
+                </div>
+                <div class="name">
+                    기업10
+                </div>
+                <div class="job">
+                    설명
+                </div>
+                <div class="text">
+                    <i>기업 내용 </i>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        
+    </section>
 
     <!-- JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/index.js"></script>
+
+
 </body>
+
 </html>
