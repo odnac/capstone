@@ -1,4 +1,4 @@
-function Navbar() {
+function Header() {
   return (
     <div>
       {/* navbar */}
@@ -17,4 +17,4 @@ function Navbar() {
     </div>
   );
 }
-export default Navbar;
+export default Header;

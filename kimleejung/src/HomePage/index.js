@@ -1,11 +1,11 @@
-import Navbar from "./Navbar";
-import Logo from "./Logo";
-import Search from "./Search";
+import Header from "./src/Header";
+import Logo from "./src/Logo";
+import Search from "./src/Search";
 
 function index() {
   return (
     <div>
-      <Navbar />
+      <Header />
       <Logo />
       <Search />
     </div>
