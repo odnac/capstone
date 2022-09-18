@@ -2,7 +2,7 @@ import Header from "./src/Header";
 import Logo from "./src/Logo";
 import Search from "./src/Search";
 
-function index() {
+const index = () => {
   return (
     <div>
       <Header />
@@ -10,6 +10,6 @@ function index() {
       <Search />
     </div>
   );
-}
+};
 
 export default index;

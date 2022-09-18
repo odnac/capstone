@@ -1,4 +1,4 @@
-function Logo() {
+const Logo = () => {
   return (
     <div class="container  ratio ratio-21x9 ">
       <div class="row">
@@ -9,5 +9,5 @@ function Logo() {
       </div>
     </div>
   );
-}
+};
 export default Logo;

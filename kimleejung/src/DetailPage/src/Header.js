@@ -1,4 +1,7 @@
-function Header() {
+const Header = () => {
+  // 로고? 클릭 시 홈페이지로 이동
+  // 로그인 시 로그아웃 버튼 활성화 || 미로그인 시 로그인 버튼 활성화
+
   return (
     <div>
       {/* navbar */}
@@ -16,5 +19,5 @@ function Header() {
       </nav>
     </div>
   );
-}
+};
 export default Header;
