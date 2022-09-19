@@ -1,30 +1,30 @@
 # capstone
 
-npm install react-router-dom
+npm install react-router-dom  
 npm install chart.js
 
-homepage->Carousel.js
-DetailPage->
-Board->
-loginModal->
+homepage->Carousel.js  
+DetailPage->  
+Board->  
+loginModal->  
 api데이터 받아서 DetailPage에 뿌리기
 
-StockPriceChart
+StockPriceChart  
 주가 선 차트
 
-DivInform
-한주당 배당금
-배당락 기준일
+DivInform  
+한주당 배당금  
+배당락 기준일  
 배당 지급일
 
-HistoryDiv
+HistoryDiv  
 과거 배당금 내역
 
-HistoryDivRate
+HistoryDivRate  
 과거 배당률 내역
 
-DivYield
+DivYield  
 배당률 시가 배당률
 
-HistorytDivPayout
+HistorytDivPayout  
 과거 배당 성향 내역
