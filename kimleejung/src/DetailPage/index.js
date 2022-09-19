@@ -1,13 +1,11 @@
-import { useLocation } from "react-router-dom";
+import Header from './src/Header';
+import StockPriceChart from './src/StockPriceChart';
 
 const Index = () => {
-  const location = useLocation();
-
-  const companyName = location.state.company;
-  //console.log(companyName);
   return (
     <div>
-      <h1>상세 페이지</h1>
+      <Header />
+      <StockPriceChart />
     </div>
   );
 };
