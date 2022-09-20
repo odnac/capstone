@@ -11,17 +11,17 @@ const Header = () => {
 
   return (
     <div>
-      <nav class='navbar navbar-light bg-light static-top'>
-        <div class='container'>
-          <a class='navbar-brand' href='/'>
+      <nav className='navbar navbar-light bg-light static-top'>
+        <div className='container'>
+          <a className='navbar-brand' href='/'>
             {' '}
             Kimleejung{' '}
           </a>
-          <a class='navbar-brand' href='/detail'>
+          <a className='navbar-brand' href='/detail'>
             {companyName}
           </a>
           <a
-            class='nav-link text-secondary'
+            className='nav-link text-secondary'
             href='#login'
             data-bs-toggle='modal'
             data-bs-target='#staticBackdrop'
@@ -30,7 +30,7 @@ const Header = () => {
           </a>
 
           <div
-            class='modal fade'
+            className='modal fade'
             id='staticBackdrop'
             data-bs-backdrop='static'
             data-bs-keyboard='false'
@@ -38,32 +38,32 @@ const Header = () => {
             aria-labelledby='staticBackdropLabel'
             aria-hidden='true'
           >
-            <div class='modal-dialog'>
-              <div class='modal-content'>
-                <div class='modal-header'>
-                  <h5 class='modal-title' id='staticBackdropLabel'>
+            <div className='modal-dialog'>
+              <div className='modal-content'>
+                <div className='modal-header'>
+                  <h5 className='modal-title' id='staticBackdropLabel'>
                     login
                   </h5>
                   <button
                     type='button'
-                    class='btn-close'
+                    className='btn-close'
                     data-bs-dismiss='modal'
                     aria-label='Close'
                   ></button>
                 </div>
 
-                <div class='modal-body'>
-                  <h6 class='modal-sub text-primary'>
+                <div className='modal-body'>
+                  <h6 className='modal-sub text-primary'>
                     {' '}
                     카카오로 로그인이 가능합니다.{' '}
                   </h6>
                   로그인 넣기
                 </div>
 
-                <div class='modal-footer'>
+                <div className='modal-footer'>
                   <button
                     type='button'
-                    class='btn btn-secondary'
+                    className='btn btn-secondary'
                     data-bs-dismiss='modal'
                   >
                     Close

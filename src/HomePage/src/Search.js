@@ -26,22 +26,22 @@ const Search = () => {
   };
 
   return (
-    <div class='row justify-content-center'>
-      <div class='col-xl-6 position-absolute top-50 start-50 translate-middle '>
+    <div className='row justify-content-center'>
+      <div className='col-xl-6 position-absolute top-50 start-50 translate-middle '>
         <form onSubmit={onCheckData}>
-          <div class='input-group'>
+          <div className='input-group'>
             {/* 검색창 */}
             <input
               type='text'
-              class='form-control border border-5 border-primary rounded-pill'
+              className='form-control border border-5 border-primary rounded-pill'
               placeholder='기업명을 입력하세요.'
               value={userCompany}
               onChange={getUserInputCompany}
             />
             {/* 검색버튼 */}
-            <div class='input-group-btn'>
-              <button class='btn btn-default' type='submit'>
-                <img src='search.svg' />
+            <div className='input-group-btn'>
+              <button className='btn btn-default' type='submit'>
+                <img src='/img/search.svg' />
               </button>
             </div>
           </div>
