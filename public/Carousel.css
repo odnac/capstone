@@ -1,0 +1,135 @@
+.logo {
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+
+.title {
+	margin-top: 50px;
+	padding: 80px;
+    font-size: 40px;
+    /* 글씨 굵기: 두껍게 (bold) */
+    font-weight: bold;
+    /* text 정렬을 가운데 정렬로 넣어주기 */
+    text-align: center;
+    /* 글자 간 간격 : 3px 넣어주기 */
+    letter-spacing: 3px;
+    padding-bottom: 100px;
+}
+
+/* title 글자에 대한 밑줄 추가해주기 */
+.title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 10px;
+    /* 0 auto를 넣어주어 가운데 정렬 해주기 */
+    margin: 0 auto;
+    /* 오른쪽 방향으로 royalblue에서 aquamarine으로 변하게 끔 넣어주기 */
+    background-image: linear-gradient(to right, royalblue, aquamarine);
+}
+
+
+
+
+/* REVIERW AREA */
+.review-area {
+	height: auto;
+	background-color: #f9f9ff;
+}
+
+.review-area > .container > .z {
+	position: relative;
+	text-align: center;
+	background-color: white;
+	margin: 20px;
+	padding: 40px;
+}
+
+@media (min-width: 992px) {
+	.review-area > .container {
+		padding: 20px 0;
+	}
+}
+
+.review-area > .container > .z > .review-prev,
+.review-area > .container > .z > .review-next {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: gray;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	user-select: none;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.review-area > .container > .z > .review-prev {
+	left: 0;
+}
+
+.review-area > .container > .z >.review-next {
+	right: 0;
+}
+
+.review-area > .container > .z >.review-prev:hover,
+.review-area > .container > .z >.review-next:hover {
+	color: rgba(0, 0, 0, 0.9);
+}
+
+.review-area > .container > .z >.review-slide {
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+}
+
+@media (min-width: 992px) {
+	.review-area > .container > .z > .review-slide {
+		width: 300px;
+	}
+}
+
+.review-area > .container > .z > .review-slide.res-show {
+	display: inline-block;
+}
+
+.review-area > .container > .z > .review-slide.show {
+	display: none;
+}
+
+@media (min-width: 992px) {
+	.review-area > .container > .z > .review-slide.show {
+		display: inline-block;
+	}
+}
+
+.review-area > .container > .z > .review-slide.hide {
+	display: none;
+}
+
+
+.review-area > .container > .z > .review-slide > .name {
+	display: inline-block;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 0 10px;
+}
+
+.review-area > .container > .z > .review-slide > .job {
+	display: inline-block;
+	font-size: 18px;
+}
+
+.review-area > .container > .z > .review-slide > .text {
+	padding: 30px;
+}
+
+.review-area > .container > .z > .review-slide > .text > i {
+	font-size: 16px;
+	color: gray;
+}
