@@ -6,13 +6,14 @@
 
 
 .title {
-	margin-top: 50px;
-	padding: 80px;
-    font-size: 40px;
+	/* background-color: blue; */
+	margin-top: 150px;
+	/* padding: 80px; */
+    font-size: 25px;
     /* 글씨 굵기: 두껍게 (bold) */
     font-weight: bold;
     /* text 정렬을 가운데 정렬로 넣어주기 */
-    text-align: center;
+    text-align: left;
     /* 글자 간 간격 : 3px 넣어주기 */
     letter-spacing: 3px;
     padding-bottom: 100px;
@@ -25,7 +26,7 @@
     width: 100px;
     height: 10px;
     /* 0 auto를 넣어주어 가운데 정렬 해주기 */
-    margin: 0 auto;
+    /* margin: 0 auto; */
     /* 오른쪽 방향으로 royalblue에서 aquamarine으로 변하게 끔 넣어주기 */
     background-image: linear-gradient(to right, royalblue, aquamarine);
 }
@@ -36,15 +37,13 @@
 /* REVIERW AREA */
 .review-area {
 	height: auto;
-	background-color:#f9f9ff;
 }
 
 .review-area > .container > .z {
 	position: relative;
-	text-align: center;
-	background-color: white;
-	margin: 20px;
-	padding: 40px;
+	text-align: left;
+	margin-top: -100px;
+	/* background-color: blue; */
 }
 
 @media (min-width: 992px) {
@@ -87,8 +86,8 @@
 
 .review-area > .container > .z > .review-slide > .name {
 	display: inline-block;
-	font-size: 24px;
-	font-weight: bold;
+	font-size: 20px;
+	/* font-weight: bold; */
 	padding: 0 10px;
 }
 
