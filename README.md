@@ -1,7 +1,8 @@
 # capstone
 
-npm install react-router-dom  
-npm install chart.js
+npm install react-router-dom
+npm install chart.js  
+npm install react-chartjs-2
 
 homepage->Carousel.js  
 DetailPage->  
