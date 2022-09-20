@@ -59,4 +59,5 @@ function showReviewSlides(n) {
   addClass(review_slides[reviewSlideIndex+3], 'show');
   removeClass(review_slides[reviewSlideIndex+4], 'hide');
   addClass(review_slides[reviewSlideIndex+4], 'show');
+
 }

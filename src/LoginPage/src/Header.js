@@ -8,7 +8,14 @@ const Header = () => {
 
   /* 로그인 시 로그아웃 버튼 활성화 || 미로그인 시 로그인 버튼 활성화 */
   // 스크롤 시 헤더 고정시키기
+  const REST_API_KEY = "2bfe8ae0660ba533d909f87f234194bb";
+  const REDIRECT_URI = "http://localhost:3000/login";
+  const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
 
+  const onKakao = (e) => {
+    e.preventDefault();
+    window.location.replace(KAKAO_AUTH_URL);
+  }    
 
   return (
     <div>
@@ -58,6 +65,9 @@ const Header = () => {
                     {' '}
                     카카오로 로그인이 가능합니다.{' '}
                   </h6>
+                  <span class="logo" onClick={onKakao}>
+                    로그아웃
+                  </span>
                 </div>
                 
                 <div className='modal-footer'>

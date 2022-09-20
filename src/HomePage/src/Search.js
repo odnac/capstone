@@ -26,8 +26,9 @@ const Search = () => {
   };
 
   return (
-    <div className='row justify-content-center'>
-      <div className='col-xl-6 position-absolute top-50 start-50 translate-middle '>
+    <div className="S">
+    <div className="row">
+      <div className="col">
         <form onSubmit={onCheckData}>
           <div className='input-group'>
             {/* 검색창 */}
@@ -48,6 +49,7 @@ const Search = () => {
         </form>
       </div>
     </div>
+  </div>
   );
 };
 
