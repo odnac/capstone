@@ -55,9 +55,49 @@ function showReviewSlides(n) {
   addClass(review_slides[reviewSlideIndex+1], 'show');
   removeClass(review_slides[reviewSlideIndex+2], 'hide');
   addClass(review_slides[reviewSlideIndex+2], 'show');
-  removeClass(review_slides[reviewSlideIndex+3], 'hide');
-  addClass(review_slides[reviewSlideIndex+3], 'show');
-  removeClass(review_slides[reviewSlideIndex+4], 'hide');
-  addClass(review_slides[reviewSlideIndex+4], 'show');
+
+
+}
+
+/* RECOMMEND AREA */
+var recommendSlideIndex = 0;
+
+function recommendSlideTimer() {
+  plusRecommendSlides(1);
+}
+
+var recommendTimer = setInterval(recommendSlideTimer, 2000);
+
+function plusRecommendSlides(n) {
+  clearInterval(recommendTimer);
+  recommendTimer = setInterval(recommendSlideTimer, 2000);
+  showRecommendSlides(recommendSlideIndex += n);
+}
+
+function showRecommendSlides(n) {
+  var i;
+  var recommend_slides = document.getElementsByClassName('recommend-slide');
+
+  if (n > recommend_slides.length - 3) {
+    recommendSlideIndex = 0;
+  }
+
+  if (n < 0) {
+    recommendSlideIndex = recommend_slides.length - 3;
+  }
+
+  for (i = 0; i < recommend_slides.length; i++) {
+    removeClass(recommend_slides[i], 'show');
+    removeClass(recommend_slides[i], 'res-show');
+    addClass(recommend_slides[i], 'hide');
+  }
+  
+  removeClass(recommend_slides[recommendSlideIndex], 'hide');
+  addClass(recommend_slides[recommendSlideIndex], 'res-show');
+  removeClass(recommend_slides[recommendSlideIndex+1], 'hide');
+  addClass(recommend_slides[recommendSlideIndex+1], 'show');
+  removeClass(recommend_slides[recommendSlideIndex+2], 'hide');
+  addClass(recommend_slides[recommendSlideIndex+2], 'show');
+
 
 }

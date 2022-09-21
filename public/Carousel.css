@@ -33,6 +33,17 @@
 
 
 
+.area {
+	width: 650px;
+	position: absolute;
+	top:230px;
+	/* z-index 숫자가 높을 수록 앞으로 나와서 보여줌 */
+	z-index: 9;
+	left: calc(50% - 300px);
+}
+
+
+
 
 /* REVIERW AREA */
 .review-area {
@@ -61,7 +72,7 @@
 
 @media (min-width: 992px) {
 	.review-area > .container > .z > .review-slide {
-		width: 150px;
+		width: 100px;
 	}
 }
 
@@ -92,6 +103,65 @@
 }
 
 
+/* RECOMMEND AREA */
+.recommend-area {
+	height: auto;
+}
+
+.recommend-area > .container > .R {
+	position: relative;
+	text-align: left;
+	margin-top: -100px;
+}
+
+@media (min-width: 992px) {
+	.recommend-area > .container {
+		padding: 20px 0;
+	}
+}
+
+.recommend-area > .container > .R >.recommend-slide {
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+}
+
+@media (min-width: 992px) {
+	.recommend-area > .container > .R > .recommend-slide {
+		width: 100px;
+	}
+}
+
+.recommend-area > .container > .R > .recommend-slide.res-show {
+	display: inline-block;
+}
+
+.recommend-area > .container > .R > .recommend-slide.show {
+	display: inline-block;	
+}
+
+@media (min-width: 992px) {
+	.recommend-area > .container > .R > .recommend-slide.show {
+		display: inline-block;
+	}
+}
+
+.recommend-area > .container > .R > .recommend-slide.hide {
+	display: none;
+}
+
+
+.recommend-area > .container > .R > .recommend-slide > .name {
+	display: inline-block;
+	font-size: 20px;
+	/* font-weight: bold; */
+	padding: 0 10px;
+}
+
+
+
+
+/*Logo and Search */
 .L > .container {
 	width: 300px;
 	height: 300px;

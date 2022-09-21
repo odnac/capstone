@@ -61,12 +61,13 @@ const Header = () => {
                 </div>
 
                 <div className='modal-body'>
+
                   <h6 className='modal-sub text-primary'>
                     {' '}
                     카카오로 로그인이 가능합니다.{' '}
                   </h6>
                   <span class="logo" onClick={onKakao}>
-                    <img src="kakao_login.png" alt="카카오톡"/>
+                    <img src="/img/kakao_login.png" alt="카카오톡"/>
                   </span>
                 </div>
                 
