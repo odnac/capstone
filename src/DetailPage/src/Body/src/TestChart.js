@@ -36,6 +36,7 @@ const TestChart = () => {
     <div>
       <h1>테스트 차트</h1>
       <Pie data={data} />
+      ss
     </div>
   );
 };

@@ -1,21 +1,20 @@
 /* REVIEW AREA */
 function addClass(element, name) {
-  if(element.className.indexOf(name) == -1) {
-      element.className += " " + name;
+  if (element.className.indexOf(name) == -1) {
+    element.className += " " + name;
   }
 }
 
-function removeClass(element, name){
+function removeClass(element, name) {
   var arr;
   arr = element.className.split(" ");
 
-  while(arr.indexOf(name) > -1) {
-      arr.splice(arr.indexOf(name), 1);
+  while (arr.indexOf(name) > -1) {
+    arr.splice(arr.indexOf(name), 1);
   }
 
   element.className = arr.join(" ");
 }
-
 
 var reviewSlideIndex = 0;
 
@@ -28,12 +27,12 @@ var reviewTimer = setInterval(reviewSlideTimer, 2000);
 function plusReviewSlides(n) {
   clearInterval(reviewTimer);
   reviewTimer = setInterval(reviewSlideTimer, 2000);
-  showReviewSlides(reviewSlideIndex += n);
+  showReviewSlides((reviewSlideIndex += n));
 }
 
 function showReviewSlides(n) {
   var i;
-  var review_slides = document.getElementsByClassName('review-slide');
+  var review_slides = document.getElementsByClassName("review-slide");
 
   if (n > review_slides.length - 3) {
     reviewSlideIndex = 0;
@@ -44,19 +43,17 @@ function showReviewSlides(n) {
   }
 
   for (i = 0; i < review_slides.length; i++) {
-    removeClass(review_slides[i], 'show');
-    removeClass(review_slides[i], 'res-show');
-    addClass(review_slides[i], 'hide');
+    removeClass(review_slides[i], "show");
+    removeClass(review_slides[i], "res-show");
+    addClass(review_slides[i], "hide");
   }
-  
-  removeClass(review_slides[reviewSlideIndex], 'hide');
-  addClass(review_slides[reviewSlideIndex], 'res-show');
-  removeClass(review_slides[reviewSlideIndex+1], 'hide');
-  addClass(review_slides[reviewSlideIndex+1], 'show');
-  removeClass(review_slides[reviewSlideIndex+2], 'hide');
-  addClass(review_slides[reviewSlideIndex+2], 'show');
 
-
+  removeClass(review_slides[reviewSlideIndex], "hide");
+  addClass(review_slides[reviewSlideIndex], "res-show");
+  removeClass(review_slides[reviewSlideIndex + 1], "hide");
+  addClass(review_slides[reviewSlideIndex + 1], "show");
+  removeClass(review_slides[reviewSlideIndex + 2], "hide");
+  addClass(review_slides[reviewSlideIndex + 2], "show");
 }
 
 /* RECOMMEND AREA */
@@ -71,12 +68,12 @@ var recommendTimer = setInterval(recommendSlideTimer, 2000);
 function plusRecommendSlides(n) {
   clearInterval(recommendTimer);
   recommendTimer = setInterval(recommendSlideTimer, 2000);
-  showRecommendSlides(recommendSlideIndex += n);
+  showRecommendSlides((recommendSlideIndex += n));
 }
 
 function showRecommendSlides(n) {
   var i;
-  var recommend_slides = document.getElementsByClassName('recommend-slide');
+  var recommend_slides = document.getElementsByClassName("recommend-slide");
 
   if (n > recommend_slides.length - 3) {
     recommendSlideIndex = 0;
@@ -87,17 +84,22 @@ function showRecommendSlides(n) {
   }
 
   for (i = 0; i < recommend_slides.length; i++) {
-    removeClass(recommend_slides[i], 'show');
-    removeClass(recommend_slides[i], 'res-show');
-    addClass(recommend_slides[i], 'hide');
+    removeClass(recommend_slides[i], "show");
+    removeClass(recommend_slides[i], "res-show");
+    addClass(recommend_slides[i], "hide");
   }
-  
-  removeClass(recommend_slides[recommendSlideIndex], 'hide');
-  addClass(recommend_slides[recommendSlideIndex], 'res-show');
-  removeClass(recommend_slides[recommendSlideIndex+1], 'hide');
-  addClass(recommend_slides[recommendSlideIndex+1], 'show');
-  removeClass(recommend_slides[recommendSlideIndex+2], 'hide');
-  addClass(recommend_slides[recommendSlideIndex+2], 'show');
 
-
+  removeClass(recommend_slides[recommendSlideIndex], "hide");
+  addClass(recommend_slides[recommendSlideIndex], "res-show");
+  removeClass(recommend_slides[recommendSlideIndex + 1], "hide");
+  addClass(recommend_slides[recommendSlideIndex + 1], "show");
+  removeClass(recommend_slides[recommendSlideIndex + 2], "hide");
+  addClass(recommend_slides[recommendSlideIndex + 2], "show");
 }
+
+var tooltipTriggerList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="tooltip"]')
+);
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl);
+});

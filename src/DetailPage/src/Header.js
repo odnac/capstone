@@ -127,15 +127,19 @@ const Header = () => {
               </div>
               {/* 로그인 */}
               <div className="col">
-                <a
-                  className="nav-link text-secondary"
-                  href="#login"
-                  data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
+                <div
+                  data-bs-toggle="tooltip"
+                  title="로그인 후 다양한 추가 기능을 누리세요!"
                 >
-                  login
-                </a>
-
+                  <a
+                    className="nav-link text-secondary"
+                    href="#login"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                  >
+                    login
+                  </a>
+                </div>
                 <div
                   className="modal fade"
                   id="staticBackdrop"
@@ -146,11 +150,11 @@ const Header = () => {
                   aria-hidden="true"
                 >
                   <div className="modal-dialog">
-                    <div className="modal-content">
+                    <div className="modal-content ">
                       {/* 로그인 모달 상단 */}
                       <div className="modal-header">
-                        <h5 className="modal-title" id="staticBackdropLabel">
-                          login
+                        <h5 className="modal-title " id="staticBackdropLabel">
+                          로그인
                         </h5>
                         <button
                           type="button"
@@ -169,6 +173,8 @@ const Header = () => {
                         <span className="logo" onClick={onKakao}>
                           <img src="/img/kakao_login.png" alt="카카오톡" />
                         </span>
+
+                        <h6 className="modal-sub2"> 로그인 시 ~~~~~~~~ </h6>
                       </div>
 
                       {/* 로그인 모달 하단 */}
