@@ -1,0 +1,225 @@
+.logo {
+	font-size: 100px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.title {
+	/* background-color: blue; */
+	margin-top: 150px;
+	/* padding: 80px; */
+	font-size: 25px;
+	/* 글씨 굵기: 두껍게 (bold) */
+	font-weight: bold;
+	/* text 정렬을 가운데 정렬로 넣어주기 */
+	text-align: left;
+	/* 글자 간 간격 : 3px 넣어주기 */
+	letter-spacing: 3px;
+	padding-bottom: 100px;
+}
+
+/* title 글자에 대한 밑줄 추가해주기 */
+.title::after {
+	content: "";
+	display: block;
+	width: 100px;
+	height: 10px;
+	/* 0 auto를 넣어주어 가운데 정렬 해주기 */
+	/* margin: 0 auto; */
+	/* 오른쪽 방향으로 royalblue에서 aquamarine으로 변하게 끔 넣어주기 */
+	background-image: linear-gradient(to right, royalblue, aquamarine);
+}
+
+
+
+.area {
+	width: 650px;
+	position: absolute;
+	top: 230px;
+	/* z-index 숫자가 높을 수록 앞으로 나와서 보여줌 */
+	z-index: 9;
+	left: calc(50% - 300px);
+}
+
+/* NAV AREA */
+.navbar-collapse {
+	margin: 5px;
+}
+
+.input-group {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	width: 100%;
+}
+
+
+/* REVIERW AREA */
+.review-area {
+	height: auto;
+}
+
+.review-area>.container>.z {
+	position: relative;
+	text-align: left;
+	margin-top: -100px;
+	/* background-color: blue; */
+}
+
+@media (min-width: 992px) {
+	.review-area>.container {
+		padding: 20px 0;
+	}
+}
+
+
+.review-area>.container>.z>.review-slide {
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+}
+
+@media (min-width: 992px) {
+	.review-area>.container>.z>.review-slide {
+		width: 100px;
+	}
+}
+
+.review-area>.container>.z>.review-slide.res-show {
+	display: inline-block;
+}
+
+.review-area>.container>.z>.review-slide.show {
+	display: inline-block;
+}
+
+@media (min-width: 992px) {
+	.review-area>.container>.z>.review-slide.show {
+		display: inline-block;
+	}
+}
+
+.review-area>.container>.z>.review-slide.hide {
+	display: none;
+}
+
+
+.review-area>.container>.z>.review-slide>.name {
+	display: inline-block;
+	font-size: 20px;
+	/* font-weight: bold; */
+	padding: 0 10px;
+}
+
+
+/* RECOMMEND AREA */
+.recommend-area {
+	height: auto;
+}
+
+.recommend-area>.container>.R {
+	position: relative;
+	text-align: left;
+	margin-top: -100px;
+}
+
+@media (min-width: 992px) {
+	.recommend-area>.container {
+		padding: 20px 0;
+	}
+}
+
+.recommend-area>.container>.R>.recommend-slide {
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+}
+
+@media (min-width: 992px) {
+	.recommend-area>.container>.R>.recommend-slide {
+		width: 100px;
+	}
+}
+
+.recommend-area>.container>.R>.recommend-slide.res-show {
+	display: inline-block;
+}
+
+.recommend-area>.container>.R>.recommend-slide.show {
+	display: inline-block;
+}
+
+@media (min-width: 992px) {
+	.recommend-area>.container>.R>.recommend-slide.show {
+		display: inline-block;
+	}
+}
+
+.recommend-area>.container>.R>.recommend-slide.hide {
+	display: none;
+}
+
+
+.recommend-area>.container>.R>.recommend-slide>.name {
+	display: inline-block;
+	font-size: 20px;
+	/* font-weight: bold; */
+	padding: 0 10px;
+}
+
+
+
+
+/*Logo and Search */
+.L>.container {
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	top: 150px;
+}
+
+.S>.row {
+	width: 650px;
+	position: absolute;
+	z-index: 10;
+	left: calc(50% - 300px);
+}
+
+
+/* LOGIN AREA */
+.modal-title {
+	font-size: 30px;
+	position: relative;
+	left: 190px;
+}
+
+.modal-sub {
+	position: relative;
+	left: 120px;
+}
+
+.modal-sub2 {
+	font-size: 13px;
+	position: relative;
+	top: -30px;
+	left: 120px;
+}
+
+.modal-body>.logo {
+	position: relative;
+	top: -40px;
+	left: 140px;
+}
+
+/* DETAIL_MAIN AREA */
+
+.card {
+	width: 1000px;
+}
+
+.test-chart {
+	width: 300px;
+}
