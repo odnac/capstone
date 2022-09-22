@@ -42,8 +42,18 @@
 	left: calc(50% - 300px);
 }
 
+.input-group {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	width: 100%;
+  }
 
-
+  /* NAV AREA */
+  .navbar-collapse{
+	margin: 5px;
+}
 
 /* REVIERW AREA */
 .review-area {

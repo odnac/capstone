@@ -23,35 +23,51 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light static-top">
         {/* nav 바 내용 */}
         <div className="container">
-          <div className="row">
-            <div className="col-3">
-              <a className="navbar-brand" href="/">
-                Kimleejung
-              </a>
+          <a className="navbar-brand" href="/">
+            Kimleejung
+          </a>
+
+          {/* 기업 검색 */}
+          <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div className="input-group">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="기업명을 입력하세요."
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
             </div>
+          </form>
 
-            {/* 992 미만일 때 버튼 */}
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+          {/* 992 미만일 때 버튼 */}
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-            {/* 992 미만일 때 묶어주는 역할 */}
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              {/* 검색 한 기업 명 나오는거 
+          {/* 992 미만일 때 묶어주는 역할 */}
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            {/* 검색 한 기업 명 나오는거 
           <a className="navbar-brand" href="/detail">
             {companyName}
           </a> */}
 
-              {/* 코스피 */}
-              <div className="col-3">
+            {/* 코스피 */}
+            <div className="row">
+              <div className="col">
                 <div className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
@@ -79,8 +95,9 @@ const Header = () => {
                     </li>
                   </ul>
                 </div>
-
-                {/* 코스닥 */}
+              </div>
+              {/* 코스닥 */}
+              <div className="col">
                 <div className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
@@ -108,9 +125,8 @@ const Header = () => {
                   </ul>
                 </div>
               </div>
-
               {/* 로그인 */}
-              <div className="col-3">
+              <div className="col">
                 <a
                   className="nav-link text-secondary"
                   href="#login"
@@ -169,21 +185,6 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* 기업 검색 */}
-            <div className="col-3">
-              <form class="d-flex">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="기업명을 입력하세요."
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
             </div>
           </div>
         </div>
