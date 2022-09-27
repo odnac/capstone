@@ -11,6 +11,9 @@ import {
   Filler,
 } from "chart.js";
 
+import HistoryDiv from "./HistoryDiv";
+import { width } from "@mui/system";
+
 ChartJS.register(
   Title,
   Tooltip,
@@ -56,8 +59,24 @@ const StockPriceChart = () => {
 
   return (
     <div>
-      <h1>주가 선 차트</h1>
-      <Line data={data} />
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-7">
+            <div className="card mb-4">
+              <div className="card-header">
+                <i className="fas fa-chart-area me-1"></i>
+                주가 선 차트
+              </div>
+              <div className="card-body">
+                <Line data={data} />
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-5">
+            <HistoryDiv />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

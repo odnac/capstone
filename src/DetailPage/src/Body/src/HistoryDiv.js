@@ -56,8 +56,21 @@ const HistoryDiv = () => {
   };
   return (
     <div>
-      <h1>배당금</h1>
-      <PolarArea options={options} data={data} />
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="card mb-4">
+              <div className="card-header">
+                <i className="fas fa-chart-area me-1"></i>
+                배당금
+              </div>
+              <div className="card-body">
+                <PolarArea options={options} data={data} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

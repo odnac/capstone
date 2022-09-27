@@ -72,8 +72,21 @@ const Multitype = () => {
   };
   return (
     <div>
-      <h1>혼합</h1>
-      <Chart type="bar" data={data} />
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="card mb-4">
+              <div className="card-header">
+                <i className="fas fa-chart-area me-1"></i>
+                혼합
+              </div>
+              <div className="card-body">
+                <Chart type="bar" data={data} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
