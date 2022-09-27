@@ -1,10 +1,7 @@
-import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Header = () => {
-  const location = useLocation(); // 파라미터 취득
-  const companyJSON = JSON.stringify(location.state); // object->json 변환
-  console.log(companyJSON);
-  const companyName = location.state.company;
+  const [userId, setUserId] = useState();
 
   /* 로그인 시 로그아웃 버튼 활성화 || 미로그인 시 로그인 버튼 활성화 */
   // 스크롤 시 헤더 고정시키기
@@ -16,6 +13,33 @@ const Header = () => {
     e.preventDefault();
     window.location.replace(KAKAO_AUTH_URL);
   };
+
+  const getProfile = async () => {
+    try {
+      // Kakao SDK API를 이용해 사용자 정보 획득
+      let data = await window.Kakao.API.request({
+        url: "/v2/user/me",
+      });
+      // 사용자 정보 변수에 저장
+      setUserId(data.id);
+      console.log(data);
+      // setNickName(data.properties.nickname);
+      // setProfileImage(data.properties.profile_image);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    getProfile();
+  }, []);
+
+  useEffect(() => {
+    if(userId) {
+      console.log("userId: ", userId);
+      alert("success login", userId);
+    }
+  }, [userId]);
 
   return (
     <div>
@@ -31,12 +55,12 @@ const Header = () => {
           <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             <div className="input-group">
               <input
-                class="form-control me-2"
+                className="form-control me-2"
                 type="search"
                 placeholder="기업명을 입력하세요."
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-success" type="submit">
                 Search
               </button>
             </div>
@@ -44,7 +68,7 @@ const Header = () => {
 
           {/* 992 미만일 때 버튼 */}
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"
@@ -52,12 +76,12 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
           {/* 992 미만일 때 묶어주는 역할 */}
           <div
-            class="collapse navbar-collapse justify-content-end"
+            className="collapse navbar-collapse justify-content-end"
             id="navbarNavAltMarkup"
           >
             {/* 검색 한 기업 명 나오는거 
