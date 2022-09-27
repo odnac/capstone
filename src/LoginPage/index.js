@@ -1,12 +1,9 @@
-import Header from './src/Header';
-import StockPriceChart from './src/StockPriceChart';
+import Header from "./src/Header";
 
 const index = () => {
-  
   return (
     <div>
       <Header />
-      <StockPriceChart />
     </div>
   );
 };

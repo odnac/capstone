@@ -47,13 +47,6 @@ const StockPriceChart = () => {
         borderColor: "rgb(75, 192, 192)",
         tension: 0.5,
       },
-      {
-        label: "비교 기업",
-        data: [15, 37, 75, 55, 90, 90, 90, 150, 60],
-        fill: true,
-        borderColor: "rgb(0,15,192)",
-        tension: 0.5,
-      },
     ],
   };
 

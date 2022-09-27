@@ -41,17 +41,10 @@ const HistoryDivRate = () => {
     datasets: [
       {
         label: "배당률(%)",
-        data: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        data: [1.9, 2.8, 2.5, 2.5, 3.0, 3.4, 3.5, 2.8, 2.5],
         fill: true,
-        borderColor: "rgb(75, 192, 192)",
-        tension: 0.5,
-      },
-      {
-        label: "기준금리(%)",
-        data: [2, 2, 2, 3, 3, 3, 3.5, 3.5, 4],
-        fill: true,
-        borderColor: "rgb(0,15,192)",
-        tension: 0.5,
+        borderColor: "rgb(221,160,221)",
+        tension: 0,
       },
     ],
   };
