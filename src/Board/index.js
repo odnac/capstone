@@ -1,12 +1,11 @@
-import main from "./src/main";
+import Main from "./src/Main";
 
-const index = () => {
+const Index = () => {
   return (
     <div>
-      <h1>게시판</h1>
-      <main />
+      <Main />
     </div>
   );
 };
 
-export default index;
+export default Index;
