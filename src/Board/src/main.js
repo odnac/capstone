@@ -7,7 +7,7 @@ const Main = () => {
         <h1>게시판</h1>
         <table
           id="example"
-          class="table table-striped"
+          className="table table-striped"
           style={{ width: "100%" }}
         >
           {/* 게시판 목록 */}
@@ -54,7 +54,7 @@ const Main = () => {
           <div className="col text-center">
             <button
               type="button"
-              class="btn btn-primary"
+              className="btn btn-primary"
               data-bs-toggle="modal"
               data-bs-target="#staticBackdrop"
             >
@@ -63,7 +63,7 @@ const Main = () => {
 
             {/* <!-- Modal --> */}
             <div
-              class="modal fade"
+              className="modal fade"
               id="staticBackdrop"
               data-bs-backdrop="static"
               data-bs-keyboard="false"
@@ -71,32 +71,40 @@ const Main = () => {
               aria-labelledby="staticBackdropLabel"
               aria-hidden="true"
             >
-              <div class="modal-dialog">
-                <div class="modal-content">
+              <div className="modal-dialog modal-dialog-centered modal-lg">
+                <div className="modal-content">
                   {/* 모달 상단 */}
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">
+                  <div className="modal-header">
+                    <h5 className="modal-title2" id="staticBackdropLabel">
                       글쓰기
                     </h5>
                     <button
                       type="button"
-                      class="btn-close"
+                      className="btn-close"
                       data-bs-dismiss="modal"
                       aria-label="Close"
                     ></button>
                   </div>
 
                   {/* 모달 내용 */}
-                  <div class="modal-body">...</div>
+                  <div className="modal-body">
+                    <div className="mb-3">
+                      <label for="exampleFormControlInput1" className="form-label"><strong>제목</strong></label>
+                      <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="제목을 입력하세요." />
+                    </div>
+                    <div className="mb-3">
+                      <label for="exampleFormControlTextarea1" className="form-label "><strong>내용</strong></label>
+                      <textarea className="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="내용을 입력하세요."></textarea>
+                    </div>
+                  </div>
 
                   {/* 모달 하단 */}
-                  <div class="modal-footer">
+                  <div className="modal-footer">
                     <button
                       type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
+                      className="btn btn-primary"
                     >
-                      Close
+                      글 작성
                     </button>
                   </div>
                 </div>
@@ -105,7 +113,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
