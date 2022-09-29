@@ -161,8 +161,10 @@ const HistoryDivRate = () => {
                     배당률(%)
                   </div>
                   <div className="card-body">
-                    {/* 차트 */}
-                    <Line data={dataA} />
+                    <div className="cardstyle3">
+                      {/* 차트 */}
+                      <Line data={dataA} />
+                    </div>
                     {/* 테이블 */}
                     <TableContainer component={Paper}>
                       <Table sx={{ minWidth: 650 }} aria-label="simple table">

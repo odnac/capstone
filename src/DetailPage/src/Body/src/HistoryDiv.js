@@ -144,8 +144,10 @@ const HistoryDiv = () => {
                     배당금
                   </div>
                   <div className="card-body">
-                    {/* 차트 */}
-                    <PolarArea options={options} data={data} />
+                    <div className="cardstyle3">
+                      {/* 차트 */}
+                      <PolarArea options={options} data={data} />
+                    </div>
                     {/* 테이블*/}
                     <TableContainer component={Paper}>
                       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -197,7 +199,7 @@ const HistoryDiv = () => {
                         <div className="col-7">
                           <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             id="formGroupExampleInput"
                             placeholder="몇 주를 갖고있나요?"
                           />

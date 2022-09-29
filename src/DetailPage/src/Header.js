@@ -45,7 +45,6 @@ const Header = () => {
     <>
       {!userId ? (
         <div>
-          <h1>미로그인</h1>
           {/* nav 바 */}
           <nav className="navbar navbar-expand-lg navbar-light bg-light static-top">
             {/* nav 바 내용 */}
@@ -228,7 +227,6 @@ const Header = () => {
         </div>
       ) : (
         <div>
-          <h1>로그인</h1>
           {/* nav 바 */}
           <nav className="navbar navbar-expand-lg navbar-light bg-light static-top">
             {/* nav 바 내용 */}
@@ -275,14 +273,8 @@ const Header = () => {
             {companyName}
           </a> */}
 
-                {/* 게시판 */}
+                {/* 코스피 */}
                 <div className="row">
-                  <div className="col-3">
-                    <a className="nav-link text-secondary" href="/board">
-                      게시판
-                    </a>
-                  </div>
-                  {/* 코스피 */}
                   <div className="col-3">
                     <div className="nav-item dropdown">
                       <a
@@ -341,6 +333,14 @@ const Header = () => {
                       </ul>
                     </div>
                   </div>
+
+                  {/* 게시판 */}
+                  <div className="col-3">
+                    <a className="nav-link text-secondary" href="/board">
+                      게시판
+                    </a>
+                  </div>
+
                   {/* 로그인 */}
                   <div className="col-3">
                     <div
