@@ -275,9 +275,15 @@ const Header = () => {
             {companyName}
           </a> */}
 
-                {/* 코스피 */}
+                {/* 게시판 */}
                 <div className="row">
-                  <div className="col">
+                  <div className="col-3">
+                    <a className="nav-link text-secondary" href="/board">
+                      게시판
+                    </a>
+                  </div>
+                  {/* 코스피 */}
+                  <div className="col-3">
                     <div className="nav-item dropdown">
                       <a
                         className="nav-link dropdown-toggle"
@@ -307,7 +313,7 @@ const Header = () => {
                     </div>
                   </div>
                   {/* 코스닥 */}
-                  <div className="col">
+                  <div className="col-3">
                     <div className="nav-item dropdown">
                       <a
                         className="nav-link dropdown-toggle"
@@ -336,7 +342,7 @@ const Header = () => {
                     </div>
                   </div>
                   {/* 로그인 */}
-                  <div className="col">
+                  <div className="col-3">
                     <div
                       data-bs-toggle="tooltip"
                       title="로그인 후 다양한 추가 기능을 누리세요!"

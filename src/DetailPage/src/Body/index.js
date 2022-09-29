@@ -20,7 +20,7 @@ const Index = () => {
       </div> */}
 
       {/* 주가 */}
-      <div style={{ margin: "0 auto", marginTop: "100px" }}>
+      <div style={{ margin: "0 auto", marginTop: "80px" }}>
         <StockPrice />
       </div>
 

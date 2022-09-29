@@ -217,3 +217,20 @@
 .modal-title2 {
 	font-size: 30px;
 }
+
+
+/* CARD AREA */
+.cardstyle {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.cardstyle > .btn {
+	display: inline-block;
+	margin-top:10px;
+}
+
+
+ .cardstyle2 {
+	margin: 10px;
+}

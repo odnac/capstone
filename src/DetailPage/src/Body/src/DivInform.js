@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 // 배당정보: 한주당 배당금 배당락 기준일 배당 지급일
 const DivInform = () => {
@@ -11,7 +11,7 @@ const DivInform = () => {
     try {
       // Kakao SDK API를 이용해 사용자 정보 획득
       let data = await window.Kakao.API.request({
-        url: '/v2/user/me',
+        url: "/v2/user/me",
       });
       // 사용자 정보 변수에 저장
       setUserId(data.id);
@@ -29,7 +29,7 @@ const DivInform = () => {
 
   useEffect(() => {
     if (userId) {
-      console.log('userId: ', userId);
+      console.log("userId: ", userId);
       // alert('success login', userId);
     }
   }, [userId]);
@@ -38,18 +38,95 @@ const DivInform = () => {
     <>
       {!userId ? (
         <div>
-          <div className='container'>
-            <div className='row'>
-              <div className='col-lg-12'>
-                <div className='card mb-4'>
-                  <div className='card-header'>
-                    <i className='fas fa-chart-area me-1'></i>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="card mb-4">
+                  <div className="card-header">
+                    <i className="fas fa-chart-area me-1"></i>
                     배당 정보
                   </div>
-                  <div className='card-body'>
-                    <h3>주당 배당금 : </h3>
-                    <h3>배당금 지급 기준일 : </h3>
-                    <h3>배당 지급일 : </h3>
+                  <div className="card-body">
+                    {/* 아코디언 */}
+                    <div className="accordion" id="accordionExample">
+                      {/* 주당 배당금 */}
+                      <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingOne">
+                          <button
+                            className="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="false"
+                            aria-controls="collapseOne"
+                          >
+                            주당 배당금
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseOne"
+                          className="accordion-collapse collapse"
+                          aria-labelledby="headingOne"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div className="accordion-body">
+                            주식배당정보_stckGenrDvdnAmt
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 배당금 지급 기준일 */}
+                      <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingTwo">
+                          <button
+                            className="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo"
+                          >
+                            배당금 지급 기준일
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseTwo"
+                          className="accordion-collapse collapse"
+                          aria-labelledby="headingTwo"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div className="accordion-body">
+                            주식배당정보_dvdnBasDt
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 배당 지급일 */}
+                      <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingThree">
+                          <button
+                            className="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree"
+                          >
+                            배당 지급일
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseThree"
+                          className="accordion-collapse collapse"
+                          aria-labelledby="headingThree"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div className="accordion-body">
+                            주식배당정보_cashDvdnPayDt
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -58,18 +135,95 @@ const DivInform = () => {
         </div>
       ) : (
         <div>
-          <div className='container'>
-            <div className='row'>
-              <div className='col-lg-12'>
-                <div className='card mb-4'>
-                  <div className='card-header'>
-                    <i className='fas fa-chart-area me-1'></i>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="card mb-4">
+                  <div className="card-header">
+                    <i className="fas fa-chart-area me-1"></i>
                     배당 정보
                   </div>
-                  <div className='card-body'>
-                    <h3>주당 배당금 : 주식배당정보_stckGenrDvdnAmt</h3>
-                    <h3>배당금 지급 기준일 : 주식배당정보_dvdnBasDt</h3>
-                    <h3>배당 지급일 : 주식배당정보_cashDvdnPayDt</h3>
+                  <div className="card-body">
+                    {/* 아코디언 */}
+                    <div className="accordion" id="accordionExample">
+                      {/* 주당 배당금 */}
+                      <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingOne">
+                          <button
+                            className="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="false"
+                            aria-controls="collapseOne"
+                          >
+                            주당 배당금
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseOne"
+                          className="accordion-collapse collapse"
+                          aria-labelledby="headingOne"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div className="accordion-body">
+                            주식배당정보_stckGenrDvdnAmt
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 배당금 지급 기준일 */}
+                      <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingTwo">
+                          <button
+                            className="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo"
+                          >
+                            배당금 지급 기준일
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseTwo"
+                          className="accordion-collapse collapse"
+                          aria-labelledby="headingTwo"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div className="accordion-body">
+                            주식배당정보_dvdnBasDt
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 배당 지급일 */}
+                      <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingThree">
+                          <button
+                            className="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree"
+                          >
+                            배당 지급일
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseThree"
+                          className="accordion-collapse collapse"
+                          aria-labelledby="headingThree"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div className="accordion-body">
+                            주식배당정보_cashDvdnPayDt
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <p>
                       다음배당금은 얼마일까? - 로그인하면 아코디언
                       디자인(+설명)과 예상배당금 알고리즘 추가

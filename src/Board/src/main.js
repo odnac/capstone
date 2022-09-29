@@ -3,6 +3,32 @@ import React from "react";
 const Main = () => {
   return (
     <div>
+      {/* nav 바 */}
+      <nav className="navbar navbar-expand-lg navbar-light bg-light static-top">
+        {/* nav 바 내용 */}
+        <div className="container">
+          <a className="navbar-brand" href="/">
+            Kimleejung
+          </a>
+
+          {/* 기업 검색 */}
+          <form class=" d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div className="input-group">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="기업명을 입력하세요."
+                aria-label="Search"
+              />
+              <button className="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+      </nav>
+
+      {/* 게시판 */}
       <div className="container mt-5">
         <h1>게시판</h1>
         <table
@@ -89,21 +115,38 @@ const Main = () => {
                   {/* 모달 내용 */}
                   <div className="modal-body">
                     <div className="mb-3">
-                      <label for="exampleFormControlInput1" className="form-label"><strong>제목</strong></label>
-                      <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="제목을 입력하세요." />
+                      <label
+                        for="exampleFormControlInput1"
+                        className="form-label"
+                      >
+                        <strong>제목</strong>
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="제목을 입력하세요."
+                      />
                     </div>
                     <div className="mb-3">
-                      <label for="exampleFormControlTextarea1" className="form-label "><strong>내용</strong></label>
-                      <textarea className="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="내용을 입력하세요."></textarea>
+                      <label
+                        for="exampleFormControlTextarea1"
+                        className="form-label "
+                      >
+                        <strong>내용</strong>
+                      </label>
+                      <textarea
+                        className="form-control"
+                        id="exampleFormControlTextarea1"
+                        rows="10"
+                        placeholder="내용을 입력하세요."
+                      ></textarea>
                     </div>
                   </div>
 
                   {/* 모달 하단 */}
                   <div className="modal-footer">
-                    <button
-                      type="button"
-                      className="btn btn-primary"
-                    >
+                    <button type="button" className="btn btn-primary">
                       글 작성
                     </button>
                   </div>
@@ -113,7 +156,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 
