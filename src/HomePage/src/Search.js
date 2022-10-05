@@ -23,6 +23,7 @@ const Search = () => {
     //console.log(enterName);
     // 페이지 이동과 userCompany 넘기기
     navigate("/detail", { state: enterName });
+    window.location.replace("/detail");
   };
 
   return (

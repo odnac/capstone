@@ -9,8 +9,8 @@ import TestView from "./src/TestView";
 
 const Index = () => {
   const location = useLocation(); // 파라미터 취득
-  // const companyName = location.state.company;
-
+  const companyName = location.state.company;
+  console.log(companyName);
   return (
     <div>
       {/* <h1>{companyName}</h1> */}

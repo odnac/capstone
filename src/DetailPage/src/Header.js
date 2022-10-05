@@ -43,6 +43,10 @@ const Header = () => {
     }
   }, [userId]);
 
+  /**
+   *  기업 재검색
+   */
+
   const navigate = useNavigate(); // 페이지 이동 시 파라미터 전달
   const [userCompany, setUserCompany] = useState(""); // 검색창에 입력한 기업명 또는 기업번호
 
@@ -63,6 +67,7 @@ const Header = () => {
     //console.log(enterName);
     // 페이지 이동과 userCompany 넘기기
     navigate("/detail", { state: enterName });
+    window.location.replace("/detail");
   };
 
   return (
