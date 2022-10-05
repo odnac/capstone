@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import dummyData from "../../DUMMY_DATA/CompanyDATA.json";
 
 const Header = () => {
   const [userId, setUserId] = useState();
@@ -37,9 +39,31 @@ const Header = () => {
   useEffect(() => {
     if (userId) {
       console.log("userId: ", userId);
-      alert("success login", userId);
+      // alert("success login", userId);
     }
   }, [userId]);
+
+  const navigate = useNavigate(); // 페이지 이동 시 파라미터 전달
+  const [userCompany, setUserCompany] = useState(""); // 검색창에 입력한 기업명 또는 기업번호
+
+  /* 사용자가 검색창에 입력한 기업명 기업번호 userCompany로 받음 */
+  const getUserInputCompany = (e) => {
+    setUserCompany(e.target.value);
+  };
+
+  /* 입력한 기업이 더미데이터에 있는지 확인 */
+  const onCheckData = (e) => {
+    e.preventDefault();
+
+    // 대소문자 구분없이 기업명 비교
+    const enterName = dummyData.find(
+      ({ company }) => company.toLowerCase() === userCompany.toLowerCase()
+    );
+    if (!enterName) return alert("검색 결과가 없습니다.");
+    //console.log(enterName);
+    // 페이지 이동과 userCompany 넘기기
+    navigate("/detail", { state: enterName });
+  };
 
   return (
     <>
@@ -54,13 +78,17 @@ const Header = () => {
               </a>
 
               {/* 기업 검색 */}
-              <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+              <form
+                onSubmit={onCheckData}
+                className="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+              >
                 <div className="input-group">
                   <input
                     className="form-control me-2"
-                    type="search"
+                    type="text"
                     placeholder="기업명을 입력하세요."
-                    aria-label="Search"
+                    value={userCompany}
+                    onChange={getUserInputCompany}
                   />
                   <button className="btn btn-outline-success" type="submit">
                     Search
@@ -236,13 +264,17 @@ const Header = () => {
               </a>
 
               {/* 기업 검색 */}
-              <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+              <form
+                onSubmit={onCheckData}
+                className="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+              >
                 <div className="input-group">
                   <input
                     className="form-control me-2"
-                    type="search"
+                    type="text"
                     placeholder="기업명을 입력하세요."
-                    aria-label="Search"
+                    value={userCompany}
+                    onChange={getUserInputCompany}
                   />
                   <button className="btn btn-outline-success" type="submit">
                     Search
@@ -341,74 +373,16 @@ const Header = () => {
                     </a>
                   </div>
 
-                  {/* 로그인 */}
+                  {/* 로그아웃 */}
                   <div className="col-3">
-                    <div
-                      data-bs-toggle="tooltip"
-                      title="로그인 후 다양한 추가 기능을 누리세요!"
+                    <a
+                      className="nav-link text-secondary"
+                      href="#login"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
                     >
-                      <a
-                        className="nav-link text-secondary"
-                        href="#login"
-                        data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop"
-                      >
-                        login
-                      </a>
-                    </div>
-                    <div
-                      className="modal fade"
-                      id="staticBackdrop"
-                      data-bs-backdrop="static"
-                      data-bs-keyboard="false"
-                      tabindex="-1"
-                      aria-labelledby="staticBackdropLabel"
-                      aria-hidden="true"
-                    >
-                      <div className="modal-dialog">
-                        <div className="modal-content ">
-                          {/* 로그인 모달 상단 */}
-                          <div className="modal-header">
-                            <h5
-                              className="modal-title "
-                              id="staticBackdropLabel"
-                            >
-                              로그인
-                            </h5>
-                            <button
-                              type="button"
-                              className="btn-close"
-                              data-bs-dismiss="modal"
-                              aria-label="Close"
-                            ></button>
-                          </div>
-
-                          {/* 로그인 모달 내용 */}
-                          <div className="modal-body">
-                            <h6 className="modal-sub text-primary">
-                              {" "}
-                              카카오로 로그인이 가능합니다.{" "}
-                            </h6>
-                            <span className="logo" onClick={onKakao}>
-                              <img src="/img/kakao_login.png" alt="카카오톡" />
-                            </span>
-
-                            <h6 className="modal-sub2"> 로그인 시 ~~~~~~~~ </h6>
-                          </div>
-
-                          {/* 로그인 모달 하단 */}
-                          <div className="modal-footer">
-                            <button
-                              type="button"
-                              className="btn btn-secondary"
-                              data-bs-dismiss="modal"
-                            >
-                              Close
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      logout
+                    </a>
                   </div>
                 </div>
               </div>
