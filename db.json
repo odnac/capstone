@@ -1,0 +1,37 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server 공부하기",
+      "content": "new content 1",
+      "date": "2022-01-04"
+    },
+    {
+      "id": 2,
+      "title": "시리즈 읽어보기",
+      "content": "new content 3",
+      "date": "2022-01-10"
+    },
+    {
+      "title": "할 일 추가하기2",
+      "content": "new content 2",
+      "id": 3,
+      "date": "2022-01-01"
+    },
+    {
+      "title": "ㄴㅇㄹㄴ",
+      "content": "ㅁㄴㅇㄹㅈ",
+      "id": 4
+    },
+    {
+      "title": "ㄴㅇㄹㄴ",
+      "content": "ㅁㄴㅇㄹㅈ",
+      "id": 5
+    },
+    {
+      "title": "asdfdfwfwdf",
+      "content": "adwfasdasdasdfawdf",
+      "id": 6
+    }
+  ]
+}
