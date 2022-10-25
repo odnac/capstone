@@ -84,6 +84,7 @@ const Main = () => {
       {/* 게시판 */}
       <div className="container mt-5">
         <h1>게시판</h1>
+
         {posts ? (
           <table
             id="example"
@@ -105,7 +106,65 @@ const Main = () => {
                 <tr key={post.id}>
                   <td>{post.date}</td>
                   <td>{post.title}</td>
-                  <td>{post.content}</td>
+
+                  <td>
+                    <a
+                      className="link-dark"
+                      href=""
+                      data-bs-toggle="modal"
+                      data-bs-target="#content"
+                    >
+                      {post.content}
+                    </a>
+
+                    <div
+                      className="modal content"
+                      id="content"
+                      data-bs-backdrop="static"
+                      data-bs-keyboard="false"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div className="modal-dialog modal-dialog-centered modal-lg">
+                        <div className="modal-content">
+                          {/* 모달 상단 */}
+                          <div className="modal-header">
+                            <h5>
+                              <strong>제목:</strong>
+                              {post.title}
+                            </h5>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+
+                          {/* 모달 내용 */}
+                          <div className="modal-body">
+                            <h5>
+                              <strong>내용</strong>
+                            </h5>
+                            {post.content}
+                          </div>
+
+                          {/* 모달 하단 */}
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              닫기
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+
+                  {/* <td>{post.content}</td> */}
                 </tr>
               ))}
             </tbody>
