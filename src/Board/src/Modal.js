@@ -1,18 +1,30 @@
 import { useState, useRef } from "react";
-import { useQuery, useQueryClient } from "react-query";
+import { useQueryClient } from "react-query";
 import { useParams } from "react-router-dom";
-import { createNewPost } from "../../api/post";
+import http from "../../api/http";
 
 const Modal = () => {
   const queryClient = useQueryClient();
   const params = useParams();
   const enterprizeId = params.enterprizeId;
   const closeBtnRef = useRef();
-  const [isSubmit, setIsSubmit] = useState(false);
   const [post, setPost] = useState({
     title: "",
     content: "",
   });
+
+  const handleSubmitBtn = () => {
+    if (post.title.trim() === "" || post.content.trim() === "") return;
+    http.post(`/board/${enterprizeId}`, post).then(({ data }) => {
+      setPost({
+        title: "",
+        content: "",
+      });
+      console.log("data", data);
+      queryClient.invalidateQueries(["boards", enterprizeId]);
+      closeBtnRef.current.click();
+    });
+  };
 
   const handleChange = (e) => {
     setPost((prev) => ({
@@ -20,23 +32,6 @@ const Modal = () => {
       [e.target.name]: e.target.value,
     }));
   };
-
-  useQuery(
-    ["borad", enterprizeId],
-    () => createNewPost({ enterprizeId, post }),
-    {
-      enabled: isSubmit,
-      onSuccess: (data) => {
-        setPost({
-          title: "",
-          content: "",
-        });
-        console.log("data", data);
-        queryClient.invalidateQueries(["boards", enterprizeId]);
-        closeBtnRef.current.click();
-      },
-    }
-  );
 
   return (
     <div
@@ -99,7 +94,7 @@ const Modal = () => {
           {/* 모달 하단 */}
           <div className="modal-footer">
             <button
-              onClick={() => setIsSubmit(true)}
+              onClick={handleSubmitBtn}
               type="submit"
               className="btn btn-primary"
             >
