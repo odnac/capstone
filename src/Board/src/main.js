@@ -143,7 +143,7 @@ const Main = () => {
               {/* 모달 상단 */}
               <div className="modal-header">
                 <h5>
-                  <strong>제목:</strong>
+                  <strong>제목: </strong>
                   {currentPost.title}
                 </h5>
                 <button

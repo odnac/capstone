@@ -133,7 +133,7 @@ const Header = () => {
 
               {/* 코스피 */}
               <div className="row">
-                <div className="col-3">
+                <div className="col-4">
                   <div className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
@@ -163,7 +163,7 @@ const Header = () => {
                   </div>
                 </div>
                 {/* 코스닥 */}
-                <div className="col-3">
+                <div className="col-4">
                   <div className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
@@ -193,9 +193,9 @@ const Header = () => {
                 </div>
 
                 {/* 게시판 */}
-                <div className="col-3">
+                <div className="col-4">
                   <Link to={`/board/${getParameter("enterprizeId")}`}>
-                    <a className="nav-link text-secondary">게시판</a>
+                    <a className="text-black ">게시판</a>
                   </Link>
                 </div>
               </div>
