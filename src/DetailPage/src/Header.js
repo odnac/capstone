@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import dummyData from "../../DUMMY_DATA/CompanyDATA.json";
 
 const Header = () => {
@@ -11,13 +11,12 @@ const Header = () => {
   const REDIRECT_URI = "http://localhost:3000/login";
   const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
 
+  const params = useParams();
+  const enterprizeId = params.enterprizeId;
+
   const onKakao = (e) => {
     e.preventDefault();
     window.location.replace(KAKAO_AUTH_URL);
-  };
-
-  let getParameter = (key) => {
-    return new URLSearchParams(window.location.search).get(key);
   };
 
   const getProfile = async () => {
@@ -35,8 +34,6 @@ const Header = () => {
       console.log(err);
     }
   };
-
-  useEffect(() => {});
 
   useEffect(() => {
     getProfile();
@@ -72,9 +69,7 @@ const Header = () => {
     if (!enterName) return alert("검색 결과가 없습니다.");
     //console.log(enterName);
     // 페이지 이동과 userCompany 넘기기
-    navigate(
-      `/detail?company=${enterName.company}&enterprizeId=${enterName.enterprizeId}`
-    );
+    navigate(`/detail/${enterName.enterprizeId}`);
     // window.location.replace("/detail");
   };
 
@@ -85,9 +80,9 @@ const Header = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light static-top">
           {/* nav 바 내용 */}
           <div className="container">
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" to="/">
               Kimleejung
-            </a>
+            </Link>
 
             {/* 기업 검색 */}
             <form
@@ -194,7 +189,7 @@ const Header = () => {
 
                 {/* 게시판 */}
                 <div className="col-4">
-                  <Link to={`/board/${getParameter("enterprizeId")}`}>
+                  <Link to={`/board/${enterprizeId}`}>
                     <a className="text-black ">게시판</a>
                   </Link>
                 </div>

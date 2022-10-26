@@ -22,9 +22,7 @@ const Search = () => {
     if (!enterName) return alert("검색 결과가 없습니다.");
     //console.log(enterName);
     // 페이지 이동과 userCompany 넘기기
-    navigate(
-      `/detail?company=${enterName.company}&enterprizeId=${enterName.enterprizeId}`
-    );
+    navigate(`/detail/${enterName.enterprizeId}`);
     // window.location.replace(`/detail?enterprizecode=${enterName.enterprizecode}`);
   };
 

@@ -1,38 +1,37 @@
-import { useLocation } from "react-router-dom";
-import DivInform from "./src/DivInform";
-import HistoryDiv from "./src/HistoryDiv";
 import HistoryDivRate from "./src/HistoryDivRate";
 import HistorytDivPayout from "./src/HistorytDivPayout";
-import Multitype from "./src/Multitype";
 import StockPrice from "./src/StockPrice";
-import TestView from "./src/TestView";
+import dummyData from "../../../DUMMY_DATA/CompanyDATA.json";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const Index = () => {
-  const location = useLocation(); // 파라미터 취득
-  // const companyName = location.state.company;
-  // console.log(companyName);
+  const params = useParams();
+  const enterprizeId = params.enterprizeId;
+  const [currentCompany, setCurrentCompany] = useState({
+    number: "",
+    company: "",
+    law_number: "",
+    enterprizeId: "",
+  });
+
+  useEffect(() => {
+    const findCompany = dummyData.find(
+      (data) => data.enterprizeId == enterprizeId
+    );
+    setCurrentCompany(findCompany);
+  }, [enterprizeId]);
+
   return (
     <div>
-      {/* <h1>{companyName}</h1> */}
-      {/* 테스트
-      <div style={{ margin: "0 auto", marginTop: "100px" }}>
-        <TestView />
-      </div> */}
+      <div>
+        <h1>{currentCompany.company}</h1>
+      </div>
 
       {/* 주가 */}
       <div style={{ margin: "0 auto", marginTop: "80px" }}>
         <StockPrice />
       </div>
-
-      {/* 배당 정보
-      <div style={{ margin: "0 auto", marginTop: "50px" }}>
-        <DivInform />
-      </div> */}
-
-      {/* 배당금
-      <div style={{ margin: "0 auto", marginTop: "50px" }}>
-        <HistoryDiv />
-      </div> */}
 
       {/* 배당률 */}
       <div style={{ margin: "0 auto", marginTop: "50px" }}>
@@ -43,17 +42,6 @@ const Index = () => {
       <div style={{ margin: "0 auto", marginTop: "50px" }}>
         <HistorytDivPayout />
       </div>
-
-      {/* 멀티차트
-      <div
-        style={{
-          margin: "0 auto",
-          marginTop: "50px",
-          marginBottom: "200px",
-        }}
-      >
-        <Multitype />
-      </div> */}
     </div>
   );
 };

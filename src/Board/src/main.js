@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useRef, useState, useEffect } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import dummyData from "../../DUMMY_DATA/CompanyDATA.json";
 import Modal from "./Modal";
 import { useQuery, useQueryClient } from "react-query";
@@ -20,6 +20,12 @@ const Main = () => {
   const closeBtnRef = useRef();
   const params = useParams();
   const enterprizeId = params.enterprizeId;
+  const [currentCompany, setCurrentCompany] = useState({
+    number: "",
+    company: "",
+    law_number: "",
+    enterprizeId: "",
+  });
 
   /* 사용자가 검색창에 입력한 기업명 기업번호 userCompany로 받음 */
   const getUserInputCompany = (e) => {
@@ -37,9 +43,7 @@ const Main = () => {
     if (!enterName) return alert("검색 결과가 없습니다.");
     //console.log(enterName);
     // 페이지 이동과 userCompany 넘기기
-    navigate(
-      `/detail?company=${enterName.company}&enterprizeId=${enterName.enterprizeId}`
-    );
+    navigate(`/detail/${enterName.enterprizeId}`);
   };
 
   const handleDeletPost = () => {
@@ -58,15 +62,22 @@ const Main = () => {
     },
   });
 
+  useEffect(() => {
+    const findCompany = dummyData.find(
+      (data) => data.enterprizeId == enterprizeId
+    );
+    setCurrentCompany(findCompany);
+  }, [enterprizeId]);
+
   return (
     <div>
       {/* nav 바 */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light static-top">
         {/* nav 바 내용 */}
         <div className="container">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" to="/">
             Kimleejung
-          </a>
+          </Link>
 
           {/* 기업 검색 */}
           <form
@@ -91,7 +102,7 @@ const Main = () => {
 
       {/* 게시판 */}
       <div className="container mt-5">
-        <h1>게시판</h1>
+        <h1>{currentCompany.company} 게시판</h1>
         {posts ? (
           <table
             id="example"
