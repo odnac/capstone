@@ -226,14 +226,14 @@
 	margin-top: 30px;
 }
 
-.cardstyle > .btn {
+.cardstyle>.btn {
 	display: inline-block;
-	margin-top:15px;
+	margin-top: 15px;
 	margin: 5px;
 	margin-bottom: 15px;
 }
 
- .cardstyle2 {
+.cardstyle2 {
 	margin: 30px;
 }
 
