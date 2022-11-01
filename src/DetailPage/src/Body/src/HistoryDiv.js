@@ -20,6 +20,14 @@ ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 
 // 과거 배당금
 const HistoryDiv = () => {
+  const [price, setPrice] = useState(0);
+
+  const onChange = (e) => {
+    setPrice(
+      (e.target.value * 600).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    ); // '600'에 최근에 받은 배당금 넣어야 함.
+  };
+
   const options = {
     responsive: true,
     plugins: {
@@ -196,27 +204,28 @@ const HistoryDiv = () => {
                     </TableContainer>
                     <div className="cardstyle2">
                       <div className="row">
+                        <strong>받을 배당금 알아보기!</strong>
+                        <br />
                         <div className="col-7">
                           <input
                             type="text"
                             className="form-control"
                             id="formGroupExampleInput"
                             placeholder="몇 주를 갖고있나요?"
+                            onChange={onChange}
                           />
                         </div>
-                        <div className="col-5">
-                          <p>
-                            <strong>"값"</strong>입니다.
-                          </p>
-                        </div>
+                        <div className="col-5"></div>
+                        <br />
+                        <br />
+                        <p>
+                          받으실 (세전)배당금은
+                          <br />
+                          <strong> {price}원</strong> 입니다. 여기 배당데이터
+                          넣어야함!
+                        </p>
                       </div>
                     </div>
-
-                    {/* 만약 내가 n주를 갖고 있었다면? */}
-                    <p>
-                      만약 내가 n주를 갖고 있었다면 얼마를 받았을까? - 주식 수 *
-                      배당금 * 0.846 세금까지 계산
-                    </p>
                   </div>
                 </div>
               </div>
