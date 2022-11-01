@@ -213,16 +213,15 @@ const HistoryDivRate = () => {
                     </TableContainer>
 
                     <div className="cardstyle">
+                      <strong>어제 매수했다면 배당률이 얼마일까?</strong>
+                      <br />
+                      <br />
                       <p>
-                        <strong>"값"</strong>입니다.
+                        계산식 : 배당금 / 어제 종가 * 100
+                        <br />
+                        <strong> 값</strong>입니다.
                       </p>
                     </div>
-
-                    {/* 어제 샀으면 배당률 얼마일까? */}
-                    <p>
-                      어제 샀으면 배당률이 얼마일까? - 전날 종가를 기준으로
-                      배당률 계산해주기
-                    </p>
                   </div>
                 </div>
               </div>
