@@ -164,7 +164,6 @@ const Main = () => {
                   aria-label="Close"
                 ></button>
               </div>
-
               {/* 모달 내용 */}
               <div className="modal-body">
                 <h5>
@@ -172,24 +171,49 @@ const Main = () => {
                 </h5>
                 {currentPost.content}
               </div>
-
               {/* 모달 하단 */}
               <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-danger"
-                  onClick={handleDeletPost}
-                >
-                  삭제
-                </button>
-                <button
-                  ref={closeBtnRef}
-                  type="button"
-                  className="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  닫기
-                </button>
+                <div className="container">
+                  <div className="row">
+                    <div className="col-8">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="댓글 입력"
+                        aria-label="default input example"
+                      />
+                    </div>
+                    <div className="col-4">
+                      <button type="button" class="btn btn-primary">
+                        등록
+                      </button>
+                    </div>
+                    <div style={{ marginTop: "10px" }}>
+                      <h6>댓글 입력 되는 곳</h6>
+                    </div>
+                  </div>
+
+                  <div className="col">
+                    <div style={{ marginTop: "30px", textAlign: "right" }}>
+                      <button
+                        type="button"
+                        className="btn btn-danger"
+                        onClick={handleDeletPost}
+                      >
+                        삭제
+                      </button>
+                      <> </>
+                      <button
+                        ref={closeBtnRef}
+                        type="button"
+                        className="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        닫기
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
