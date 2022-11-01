@@ -32,22 +32,26 @@ const Index = () => {
   return (
     <div>
       <div className="container">
-        {/* 기업명 */}
-        <div style={{ margin: "0 auto", marginTop: "60px" }}>
-          <h1>{currentCompany.company}</h1>
-        </div>
+        <div style={{ display: "flex", marginTop: "60px" }}>
+          {/* 기업명 */}
+          <div>
+            <h1>{currentCompany.company}</h1>
+          </div>
 
-        {/* 관심기업 버튼 */}
-        <div style={{ width: "28px" }}>
-          <h3>
-            <div className="heartIcon" onClick={heart}>
-              {hearts ? (
-                <i className="bi bi-heart-fill" />
-              ) : (
-                <i className="bi bi-heart" />
-              )}
-            </div>
-          </h3>
+          {/* 관심기업 버튼 */}
+          <div
+            style={{ width: "28px", marginLeft: "18px", alignSelf: "center" }}
+          >
+            <h2>
+              <div className="heartIcon" onClick={heart}>
+                {hearts ? (
+                  <i className="bi bi-heart-fill" />
+                ) : (
+                  <i className="bi bi-heart" />
+                )}
+              </div>
+            </h2>
+          </div>
         </div>
 
         {/* 주가 */}
