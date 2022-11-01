@@ -126,9 +126,9 @@ const Header = () => {
             {companyName}
           </a> */}
 
-              {/* 코스피 */}
+              {/* 관심기업 */}
               <div className="row">
-                <div className="col-4">
+                <div className="col-3">
                   <div className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
@@ -138,7 +138,37 @@ const Header = () => {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      코스피
+                      관심기업
+                    </a>
+                    <ul
+                      className="dropdown-menu dropdown-menu-dark"
+                      aria-labelledby="navbarDarkDropdownMenuLink"
+                    >
+                      <li>
+                        <a className="dropdown-item">기업1</a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item">기업2</a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item">기업3</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* 코스피 */}
+                <div className="col-3">
+                  <div className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDarkDropdownMenuLink"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      &nbsp;코스피
                     </a>
                     <ul
                       className="dropdown-menu dropdown-menu-dark"
@@ -158,7 +188,7 @@ const Header = () => {
                   </div>
                 </div>
                 {/* 코스닥 */}
-                <div className="col-4">
+                <div className="col-3">
                   <div className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
@@ -186,9 +216,8 @@ const Header = () => {
                     </ul>
                   </div>
                 </div>
-
                 {/* 게시판 */}
-                <div className="col-4">
+                <div className="col-3">
                   <Link to={`/board/${enterprizeId}`}>
                     <a className="text-black ">게시판</a>
                   </Link>
