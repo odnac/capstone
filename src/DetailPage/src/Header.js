@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import dummyData from "../../DUMMY_DATA/CompanyDATA.json";
+import { Link, useNavigate } from "react-router-dom";
+import http from "../../api/http";
 
-const Header = () => {
+const Header = ({ currentCompany }) => {
   const [userId, setUserId] = useState();
 
   /* 로그인 시 로그아웃 버튼 활성화 || 미로그인 시 로그인 버튼 활성화 */
@@ -10,9 +10,6 @@ const Header = () => {
   const REST_API_KEY = "2bfe8ae0660ba533d909f87f234194bb";
   const REDIRECT_URI = "http://localhost:3000/login";
   const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
-
-  const params = useParams();
-  const enterprizeId = params.enterprizeId;
 
   const onKakao = (e) => {
     e.preventDefault();
@@ -62,14 +59,13 @@ const Header = () => {
   const onCheckData = (e) => {
     e.preventDefault();
 
-    // 대소문자 구분없이 기업명 비교
-    const enterName = dummyData.find(
-      ({ company }) => company.toLowerCase() === userCompany.toLowerCase()
-    );
-    if (!enterName) return alert("검색 결과가 없습니다.");
-    //console.log(enterName);
-    // 페이지 이동과 userCompany 넘기기
-    navigate(`/detail/${enterName.enterprizeId}`);
+    http.get(`/lastest?enterprise=${userCompany}`).then((res) => {
+      console.log(res.data);
+
+      const itemList = res.data;
+      if (!itemList.length) return alert("검색 결과가 없습니다.");
+      navigate(`/detail?enterprise=${userCompany}`);
+    });
     // window.location.replace("/detail");
   };
 
@@ -218,7 +214,7 @@ const Header = () => {
                 </div>
                 {/* 게시판 */}
                 <div className="col-3">
-                  <Link to={`/board/${enterprizeId}`}>
+                  <Link to={`/board/${currentCompany.crno}`}>
                     <a className="text-black ">게시판</a>
                   </Link>
                 </div>
