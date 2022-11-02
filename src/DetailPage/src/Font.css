@@ -1,0 +1,51 @@
+/* FONT */
+@font-face{
+	font-family: "Nanum";
+	src: url("/src/font/NanumGothicCoding-Regular.ttf");
+}
+
+@font-face{
+	font-family: "Noto";
+	src: url("/src/font/NotoSansKR-Regular.otf");
+}
+
+@font-face{
+	font-family: "Lato";
+	src: url("/src/font/Lato-Regular.ttf");
+}
+
+/* Header AREA */
+.navbar-brand{
+    font-family: "Lato";
+}
+
+.form-control{
+    font-family: "Noto";
+}
+
+.input-group > .btn {
+    font-family: "Lato";
+}
+
+.nav-item {
+    font-family: "Noto";
+}
+
+.text-black {
+    font-family: "Noto";
+}
+
+
+/* Detail AREA */
+.companyT{
+    font-family: "Noto";
+}
+
+.card-header{
+    font-family: "Noto";
+    font-size:large;
+}
+
+.card-body{
+    font-family: "Lato";
+}

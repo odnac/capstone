@@ -102,7 +102,9 @@ const Main = () => {
 
       {/* 게시판 */}
       <div className="container mt-5">
-        <h1>{currentCompany.company} 게시판</h1>
+        <div className="boardT">
+          <h1>{currentCompany.company} 게시판</h1>
+        </div>
         {posts ? (
           <table
             id="example"
@@ -110,7 +112,7 @@ const Main = () => {
             style={{ width: "100%" }}
           >
             {/* 게시판 목록 */}
-            <thead>
+            <thead className="up">
               <tr>
                 <th>날짜</th>
                 <th>제목</th>
@@ -119,7 +121,7 @@ const Main = () => {
             </thead>
 
             {/* 게시판 내용 넣을 곳 (아래는 DUMMY_DATA) */}
-            <tbody>
+            <tbody className="down">
               {posts.map((post) => (
                 <tr
                   onClick={() => setCurrentPost(post)}

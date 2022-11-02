@@ -1,4 +1,5 @@
 import Main from "./src/main";
+import "./src/Font.css";
 
 const Index = () => {
   return (

@@ -34,7 +34,7 @@ const Index = () => {
       <div className="container">
         <div style={{ display: "flex", marginTop: "60px" }}>
           {/* 기업명 */}
-          <div>
+          <div className="companyT">
             <h1>{currentCompany.company}</h1>
           </div>
 
