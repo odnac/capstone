@@ -3,6 +3,7 @@ import DetailPage from "./DetailPage";
 import LoginPage from "./LoginPage";
 import Board from "./Board";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Callback from "./HomePage/src/Callback";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/detail/:enterprizeId" element={<DetailPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/board/:enterprizeId" element={<Board />} />
+          <Route path="/callback" element={<Callback />}></Route>
         </Routes>
       </BrowserRouter>
     </>
