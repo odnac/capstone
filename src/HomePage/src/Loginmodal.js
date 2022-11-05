@@ -1,30 +1,11 @@
-import http from "../../api/http";
-
-function socialLogin(provider) {
-  // const baseURL = https://api.kimeleejung.com
-  const frontendUrl = window.location.protocol + "//" + window.location.host;
-  // window.location.href =
-  // baseURL + "/auth/authorize/" + provider + "?redirect_url=" + frontendUrl;
-  http
-    .get("/auth/authorize/" + provider)
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
-}
-
 const Loginmodal = () => {
-  // const REST_API_KEY = "2bfe8ae0660ba533d909f87f234194bb";
-  // const REDIRECT_URI = "http://localhost:3000/login";
-  // const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+  const REST_API_KEY = process.env.REACT_APP_REST_API_KEY;
+  const REDIRECT_URI = "http://localhost:3000/callback";
 
-  // const onKakao = (e) => {
-  //   e.preventDefault();
-  //   window.location.replace(KAKAO_AUTH_URL);
-  // };
+  const KAKAO_AUTH_URI = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
 
-  const handleSocialLogin = (provider) => {
-    console.log(provider);
-    socialLogin(provider);
-    // SocialLogin(provider);
+  const handleSocialLogin = () => {
+    window.location.replace(KAKAO_AUTH_URI);
   };
 
   return (

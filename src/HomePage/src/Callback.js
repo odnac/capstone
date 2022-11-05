@@ -1,23 +1,27 @@
-import React from "react";
-import { Navigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import http from "../../api/http";
 
-const Callback = (props) => {
-  const getUrlParameter = (name) => {
-    let search = window.location.search;
-    let params = new URLSearchParams(search);
-    return params.get(name);
-  };
+const Callback = () => {
+  const code = new URL(window.location.href).searchParams.get("code");
+  const navigate = useNavigate();
 
-  const token = getUrlParameter("token");
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await http.get(`api/code=${code}`);
+        const token = res.headers.authorization;
+        window.localStorage.setItem("token", token);
+        navigate("/");
+      } catch (e) {
+        console.error(e);
+        navigate("/");
+        alert("login failed");
+      }
+    })();
+  }, []);
 
-  console.log("토큰 파싱:" + token);
-
-  if (token) {
-    console.log("로컬 스토리지에 토큰 저장" + token);
-    localStorage.setItem("ACCESS_TOKEN", token);
-    return <Navigate to={{ pathname: "/", state: { from: props.location } }} />;
-  } else {
-    return <Navigate to={{ pathname: "/", state: { from: props.location } }} />;
-  }
+  return <div>login...</div>;
 };
+
 export default Callback;
