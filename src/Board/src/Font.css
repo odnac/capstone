@@ -1,0 +1,29 @@
+/* FONT */
+@font-face{
+	font-family: "Nanum";
+	src: url("/src/font/NanumGothicCoding-Regular.ttf");
+}
+
+@font-face{
+	font-family: "Noto";
+	src: url("/src/font/NotoSansKR-Regular.otf");
+}
+
+@font-face{
+	font-family: "Lato";
+	src: url("/src/font/Lato-Regular.ttf");
+}
+
+/* Board AREA */
+
+.boardT{
+    font-family: "Noto";
+}
+
+.up{
+    font-family: "Nanum";
+}
+
+.down{
+    font-family: "Lato";
+}

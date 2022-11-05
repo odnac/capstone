@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import dummyData from "../../DUMMY_DATA/CompanyDATA.json";
 import Modal from "./Modal";
 import { useQuery, useQueryClient } from "react-query";
@@ -8,6 +8,9 @@ import moment from "moment";
 import http from "../../api/http";
 
 const Main = () => {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const searchEnterprise = searchParams.get("enterprise");
   const queryClient = useQueryClient();
   const navigate = useNavigate(); // 페이지 이동 시 파라미터 전달
   const [userCompany, setUserCompany] = useState(""); // 검색창에 입력한 기업명 또는 기업번호
@@ -18,8 +21,6 @@ const Main = () => {
     content: "",
   });
   const closeBtnRef = useRef();
-  const params = useParams();
-  const enterprizeId = params.enterprizeId;
   const [currentCompany, setCurrentCompany] = useState({
     number: "",
     company: "",
@@ -32,42 +33,37 @@ const Main = () => {
     setUserCompany(e.target.value);
   };
 
-  /* 입력한 기업이 더미데이터에 있는지 확인 */
   const onCheckData = (e) => {
     e.preventDefault();
 
-    // 대소문자 구분없이 기업명 비교
-    const enterName = dummyData.find(
-      ({ company }) => company.toLowerCase() === userCompany.toLowerCase()
-    );
-    if (!enterName) return alert("검색 결과가 없습니다.");
-    //console.log(enterName);
-    // 페이지 이동과 userCompany 넘기기
-    navigate(`/detail/${enterName.enterprizeId}`);
+    http.get(`/portable?enterprise=${userCompany}`).then((res) => {
+      console.log(res.data);
+
+      const itemList = res.data;
+      if (!itemList.length) return alert("검색 결과가 없습니다.");
+      navigate(`/detail?enterprise=${userCompany}`);
+    });
   };
 
   const handleDeletPost = () => {
     let answer = window.confirm("게시글을 삭제하시겠습니까?");
     if (!answer) return;
-    http.delete(`/board/${enterprizeId}/${currentPost.id}`).then(() => {
-      queryClient.invalidateQueries(["boards", enterprizeId]);
+    http.delete(`/board/${currentPost.crno}/${currentPost.id}`).then(() => {
+      queryClient.invalidateQueries(["boards", currentPost.crno]);
       closeBtnRef.current.click();
     });
   };
 
-  useQuery(["boards", enterprizeId], () => getPosts({ enterprizeId }), {
-    onSuccess: (data) => {
-      console.log(data);
-      setPosts(data);
-    },
-  });
-
-  useEffect(() => {
-    const findCompany = dummyData.find(
-      (data) => data.enterprizeId == enterprizeId
-    );
-    setCurrentCompany(findCompany);
-  }, [enterprizeId]);
+  useQuery(
+    ["boards", currentPost.crno],
+    () => getPosts({ enterprizeId: currentPost.crno }),
+    {
+      onSuccess: (data) => {
+        console.log(data);
+        setPosts(data);
+      },
+    }
+  );
 
   return (
     <div>
@@ -102,7 +98,9 @@ const Main = () => {
 
       {/* 게시판 */}
       <div className="container mt-5">
-        <h1>{currentCompany.company} 게시판</h1>
+        <div className="boardT">
+          <h1>{currentCompany.company} 게시판</h1>
+        </div>
         {posts ? (
           <table
             id="example"
@@ -110,7 +108,7 @@ const Main = () => {
             style={{ width: "100%" }}
           >
             {/* 게시판 목록 */}
-            <thead>
+            <thead className="up">
               <tr>
                 <th>날짜</th>
                 <th>제목</th>
@@ -119,7 +117,7 @@ const Main = () => {
             </thead>
 
             {/* 게시판 내용 넣을 곳 (아래는 DUMMY_DATA) */}
-            <tbody>
+            <tbody className="down">
               {posts.map((post) => (
                 <tr
                   onClick={() => setCurrentPost(post)}

@@ -1,0 +1,53 @@
+/* FONT */
+@font-face{
+	font-family: "Nanum";
+	src: url("/src/font/NanumGothicCoding-Regular.ttf");
+}
+
+@font-face{
+	font-family: "Noto";
+	src: url("/src/font/NotoSansKR-Regular.otf");
+}
+
+@font-face{
+	font-family: "Lato";
+	src: url("/src/font/Lato-Regular.ttf");
+}
+
+/* Modal AREA */
+.modal-header{
+    font-family: "Noto";
+}
+
+.modal-body{
+    font-family: "Nanum";
+}
+
+/* Logo AREA */
+
+.logo{
+    font-family: "Noto";
+}
+
+/* Search AREA */
+.form-control {
+    font-family: "Lato";
+}
+
+/* Carousel AREA */
+
+.review-area > .title{
+    font-family: "Lato";
+}
+
+.z {
+    font-family: "Nanum";
+}
+
+.recommend-area > .title {
+    font-family: "Lato";
+}
+
+.R{
+    font-family: "Nanum";
+}

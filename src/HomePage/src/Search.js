@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
-import dummyData from "../../DUMMY_DATA/CompanyDATA.json";
+import http from "../../api/http";
 
 const Search = () => {
   const navigate = useNavigate(); // 페이지 이동 시 파라미터 전달
@@ -15,15 +16,13 @@ const Search = () => {
   const onCheckData = (e) => {
     e.preventDefault();
 
-    // 대소문자 구분없이 기업명 비교
-    const enterName = dummyData.find(
-      ({ company }) => company.toLowerCase() === userCompany.toLowerCase()
-    );
-    if (!enterName) return alert("검색 결과가 없습니다.");
-    //console.log(enterName);
-    // 페이지 이동과 userCompany 넘기기
-    navigate(`/detail/${enterName.enterprizeId}`);
-    // window.location.replace(`/detail?enterprizecode=${enterName.enterprizecode}`);
+    http.get(`/lastest?enterprise=${userCompany}`).then((res) => {
+      console.log(res.data);
+
+      const itemList = res.data;
+      if (!itemList.length) return alert("검색 결과가 없습니다.");
+      navigate(`/detail?enterprise=${userCompany}`);
+    });
   };
 
   return (

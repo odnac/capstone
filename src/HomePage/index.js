@@ -3,6 +3,7 @@ import Search from "./src/Search";
 import Carousel from "./src/Carousel";
 import Loginmodal from "./src/Loginmodal";
 import { useEffect, useState } from "react";
+import "./src/Font.css";
 
 const Index = () => {
   const [userId, setUserId] = useState();
