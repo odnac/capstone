@@ -11,10 +11,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/detail/:enterprizeId" element={<DetailPage />} />
+          <Route path="/detail" element={<DetailPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/board/:enterprizeId" element={<Board />} />
-          <Route path="/callback" element={<Callback />}></Route>
+          <Route path="/auth" element={<Callback />}></Route>
         </Routes>
       </BrowserRouter>
     </>

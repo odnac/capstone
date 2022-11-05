@@ -1,20 +1,8 @@
-[
-  {
-    "number": "005930",
-    "company": "삼성전자",
-    "law_number": "1301110006246",
-    "enterprizeId": "1"
-  },
-  {
-    "number": "000660",
-    "company": "SK하이닉스",
-    "law_number": "1344110001387",
-    "enterprizeId": "2"
-  },
-  {
-    "number": "035420",
-    "company": "네이버",
-    "law_number": "1101111707178",
-    "enterprizeId": "3"
-  }
-]
+{
+  "basDt": "20220322",
+  "crno": "111111111111",
+  "dvdnBasDt": "20211101",
+  "cashDvdnPayDt": "20211212",
+  "isinCdNm": "삼성전자",
+  "stckGenrDvdnAmt": "3400"
+}

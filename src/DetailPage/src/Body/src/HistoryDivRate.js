@@ -32,7 +32,7 @@ ChartJS.register(
   Filler
 );
 // 배당률
-const HistoryDivRate = () => {
+const HistoryDivRate = ({ currentEnterprise }) => {
   /*
       차트 라벨 로그인,미로그인 공동
   */
@@ -145,7 +145,7 @@ const HistoryDivRate = () => {
                 </div>
               </div>
               <div className="col-lg-6">
-                <DivInform />
+                <DivInform currentEnterprise={currentEnterprise} />
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 const Loginmodal = () => {
   const REST_API_KEY = process.env.REACT_APP_REST_API_KEY;
-  const REDIRECT_URI = "http://localhost:3000/callback";
+  const REDIRECT_URI = "http://localhost:3000/auth";
 
   const KAKAO_AUTH_URI = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
 
@@ -34,10 +34,7 @@ const Loginmodal = () => {
                 <strong>카카오로 로그인 후 사용 가능합니다.</strong>
               </h6>
 
-              <span
-                className="logo"
-                onClick={() => handleSocialLogin("github")}
-              >
+              <span className="logo" onClick={handleSocialLogin}>
                 <img src="/img/kakao_login.png" alt="카카오톡" />
               </span>
             </div>

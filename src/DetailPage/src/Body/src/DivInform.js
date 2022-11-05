@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import moment from "moment";
 
 // 배당정보: 한주당 배당금 배당락 기준일 배당 지급일
-const DivInform = () => {
+const DivInform = ({ currentEnterprise }) => {
   /*
       로그인한지 안한지 체크
       userId로 확인
@@ -21,6 +22,10 @@ const DivInform = () => {
     } catch (err) {
       console.log(err);
     }
+  };
+
+  const numberWithCommas = (num) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
   useEffect(() => {
@@ -70,7 +75,10 @@ const DivInform = () => {
                           data-bs-parent="#accordionExample"
                         >
                           <div className="accordion-body">
-                            주식배당정보_stckGenrDvdnAmt
+                            {numberWithCommas(
+                              currentEnterprise.stckGenrDvdnAmt
+                            )}
+                            원
                           </div>
                         </div>
                       </div>
@@ -96,7 +104,10 @@ const DivInform = () => {
                           data-bs-parent="#accordionExample"
                         >
                           <div className="accordion-body">
-                            주식배당정보_dvdnBasDt
+                            {moment(
+                              currentEnterprise.dvdnBasDt,
+                              "YYYYMMDD"
+                            ).format("YYYY-MM-DD")}
                           </div>
                         </div>
                       </div>
@@ -122,7 +133,10 @@ const DivInform = () => {
                           data-bs-parent="#accordionExample"
                         >
                           <div className="accordion-body">
-                            주식배당정보_cashDvdnPayDt
+                            {moment(
+                              currentEnterprise.cashDvdnPayDt,
+                              "YYYYMMDD"
+                            ).format("YYYY-MM-DD")}
                           </div>
                         </div>
                       </div>

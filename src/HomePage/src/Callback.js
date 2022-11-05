@@ -9,9 +9,10 @@ const Callback = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await http.get(`api/code=${code}`);
+        const res = await http.get(`/api/oauth/token?code=${code}`);
         const token = res.headers.authorization;
         window.localStorage.setItem("token", token);
+        console.log("login success", token);
         navigate("/");
       } catch (e) {
         console.error(e);

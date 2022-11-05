@@ -3,7 +3,7 @@ import HistorytDivPayout from "./src/HistorytDivPayout";
 import StockPrice from "./src/StockPrice";
 import { useState } from "react";
 
-const Index = ({ enterpriseList, currentCompany }) => {
+const Index = ({ currentEnterprise }) => {
   const [hearts, setheart] = useState();
   const heart = () => {
     setheart(!hearts);
@@ -15,7 +15,7 @@ const Index = ({ enterpriseList, currentCompany }) => {
         <div style={{ display: "flex", marginTop: "60px" }}>
           {/* 기업명 */}
           <div className="companyT">
-            <h1>{currentCompany.isinCdNm}</h1>
+            <h1>{currentEnterprise.isinCdNm}</h1>
           </div>
 
           {/* 관심기업 버튼 */}
@@ -40,7 +40,7 @@ const Index = ({ enterpriseList, currentCompany }) => {
         </div>
         {/* 배당률 */}
         <div style={{ margin: "0 auto", marginTop: "50px" }}>
-          <HistoryDivRate />
+          <HistoryDivRate currentEnterprise={currentEnterprise} />
         </div>
         {/* 배당성향 */}
         <div style={{ margin: "0 auto", marginTop: "50px" }}>

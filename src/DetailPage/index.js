@@ -3,15 +3,16 @@ import Body from "./src/Body";
 import "./src/Font.css";
 import { useLocation } from "react-router-dom";
 import { useQuery } from "react-query";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getPortableData } from "../api/portable";
+import dummyEnterprise from "../DUMMY_DATA/CompanyDATA.json";
 
 const Index = () => {
-  const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const searchCompany = searchParams.get("enterprise");
+  // const location = useLocation();
+  // const searchParams = new URLSearchParams(location.search);
+  // const searchEnterprise = searchParams.get("enterprise");
 
-  const [currentCompany, setCurrentCompany] = useState({
+  const [currentEnterprise, setCurrentEnterprise] = useState({
     basDt: "",
     crno: "",
     dvdnBasDt: "",
@@ -20,24 +21,25 @@ const Index = () => {
     stckGenrDvdnAmt: "",
   });
 
-  const [enterpriseList, setEnterPriseList] = useState([]);
+  // useQuery(
+  //   ["enterprise", searchEnterprise],
+  //   () => getPortableData({ company: searchEnterprise }),
+  //   {
+  //     onSuccess: (data) => {
+  //       console.log(data);
+  //       setCurrentEnterprise(data);
+  //     },
+  //   }
+  // );
 
-  useQuery(
-    ["enterprise", searchCompany],
-    () => getPortableData({ company: searchCompany }),
-    {
-      onSuccess: (data) => {
-        console.log(data);
-        setEnterPriseList(data);
-        setCurrentCompany(data[0]);
-      },
-    }
-  );
+  useEffect(() => {
+    setCurrentEnterprise(dummyEnterprise);
+  }, []);
 
   return (
     <div>
-      <Header currentCompany={currentCompany} />
-      <Body enterpriseList={enterpriseList} currentCompany={currentCompany} />
+      <Header currentEnterprise={currentEnterprise} />
+      <Body currentEnterprise={currentEnterprise} />
     </div>
   );
 };

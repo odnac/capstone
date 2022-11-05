@@ -1,59 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import http from "../../api/http";
 
-const Header = ({ currentCompany }) => {
-  const [userId, setUserId] = useState();
-
-  /* 로그인 시 로그아웃 버튼 활성화 || 미로그인 시 로그인 버튼 활성화 */
-  // 스크롤 시 헤더 고정시키기
-  const REST_API_KEY = "2bfe8ae0660ba533d909f87f234194bb";
-  const REDIRECT_URI = "http://localhost:3000/login";
-  const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
-
-  const onKakao = (e) => {
-    e.preventDefault();
-    window.location.replace(KAKAO_AUTH_URL);
-  };
-
-  const getProfile = async () => {
-    try {
-      // Kakao SDK API를 이용해 사용자 정보 획득
-      let data = await window.Kakao.API.request({
-        url: "/v2/user/me",
-      });
-      // 사용자 정보 변수에 저장
-      setUserId(data.id);
-      console.log(data);
-      // setNickName(data.properties.nickname);
-      // setProfileImage(data.properties.profile_image);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  useEffect(() => {
-    getProfile();
-  }, []);
-
-  useEffect(() => {
-    if (userId) {
-      console.log("userId: ", userId);
-      // alert("success login", userId);
-    }
-  }, [userId]);
-
-  /**
-   *  기업 재검색
-   */
-
+const Header = ({ currentEnterprise }) => {
   const navigate = useNavigate(); // 페이지 이동 시 파라미터 전달
   const [userCompany, setUserCompany] = useState(""); // 검색창에 입력한 기업명 또는 기업번호
-
-  /* 사용자가 검색창에 입력한 기업명 기업번호 userCompany로 받음 */
-  const getUserInputCompany = (e) => {
-    setUserCompany(e.target.value);
-  };
 
   /* 입력한 기업이 더미데이터에 있는지 확인 */
   const onCheckData = (e) => {
@@ -66,7 +17,6 @@ const Header = ({ currentCompany }) => {
       if (!itemList.length) return alert("검색 결과가 없습니다.");
       navigate(`/detail?enterprise=${userCompany}`);
     });
-    // window.location.replace("/detail");
   };
 
   return (
@@ -91,7 +41,7 @@ const Header = ({ currentCompany }) => {
                   type="text"
                   placeholder="기업명을 입력하세요."
                   value={userCompany}
-                  onChange={getUserInputCompany}
+                  onChange={(e) => setUserCompany(e.target.value)}
                 />
                 <button className="btn btn-outline-success" type="submit">
                   Search
@@ -214,7 +164,7 @@ const Header = ({ currentCompany }) => {
                 </div>
                 {/* 게시판 */}
                 <div className="col-3">
-                  <Link to={`/board/${currentCompany.crno}`}>
+                  <Link to={`/board/${currentEnterprise.crno}`}>
                     <a className="text-black ">게시판</a>
                   </Link>
                 </div>
