@@ -24,8 +24,10 @@ const HistoryDiv = ({ dividendData }) => {
 
   const onChange = (e) => {
     setPrice(
-      (e.target.value * 600).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-    ); // '600'에 최근에 받은 배당금 넣어야 함.
+      (e.target.value * dividendData.crtmOnskCashDvdnAmt)
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    );
   };
 
   const options = {
