@@ -5,7 +5,6 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -29,7 +28,7 @@ ChartJS.register(
 );
 
 // 과거 배당 성향
-const HistorytDivPayout = () => {
+const HistorytDivPayout = ({ dividendData }) => {
   const options = {
     responsive: true,
     plugins: {
@@ -43,21 +42,17 @@ const HistorytDivPayout = () => {
     },
   };
 
-  /*
-      차트 로그인, 미로그인 공통 데이터
-  */
-  const labels = [
-    "now-9M || now-3Y",
-    "now-6M || now-2Y",
-    "'now-3M || now-1Y'",
-    "now",
-  ];
+  const labels = ["now-9M || now-3Y", "now-6M || now-2Y", "'now-3M || now-1Y'"];
   const data = {
     labels: labels,
     datasets: [
       {
         label: "배당성향(%)",
-        data: [40, 50, 60, 70],
+        data: [
+          dividendData.bpvtrCashDvdnTndnCtt,
+          dividendData.pvtrCashDvdnTndnCtt,
+          dividendData.crtmCashDvdnTndnCtt,
+        ],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(255, 159, 64, 0.2)",
@@ -81,147 +76,86 @@ const HistorytDivPayout = () => {
     ],
   };
 
-  /*
-      로그인 시 테이블
-  */
-  function createData(name, now, now3M_now1Y, now6M_now2Y, now9M_now3Y) {
-    return { name, now, now3M_now1Y, now6M_now2Y, now9M_now3Y };
+  function createData(name, now3M_now1Y, now6M_now2Y, now9M_now3Y) {
+    return { name, now3M_now1Y, now6M_now2Y, now9M_now3Y };
   }
 
-  const rows = [createData("배당성향", 40, 50, 60, 70)];
-
-  /*
-      로그인한지 안한지 체크
-      userId로 확인
-  */
-  const [userId, setUserId] = useState();
-  const getProfile = async () => {
-    try {
-      // Kakao SDK API를 이용해 사용자 정보 획득
-      let data = await window.Kakao.API.request({
-        url: "/v2/user/me",
-      });
-      // 사용자 정보 변수에 저장
-      setUserId(data.id);
-      console.log(data);
-      // setNickName(data.properties.nickname);
-      // setProfileImage(data.properties.profile_image);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  useEffect(() => {
-    getProfile();
-  }, []);
-
-  useEffect(() => {
-    if (userId) {
-      console.log("userId: ", userId);
-      // alert('success login', userId);
-    }
-  }, [userId]);
+  const rows = [
+    createData(
+      "배당성향",
+      dividendData.bpvtrCashDvdnTndnCtt,
+      dividendData.pvtrCashDvdnTndnCtt,
+      dividendData.crtmCashDvdnTndnCtt
+    ),
+  ]; // bpvtrCashDvdnTndnCtt, pvtrCashDvdnTndnCtt, crtmCashDvdnTndnCtt
 
   return (
     <>
-      {!userId ? (
-        <div>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6">
-                <div className="card mb-4">
-                  <div className="card-header">
-                    <i className="fas fa-chart-area me-1"></i>
-                    배당성향(%)
-                  </div>
-                  <div className="card-body">
+      <div>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="card mb-4">
+                <div className="card-header">
+                  <i className="fas fa-chart-area me-1"></i>
+                  배당성향(%)
+                </div>
+                <div className="card-body">
+                  <div className="cardstyle3">
                     {/* 차트 */}
                     <Bar options={options} data={data} />
                   </div>
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <Multitype />
-              </div>
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6">
-                <div className="card mb-4">
-                  <div className="card-header">
-                    <i className="fas fa-chart-area me-1"></i>
-                    배당성향(%)
-                  </div>
-                  <div className="card-body">
-                    <div className="cardstyle3">
-                      {/* 차트 */}
-                      <Bar options={options} data={data} />
-                    </div>
-                    {/* 테이블 */}
-                    <TableContainer component={Paper}>
-                      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                        <TableHead>
-                          <TableRow>
-                            <TableCell></TableCell>
-                            <TableCell align="right">now</TableCell>
-                            <TableCell align="right">
-                              now-3M || now-1Y
+                  {/* 테이블 */}
+                  <TableContainer component={Paper}>
+                    <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                      <TableHead>
+                        <TableRow>
+                          <TableCell></TableCell>
+                          <TableCell align="right">now-3M || now-1Y</TableCell>
+                          <TableCell align="right">now-6M || now-2Y</TableCell>
+                          <TableCell align="right">now-9M || now-3Y</TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {rows.map((row) => (
+                          <TableRow
+                            key={row.name}
+                            sx={{
+                              "&:last-child td, &:last-child th": {
+                                border: 0,
+                              },
+                            }}
+                          >
+                            <TableCell component="th" scope="row">
+                              {row.name}
                             </TableCell>
                             <TableCell align="right">
-                              now-6M || now-2Y
+                              {row.now9M_now3Y}
                             </TableCell>
                             <TableCell align="right">
-                              now-9M || now-3Y
+                              {row.now6M_now2Y}
+                            </TableCell>
+                            <TableCell align="right">
+                              {row.now3M_now1Y}
                             </TableCell>
                           </TableRow>
-                        </TableHead>
-                        <TableBody>
-                          {rows.map((row) => (
-                            <TableRow
-                              key={row.name}
-                              sx={{
-                                "&:last-child td, &:last-child th": {
-                                  border: 0,
-                                },
-                              }}
-                            >
-                              <TableCell component="th" scope="row">
-                                {row.name}
-                              </TableCell>
-                              <TableCell align="right">
-                                {row.now9M_now3Y}
-                              </TableCell>
-                              <TableCell align="right">
-                                {row.now6M_now2Y}
-                              </TableCell>
-                              <TableCell align="right">
-                                {row.now3M_now1Y}
-                              </TableCell>
-                              <TableCell align="right">{row.now}</TableCell>
-                            </TableRow>
-                          ))}
-                        </TableBody>
-                      </Table>
-                    </TableContainer>
-                    {/* 배당성향이란 무엇일까? */}
-                    <p>
-                      배당성향이란 무엇일까? - 0~30% 성장기업, 50%~ 성숙기업
-                      설명
-                    </p>
-                  </div>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                  {/* 배당성향이란 무엇일까? */}
+                  <p>
+                    배당성향이란 무엇일까? - 0~30% 성장기업, 50%~ 성숙기업 설명
+                  </p>
                 </div>
               </div>
-              <div className="col-lg-6">
-                <Multitype />
-              </div>
+            </div>
+            <div className="col-lg-6">
+              <Multitype />
             </div>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 };

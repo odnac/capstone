@@ -1,7 +1,7 @@
 import Header from "./src/Header";
 import Body from "./src/Body";
 import "./src/Font.css";
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { useQuery } from "react-query";
 import { useEffect, useState } from "react";
 import { getPortableData } from "../api/portable";
@@ -35,6 +35,8 @@ const Index = () => {
   useEffect(() => {
     setCurrentEnterprise(dummyEnterprise);
   }, []);
+
+  if (!window.localStorage.getItem("token")) return <Navigate to="/" />;
 
   return (
     <div>

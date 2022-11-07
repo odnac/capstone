@@ -1,13 +1,35 @@
 import HistoryDivRate from "./src/HistoryDivRate";
 import HistorytDivPayout from "./src/HistorytDivPayout";
 import StockPrice from "./src/StockPrice";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import HistoryDiv from "./src/HistoryDiv";
+
+import dummyDividend from "../../../DUMMY_DATA/dividendDATA.json";
 
 const Index = ({ currentEnterprise }) => {
   const [hearts, setheart] = useState();
+  const [dividendData, setDividendData] = useState({
+    basDt: "",
+    bpvtrCashDvdnTndnCtt: "",
+    bpvtrOnskCashDvdnAmt: "",
+    bpvtrOnskCashDvdnBnfRt: "",
+
+    crtmCashDvdnTndnCtt: "",
+    crtmOnskCashDvdnAmt: "",
+    crtmOnskCashDvdnBnfRt: "",
+
+    pvtrCashDvdnTndnCtt: "",
+    pvtrOnskCashDvdnAmt: "",
+    pvtrOnskCashDvdnBnfRt: "",
+  });
+
   const heart = () => {
     setheart(!hearts);
   };
+
+  useEffect(() => {
+    setDividendData(dummyDividend);
+  }, [dummyDividend]);
 
   return (
     <div>
@@ -36,15 +58,23 @@ const Index = ({ currentEnterprise }) => {
 
         {/* 주가 */}
         <div style={{ margin: "0 auto", marginTop: "40px" }}>
-          <StockPrice />
+          <div className="container">
+            <div className="row">
+              <StockPrice />
+              <HistoryDiv dividendData={dividendData} />
+            </div>
+          </div>
         </div>
         {/* 배당률 */}
         <div style={{ margin: "0 auto", marginTop: "50px" }}>
-          <HistoryDivRate currentEnterprise={currentEnterprise} />
+          <HistoryDivRate
+            currentEnterprise={currentEnterprise}
+            dividendData={dividendData}
+          />
         </div>
         {/* 배당성향 */}
         <div style={{ margin: "0 auto", marginTop: "50px" }}>
-          <HistorytDivPayout />
+          <HistorytDivPayout dividendData={dividendData} />
         </div>
       </div>
     </div>
