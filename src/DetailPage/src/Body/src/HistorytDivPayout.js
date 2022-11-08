@@ -144,9 +144,18 @@ const HistorytDivPayout = ({ dividendData }) => {
                     </Table>
                   </TableContainer>
                   {/* 배당성향이란 무엇일까? */}
-                  <p>
-                    배당성향이란 무엇일까? - 0~30% 성장기업, 50%~ 성숙기업 설명
-                  </p>
+                  <div className="cardstyle">
+                    <strong>배당성향이 무엇일까?</strong>
+                    <br />
+                    <br />
+                    <p>
+                      지급 기준일 하루 전에 주식을 매수해야 배당금을 받을 수
+                      있어요!
+                      <br />
+                      <strong></strong>
+                      까지 사야해요!
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

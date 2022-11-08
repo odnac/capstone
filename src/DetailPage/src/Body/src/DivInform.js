@@ -7,6 +7,10 @@ const DivInform = ({ currentEnterprise }) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
+  const makeInt = (a) => {
+    return parseInt(a);
+  };
+
   return (
     <>
       <div>
@@ -107,14 +111,42 @@ const DivInform = ({ currentEnterprise }) => {
                     </div>
                   </div>
                   <div className="cardstyle">
-                    <strong>다음 배당금 예상하기!</strong>
+                    <strong>배당금을 받으려면 언제 사야할까?</strong>
                     <br />
                     <br />
                     <p>
-                      요
+                      지급 기준일 하루 전에 주식을 매수해야 배당금을 받을 수
+                      있어요!
                       <br />
-                      <strong>아아아아</strong>
-                      ㅇㄹㅇㄹ
+                      <strong>
+                        {moment(
+                          currentEnterprise.dvdnBasDt - 1,
+                          "YYYYMMDD"
+                        ).format("YYYY-MM-DD")}
+                      </strong>
+                      까지 사야해요!
+                    </p>
+                  </div>
+                  <br />
+                  <div className="cardstyle">
+                    <strong>다음 배당금은 얼마일까?</strong>
+                    <br />
+                    <br />
+                    <p>
+                      배당 평가 모형의 항상 성장 모형을 응용했어요.
+                      <br />
+                      간단히 배당금 x 평균 배당 성장률로 나타내요!
+                      <br />
+                      <strong>
+                        {numberWithCommas(currentEnterprise.stckGenrDvdnAmt)} x
+                        8% ={" "}
+                        {makeInt(
+                          numberWithCommas(currentEnterprise.stckGenrDvdnAmt) *
+                            1.08
+                        )}
+                        (￦)
+                      </strong>
+                      <br /> 예상치이므로 실제와 다를 수 있습니다.
                     </p>
                   </div>
                 </div>

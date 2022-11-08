@@ -1,6 +1,7 @@
 import Logo from "./src/Logo";
 import Search from "./src/Search";
 import Carousel from "./src/Carousel";
+import Loginmodal from "./src/Loginmodal";
 import "./src/Font.css";
 
 const Index = () => {
@@ -11,7 +12,7 @@ const Index = () => {
         <Search />
         <Carousel />
       </div>
-      {/* {!window.localStorage.getItem("token") && <Loginmodal />} */}
+      {!window.localStorage.getItem("token") && <Loginmodal />}
     </>
   );
 };
