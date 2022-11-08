@@ -1,0 +1,1003 @@
+[
+    {
+        "number" : "005930",
+        "company" : "삼성전자",
+        "law_number":"1301110006246"
+    },
+    {
+        "number" : "000660",
+        "company" : "SK하이닉스",
+        "law_number":"1344110001387"
+        
+    },
+    {
+        "number" : "035420",
+        "company" : "네이버",
+        "law_number":"1101111707178"
+    },
+    {
+        "number" : "207940",
+        "company" : "삼성바이오로직스",
+        "law_number":"1201110566317"
+    },
+    {
+        "number" : "035720",
+        "company" : "카카오",
+        "law_number":"1101111129497"
+    },
+    {
+        "number" : "051910",
+        "company" : "LG화학",
+        "law_number":"1101112207995"
+    },
+    {
+        "number" : "006400",
+        "company" : "삼성SDI",
+        "law_number":"1101110394174"
+    },
+    {
+        "number" : "005380",
+        "company" : "현대차",
+        "law_number":"1101110019962"
+    },
+    {
+        "number" : "323410",
+        "company" : "카카오뱅크",
+        "law_number":"1311110435767"
+    },
+    {
+        "number" : "000270",
+        "company" : "기아",
+        "law_number":"1101110037998"
+    },
+    {
+        "number" : "068270",
+        "company" : "셀트리온",
+        "law_number":"1350110034038"
+    },
+    {
+        "number" : "259960",
+        "company" : "크래프톤",
+        "law_number":"1101113645772"
+    },
+    {
+        "number" : "005490",
+        "company" : "POSCO",
+        "law_number":"1746110000741"
+    },
+    {
+        "number" : "105560",
+        "company" : "KB금융",
+        "law_number":"1101113975517"
+    },
+    {
+        "number" : "012330",
+        "company" : "현대모비스",
+        "law_number":"1101110215536"
+    },
+    {
+        "number" : "302440",
+        "company" : "SK바이오사이언스",
+        "law_number":"1311110523736"
+    },
+    {
+        "number" : "028260",
+        "company" : "삼성물산",
+        "law_number":"1101110015762"
+    },
+    {
+        "number" : "066570",
+        "company" : "LG전자",
+        "law_number":"1101112487050"
+    },
+    {
+        "number" : "096770",
+        "company" : "SK이노베이션",
+        "law_number":"1101113710385"
+    },
+    {
+        "number" : "055550",
+        "company" : "신한지주",
+        "law_number":"1101112322438"
+    },
+    {
+        "number" : "034730",
+        "company" : "SK",
+        "law_number":"1101110769583"
+    },
+    {
+        "number" : "051900",
+        "company" : "LG생활건강",
+        "law_number":"1101112208000"
+    },
+    {
+        "number" : "036570",
+        "company" : "엔씨소프트",
+        "law_number":"1101111387748"
+    },
+    {
+        "number" : "352820",
+        "company" : "하이브",
+        "law_number":"1101113166546"
+    },
+    {
+        "number" : "015760",
+        "company" : "한국전력",
+        "law_number":"1146710001456"
+    },
+    {
+        "number" : "003550",
+        "company" : "LG",
+        "law_number":"1101110003543"
+    },
+    {
+        "number" : "009150",
+        "company" : "삼성전기",
+        "law_number":"1301110001626"
+    },
+    {
+        "number" : "017670",
+        "company" : "SK텔레콤",
+        "law_number":"1101110371346"
+    },
+    {
+        "number" : "032830",
+        "company" : "삼성생명",
+        "law_number":"1101110005953"
+    },
+    {
+        "number" : "086790",
+        "company" : "하나금융지주",
+        "law_number":"1101113352004"
+    },
+    {
+        "number" : "011200",
+        "company" : "HMM",
+        "law_number":"1101110193740"
+    },
+    {
+        "number" : "003670",
+        "company" : "포스코케미칼",
+        "law_number":"1746110001947"
+    },
+    {
+        "number" : "361610",
+        "company" : "SK아이이테크놀로지",
+        "law_number":"1101117064217"
+    },
+    {
+        "number" : "018260",
+        "company" : "삼성에스디에스",
+        "law_number":"1101110398556"
+    },
+    {
+        "number" : "033780",
+        "company" : "KT&G",
+        "law_number":"1601110067804"
+    },
+    {
+        "number" : "034020",
+        "company" : "두산중공업",
+        "law_number":"1942110000943"
+    },
+    {
+        "number" : "251270",
+        "company" : "넷마블",
+        "law_number":"1101114731299"
+    },
+    {
+        "number" : "000810",
+        "company" : "삼성화재",
+        "law_number":"1101110005078"
+    },
+    {
+        "number" : "090430",
+        "company" : "아모레퍼시픽",
+        "law_number":"1101113471036"
+    },
+    {
+        "number" : "010130",
+        "company" : "고려아연",
+        "law_number":"1101110168404"
+    },
+    {
+        "number" : "010950",
+        "company" : "S-Oil",
+        "law_number":"1101110189955"
+    },
+    {
+        "number" : "316140",
+        "company" : "우리금융지주",
+        "law_number":"1101116981206"
+    },
+    {
+        "number" : "003490",
+        "company" : "대한항공",
+        "law_number":"1101110108484"
+    },
+    {
+        "number" : "030200",
+        "company" : "KT",
+        "law_number":"1101111468754"
+    },
+    {
+        "number" : "024110",
+        "company" : "기업은행",
+        "law_number":"1101350000903"
+    },
+    {
+        "number" : "011790",
+        "company" : "SKC",
+        "law_number":"1301110001585"
+    },
+    {
+        "number" : "326030",
+        "company" : "SK바이오팜",
+        "law_number":"1101114570720"
+    },
+    {
+        "number" : "034220",
+        "company" : "LG디스플레이",
+        "law_number":"1101110393134"
+    },
+    {
+        "number" : "018880",
+        "company" : "한온시스템",
+        "law_number":"1347110002206"
+    },
+    {
+        "number" : "011070",
+        "company" : "LG이노텍",
+        "law_number":"1101110192180"
+    },
+    {
+        "number" : "011170",
+        "company" : "롯데케미칼",
+        "law_number":"1101110193196"
+    },
+    {
+        "number" : "009540",
+        "company" : "한국조선해양",
+        "law_number":"1812110000386"
+    },
+    {
+        "number" : "020150",
+        "company" : "일진머티리얼즈",
+        "law_number":"2149110003625"
+    },
+    {
+        "number" : "009830",
+        "company" : "한화솔루션",
+        "law_number":"1101110360935"
+    },
+    {
+        "number" : "032640",
+        "company" : "LG유플러스",
+        "law_number":"1101111296676"
+    },
+    {
+        "number" : "086280",
+        "company" : "현대글로비스",
+        "law_number":"1101112177388"
+    },
+    {
+        "number" : "006800",
+        "company" : "미래에셋증권",
+        "law_number":"1101110011679"
+    },
+    {
+        "number" : "097950",
+        "company" : "CJ제일제당",
+        "law_number":"1101113748253"
+    },
+    {
+        "number" : "021240",
+        "company" : "코웨이",
+        "law_number":"1101110626501"
+    },
+    {
+        "number" : "004020",
+        "company" : "현대제철",
+        "law_number":"1201110001743"
+    },
+    {
+        "number" : "000720",
+        "company" : "현대건설",
+        "law_number":"1101110007909"
+    },
+    {
+        "number" : "035250",
+        "company" : "강원랜드",
+        "law_number":"1449110001666"
+    },
+    {
+        "number" : "011780",
+        "company" : "금호석유",
+        "law_number":"1101110205975"
+    },
+    {
+        "number" : "161390",
+        "company" : "한국타이어앤테크놀로지",
+        "law_number":"1101114952093"
+    },
+    {
+        "number" : "010140",
+        "company" : "삼성중공업",
+        "law_number":"1101110168595"
+    },
+    {
+        "number" : "071050",
+        "company" : "한국금융지주",
+        "law_number":"1101112691651"
+    },
+    {
+        "number" : "267250",
+        "company" : "현대중공업지주",
+        "law_number":"1701110638661"
+    },
+    {
+        "number" : "028050",
+        "company" : "삼성엔지니어링",
+        "law_number":"1101110240509"
+    },
+    {
+        "number" : "139480",
+        "company" : "이마트",
+        "law_number":"1101114594952"
+    },
+    {
+        "number" : "000100",
+        "company" : "유한양행",
+        "law_number":"1101110014409"
+    },
+    {
+        "number" : "271560",
+        "company" : "오리온",
+        "law_number":"1101116417805"
+    },
+    {
+        "number" : "016360",
+        "company" : "삼성증권",
+        "law_number":"1101110335649"
+    },
+    {
+        "number" : "029780",
+        "company" : "삼성카드",
+        "law_number":"1101110346901"
+    },
+    {
+        "number" : "005830",
+        "company" : "DB손해보험",
+        "law_number":"1101110346901"
+    },
+    {
+        "number" : "003410",
+        "company" : "쌍용C&E",
+        "law_number":"1101110037823"
+    },
+    {
+        "number" : "005940",
+        "company" : "NH투자증권",
+        "law_number":"1101110098130"
+    },
+    {
+        "number" : "241560",
+        "company" : "두산밥캣",
+        "law_number":"1101115402237"
+    },
+    {
+        "number" : "078930",
+        "company" : "GS",
+        "law_number":"1101113045112"
+    },
+    {
+        "number" : "008930",
+        "company" : "한미사이언스",
+        "law_number":"1348110003187"
+    },
+    {
+        "number" : "002790",
+        "company" : "아모레G",
+        "law_number":"1101110026644"
+    },
+    {
+        "number" : "014680",
+        "company" : "한솔케미칼",
+        "law_number":"1101110270895"
+    },
+    {
+        "number" : "180640",
+        "company" : "한진칼",
+        "law_number":"1101115197193"
+    },
+    {
+        "number" : "008560",
+        "company" : "메리츠증권",
+        "law_number":"1101110141301"
+    },
+    {
+        "number" : "036460",
+        "company" : "한국가스공사",
+        "law_number":"1146710006125"
+    },
+    {
+        "number" : "000990",
+        "company" : "DB하이텍",
+        "law_number":"1101110026206"
+    },
+    {
+        "number" : "026960",
+        "company" : "동서",
+        "law_number":"1101110180888"
+    },
+    {
+        "number" : "052690",
+        "company" : "한전기술",
+        "law_number":"1101110186307"
+    },
+    {
+        "number" : "006360",
+        "company" : "GS건설",
+        "law_number":"1101110002694"
+    },
+    {
+        "number" : "336260",
+        "company" : "두산퓨얼셀",
+        "law_number":"2149110058935"
+    },
+    {
+        "number" : "004990",
+        "company" : "롯데지주",
+        "law_number":"1101110076300"
+    },
+    {
+        "number" : "128940",
+        "company" : "한미약품",
+        "law_number":"1348110197550"
+    },
+    {
+        "number" : "007070",
+        "company" : "GS리테일",
+        "law_number":"1101110090037"
+    },
+    {
+        "number" : "000120",
+        "company" : "CJ대한통운",
+        "law_number":"1101110006167"
+    },
+    {
+        "number" : "010620",
+        "company" : "현대미포조선",
+        "law_number":"1812110000526"
+    },
+    {
+        "number" : "028670",
+        "company" : "팬오션",
+        "law_number":"1101110004286"
+    },
+    {
+        "number" : "012750",
+        "company" : "에스원",
+        "law_number":"1101110221939"
+    },
+    {
+        "number" : "008770",
+        "company" : "호텔신라",
+        "law_number":"1101110145519"
+    },
+    {
+        "number" : "047810",
+        "company" : "한국항공우주",
+        "law_number":"1101111827570"
+    },
+    {
+        "number" : "272210",
+        "company" : "한화시스템",
+        "law_number":"1760110020640"
+    },
+    {
+        "number" : "298050",
+        "company" : "효성첨단소재",
+        "law_number":"1101116770170"
+    },
+    {
+        "number" : "138930",
+        "company" : "BNK금융지주",
+        "law_number":"1801110750893"
+    },
+    {
+        "number" : "039490",
+        "company" : "키움증권",
+        "law_number":"1101111867948"
+    },
+    {
+        "number" : "010060",
+        "company" : "OCI",
+        "law_number":"1746110000981"
+    },
+    {
+        "number" : "204320",
+        "company" : "만도",
+        "law_number":"1313110140776"
+    },
+    {
+        "number" : "006280",
+        "company" : "녹십자",
+        "law_number":"1101110109854"
+    },
+    {
+        "number" : "088350",
+        "company" : "한화생명",
+        "law_number":"1101110003204"
+    },
+    {
+        "number" : "285130",
+        "company" : "SK케미칼",
+        "law_number":"1311110501021"
+    },
+    {
+        "number" : "030000",
+        "company" : "제일기획",
+        "law_number":"1101110139017"
+    },
+    {
+        "number" : "282330",
+        "company" : "BGF리테일",
+        "law_number":"1101116555770"
+    },
+    {
+        "number" : "042660",
+        "company" : "대우조선해양",
+        "law_number":"1101112095837"
+    },
+    {
+        "number" : "002380",
+        "company" : "KCC",
+        "law_number":"1101110221814"
+    },
+    {
+        "number" : "023530",
+        "company" : "롯데쇼핑",
+        "law_number":"1101110000086"
+    },
+    {
+        "number" : "112610",
+        "company" : "씨에스윈드",
+        "law_number":"1101113509887"
+    },
+    {
+        "number" : "047050",
+        "company" : "포스코인터내셔널",
+        "law_number":"1101112137358"
+    },
+    {
+        "number" : "001040",
+        "company" : "CJ",
+        "law_number":"1101110015639"
+    },
+    {
+        "number" : "000880",
+        "company" : "한화",
+        "law_number":"1101110002959"
+    },
+    {
+        "number" : "047040",
+        "company" : "대우건설",
+        "law_number":"1101112137895"
+    },
+    {
+        "number" : "093370",
+        "company" : "후성",
+        "law_number":"1314110189425"
+    },
+    {
+        "number" : "298020",
+        "company" : "효성티앤씨",
+        "law_number":"1101116770138"
+    },
+    {
+        "number" : "375500",
+        "company" : "DL이앤씨",
+        "law_number":"1101117736808"
+    },
+    {
+        "number" : "001450",
+        "company" : "현대해상",
+        "law_number":"1101110035893"
+    },
+    {
+        "number" : "064350",
+        "company" : "현대로템",
+        "law_number":"1942110036336"
+    },
+    {
+        "number" : "012450",
+        "company" : "한화에어로스페이스",
+        "law_number":"1942110000480"
+    },
+    {
+        "number" : "000080",
+        "company" : "하이트진로",
+        "law_number":"1101110028591"
+    },
+    {
+        "number" : "004170",
+        "company" : "신세계",
+        "law_number":"1101110028848"
+    },
+    {
+        "number" : "081660",
+        "company" : "휠라홀딩스",
+        "law_number":"1101110792667"
+    },
+    {
+        "number" : "004000",
+        "company" : "롯데정밀화학",
+        "law_number":"1812110000013"
+    },
+    {
+        "number" : "009240",
+        "company" : "한샘",
+        "law_number":"1341110003595"
+    },
+    {
+        "number" : "120110",
+        "company" : "코오롱인더",
+        "law_number":"1353110013606"
+    },
+    {
+        "number" : "004800",
+        "company" : "효성",
+        "law_number":"1101110030497"
+    },
+    {
+        "number" : "011210",
+        "company" : "현대위아",
+        "law_number":"1942110000125"
+    },
+    {
+        "number" : "003090",
+        "company" : "대웅",
+        "law_number":"1311110000271"
+    },
+    {
+        "number" : "000150",
+        "company" : "두산",
+        "law_number":"1101110013774"
+    },
+    {
+        "number" : "019170",
+        "company" : "신풍제약",
+        "law_number":"1301110011815"
+    },
+    {
+        "number" : "051600",
+        "company" : "한전KPS",
+        "law_number":"1101110371148"
+    },
+    {
+        "number" : "004370",
+        "company" : "농심",
+        "law_number":"1101110057574"
+    },
+    {
+        "number" : "111770",
+        "company" : "영원무역",
+        "law_number":"1101114129585"
+    },
+    {
+        "number" : "017800",
+        "company" : "현대엘리베이터",
+        "law_number":"1344110001519"
+    },
+    {
+        "number" : "007310",
+        "company" : "오뚜기",
+        "law_number":"1341110002258"
+    },
+    {
+        "number" : "006260",
+        "company" : "LS",
+        "law_number":"1101110003965"
+    },
+    {
+        "number" : "069620",
+        "company" : "대웅제약",
+        "law_number":"1348110075342"
+    },
+    {
+        "number" : "010120",
+        "company" : "LS ELECTRIC",
+        "law_number":"1101110520076"
+    },
+    {
+        "number" : "069960",
+        "company" : "현대백화점",
+        "law_number":"1101112644725"
+    },
+    {
+        "number" : "001440",
+        "company" : "대한전선",
+        "law_number":"1101110035835"
+    },
+    {
+        "number" : "014820",
+        "company" : "동원시스템즈",
+        "law_number":"1341110011712"
+    },
+    {
+        "number" : "007700",
+        "company" : "F&F홀딩스",
+        "law_number":"1101110126783"
+    },
+    {
+        "number" : "000240",
+        "company" : "한국앤컴퍼니",
+        "law_number":"1101110034233"
+    },
+    {
+        "number" : "294870",
+        "company" : "HDC현대산업개발",
+        "law_number":"1101116740008"
+    },
+    {
+        "number" : "001230",
+        "company" : "동국제강",
+        "law_number":"1101110031338"
+    },
+    {
+        "number" : "020560",
+        "company" : "아시아나항공",
+        "law_number":"1101110562804"
+    },
+    {
+        "number" : "010780",
+        "company" : "아이에스동서",
+        "law_number":"1101110208383"
+    },
+    {
+        "number" : "185750",
+        "company" : "종근당",
+        "law_number":"1101115260669"
+    },
+    {
+        "number" : "005300",
+        "company" : "롯데칠성",
+        "law_number":"1101110003684"
+    },
+    {
+        "number" : "013890",
+        "company" : "지누스",
+        "law_number":"1347110002553"
+    },
+    {
+        "number" : "000210",
+        "company" : "DL",
+        "law_number":"1101110084915"
+    },
+    {
+        "number" : "001740",
+        "company" : "SK네트웍스",
+        "law_number":"1301110005199"
+    },
+    {
+        "number" : "005250",
+        "company" : "녹십자홀딩스",
+        "law_number":"1345110000014"
+    },
+    {
+        "number" : "079550",
+        "company" : "LIG넥스원",
+        "law_number":"1101111516933"
+    },
+    {
+        "number" : "000670",
+        "company" : "영풍",
+        "law_number":"1101110003824"
+    },
+    {
+        "number" : "073240",
+        "company" : "금호타이어",
+        "law_number":"1101112810590"
+    },
+    {
+        "number" : "032350",
+        "company" : "롯데관광개발",
+        "law_number":"1101110115504"
+    },
+    {
+        "number" : "004490",
+        "company" : "세방전지",
+        "law_number":"1101110202765"
+    },
+    {
+        "number" : "006650",
+        "company" : "대한유화",
+        "law_number":"1101110024698"
+    },
+    {
+        "number" : "192820",
+        "company" : "코스맥스",
+        "law_number":"1348110294273"
+    },
+    {
+        "number" : "003240",
+        "company" : "태광산업",
+        "law_number":"1101110185276"
+    },
+    {
+        "number" : "192080",
+        "company" : "더블유게임즈",
+        "law_number":"1101114855924"
+    },
+    {
+        "number" : "214320",
+        "company" : "이노션",
+        "law_number":"1101113229097"
+    },
+    {
+        "number" : "009420",
+        "company" : "한올바이오파마",
+        "law_number":"1641110000397"
+    },
+    {
+        "number" : "031430",
+        "company" : "신세계인터내셔날",
+        "law_number":"1101110282402"
+    },
+    {
+        "number" : "016380",
+        "company" : "KG동부제철",
+        "law_number":"1101110393308"
+    },
+    {
+        "number" : "003850",
+        "company" : "보령제약",
+        "law_number":"1101110012560"
+    },
+    {
+        "number" : "001800",
+        "company" : "오리온홀딩스",
+        "law_number":"1101110004690"
+    },
+    {
+        "number" : "001120",
+        "company" : "LX인터내셔널",
+        "law_number":"1101110004632"
+    },
+    {
+        "number" : "241590",
+        "company" : "화승엔터프라이즈",
+        "law_number":"1101115891943"
+    },
+    {
+        "number" : "069260",
+        "company" : "휴켐스",
+        "law_number":"1101112611906"
+    },
+    {
+        "number" : "020000",
+        "company" : "한섬",
+        "law_number":"1101110531578"
+    },
+    {
+        "number" : "003000",
+        "company" : "부광약품",
+        "law_number":"1101110030405"
+    },
+    {
+        "number" : "161890",
+        "company" : "한국콜마",
+        "law_number":"1647110030756"
+    },
+    {
+        "number" : "006120",
+        "company" : "SK디스커버리",
+        "law_number":"1301110005727"
+    },
+    {
+        "number" : "284740",
+        "company" : "쿠쿠홈시스",
+        "law_number":"1355110319406"
+    },
+    {
+        "number" : "079160",
+        "company" : "CJ CGV",
+        "law_number":"1101111673220"
+    },
+    {
+        "number" : "103140",
+        "company" : "풍산",
+        "law_number":"1313110083497"
+    },
+    {
+        "number" : "000070",
+        "company" : "삼양홀딩스",
+        "law_number":"1101110026181"
+    },
+    {
+        "number" : "105630",
+        "company" : "한세실업",
+        "law_number":"1201110484303"
+    },
+    {
+        "number" : "005440",
+        "company" : "현대그린푸드",
+        "law_number":"1101110095201"
+    },
+    {
+        "number" : "006040",
+        "company" : "동원산업",
+        "law_number":"1101110003098"
+    },
+    {
+        "number" : "003520",
+        "company" : "영진약품",
+        "law_number":"1101110043127"
+    },
+    {
+        "number" : "001680",
+        "company" : "대상",
+        "law_number":"1101110327125"
+    },
+    {
+        "number" : "114090",
+        "company" : "GKL",
+        "law_number":"1101113301457"
+    },
+    {
+        "number" : "057050",
+        "company" : "현대홈쇼핑",
+        "law_number":"1101112248882"
+    },
+    {
+        "number" : "049770",
+        "company" : "동원F&B",
+        "law_number":"1101112101816"
+    },
+    {
+        "number" : "383800",
+        "company" : "LX홀딩스",
+        "law_number":"1101117875359"
+    },
+    {
+        "number" : "192400",
+        "company" : "쿠쿠홀딩스",
+        "law_number":"1845110000634"
+    },
+    {
+        "number" : "002350",
+        "company" : "넥센타이어",
+        "law_number":"1101110014219"
+    },
+    {
+        "number" : "064960",
+        "company" : "SNT모티브",
+        "law_number":"1801110396069"
+    },
+    {
+        "number" : "003230",
+        "company" : "삼양식품",
+        "law_number":"1101110034308"
+    },
+    {
+        "number" : "042670",
+        "company" : "현대두산인프라코어",
+        "law_number":"1201110234469"
+    },
+    {
+        "number" : "071840",
+        "company" : "롯데하이마트",
+        "law_number":"1101110532633"
+    },
+    {
+        "number" : "007570",
+        "company" : "일양약품",
+        "law_number":"1101110124802"
+    },
+    {
+        "number" : "108670",
+        "company" : "LX하우시스",
+        "law_number":"1101114071207"
+    }
+    ]
