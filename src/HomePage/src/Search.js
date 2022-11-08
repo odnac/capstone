@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import JSONDATA from '../../assets/DATA.json'
+import JSONDATA from "../../assets/DATA.json";
 import { useNavigate } from "react-router-dom";
 import http from "../../api/http";
 
@@ -41,24 +41,31 @@ const Search = () => {
                   <img src="/img/search.svg" />
                 </button>
               </div>
-              
             </div>
           </form>
           {/*검색 기능*/}
-          <div  className="search_list bg-white">
+          <div className="search_list bg-white">
             {JSONDATA.filter((val) => {
-              if (userCompany === ""){
-                return null
-              } else if (val.company.toLowerCase().includes(userCompany.toLowerCase())){
-                return val
+              if (userCompany === "") {
+                return null;
+              } else if (
+                val.company.toLowerCase().includes(userCompany.toLowerCase())
+              ) {
+                return val;
               }
-            }).map((val,key)=> {
-              return (
-              <div className="user" key={key} onClick={()=>setUserCompany(val.company)}> 
-                <p> {val.company} </p>
-              </div>
-              );
-            })}
+            })
+              .map((val, key) => {
+                return (
+                  <div
+                    className="user"
+                    key={key}
+                    onClick={() => setUserCompany(val.company)}
+                  >
+                    <p> {val.company} </p>
+                  </div>
+                );
+              })
+              .splice(0, 5)}
           </div>
         </div>
       </div>

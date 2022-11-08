@@ -1,6 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
-import dummyData from "../../DUMMY_DATA/CompanyDATA.json";
+import React, { useRef, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Modal from "./Modal";
 import { useQuery, useQueryClient } from "react-query";
 import { getPosts } from "../../api/post";
@@ -8,25 +7,17 @@ import moment from "moment";
 import http from "../../api/http";
 
 const Main = () => {
-  const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const searchEnterprise = searchParams.get("enterprise");
+  const params = useParams();
   const queryClient = useQueryClient();
   const navigate = useNavigate(); // 페이지 이동 시 파라미터 전달
   const [userCompany, setUserCompany] = useState(""); // 검색창에 입력한 기업명 또는 기업번호
-  const [posts, setPosts] = useState();
+  const [posts, setPosts] = useState([]);
   const [currentPost, setCurrentPost] = useState({
     id: "",
     title: "",
     content: "",
   });
   const closeBtnRef = useRef();
-  const [currentCompany, setCurrentCompany] = useState({
-    number: "",
-    company: "",
-    law_number: "",
-    enterprizeId: "",
-  });
 
   /* 사용자가 검색창에 입력한 기업명 기업번호 userCompany로 받음 */
   const getUserInputCompany = (e) => {
@@ -36,7 +27,7 @@ const Main = () => {
   const onCheckData = (e) => {
     e.preventDefault();
 
-    http.get(`/portable?enterprise=${userCompany}`).then((res) => {
+    http.get(`/lastest?enterprise=${userCompany}`).then((res) => {
       console.log(res.data);
 
       const itemList = res.data;
@@ -48,15 +39,15 @@ const Main = () => {
   const handleDeletPost = () => {
     let answer = window.confirm("게시글을 삭제하시겠습니까?");
     if (!answer) return;
-    http.delete(`/board/${currentPost.crno}/${currentPost.id}`).then(() => {
+    http.delete(`/board/${params.enterprizeId}/${currentPost.id}`).then(() => {
       queryClient.invalidateQueries(["boards", currentPost.crno]);
       closeBtnRef.current.click();
     });
   };
 
   useQuery(
-    ["boards", currentPost.crno],
-    () => getPosts({ enterprizeId: currentPost.crno }),
+    ["boards", params.enterprizeId],
+    () => getPosts({ enterprizeId: params.enterprizeId }),
     {
       onSuccess: (data) => {
         console.log(data);
@@ -99,7 +90,7 @@ const Main = () => {
       {/* 게시판 */}
       <div className="container mt-5">
         <div className="boardT">
-          <h1>{currentCompany.company} 게시판</h1>
+          <h1>{params.enterprizeId} 게시판</h1>
         </div>
         {posts ? (
           <table

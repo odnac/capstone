@@ -37,7 +37,7 @@ const Index = ({ currentEnterprise, hearts, setheart }) => {
         <div style={{ display: "flex", marginTop: "60px" }}>
           {/* 기업명 */}
           <div className="companyT">
-            <h1>{currentEnterprise.isinCdNm}</h1>
+            <h1>{currentEnterprise.stckIssuCmpyNm}</h1>
           </div>
 
           {/* 관심기업 버튼 */}

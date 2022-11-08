@@ -11,7 +11,7 @@ const Index = () => {
         <Search />
         <Carousel />
       </div>
-      {/* {!window.localStorage.getItem("token") && <Loginmodal />} */}
+      {!window.localStorage.getItem("token") && <Loginmodal />}
     </>
   );
 };

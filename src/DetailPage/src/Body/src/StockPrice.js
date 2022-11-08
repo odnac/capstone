@@ -20,6 +20,9 @@ import {
   PointElement,
   Filler,
 } from "chart.js";
+import { useLocation } from "react-router-dom";
+import { getEnterprisePriceList } from "../../../../api/portable";
+import { useQuery } from "react-query";
 
 ChartJS.register(
   Title,
@@ -33,6 +36,10 @@ ChartJS.register(
 );
 // 주가
 const StockPriceChart = () => {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const searchEnterprise = searchParams.get("enterprise");
+
   const [priceData, setPriceData] = useState([]);
   const [priceList, setPriceList] = useState([]);
   const [sortedPriceList, setSortedPriceList] = useState();
@@ -146,7 +153,7 @@ const StockPriceChart = () => {
 
   const createPriceList = (priceData) => {
     let priceArr = [];
-    priceData.map((data) => priceArr.push(data.clpr));
+    priceData.map((data) => priceArr.push(numberWithCommas(data.clpr)));
     setPriceList(priceArr);
   };
 
@@ -159,15 +166,28 @@ const StockPriceChart = () => {
     setSortedPriceList(sortedPriceArr);
   };
 
-  useEffect(() => {
-    setPriceData(dummyPrice);
-    createPriceList(priceData);
-    createSortedPriceList(priceData);
-  }, [dummyPrice, priceData]);
+  const numberWithCommas = (num) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
 
-  // const numberWithCommas = (num) => {
-  //   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  // };
+  useQuery(
+    ["enterprisePriseList", searchEnterprise],
+    () => getEnterprisePriceList({ enterpriseName: searchEnterprise }),
+    {
+      onSuccess: (data) => {
+        console.log(data);
+        setPriceData(data);
+        createPriceList(priceData);
+        createSortedPriceList(priceData);
+      },
+    }
+  );
+
+  // useEffect(() => {
+  //   setPriceData(dummyPrice);
+  //   createPriceList(priceData);
+  //   createSortedPriceList(priceData);
+  // }, [dummyPrice, priceData]);
 
   return (
     <div className="col-lg-7">

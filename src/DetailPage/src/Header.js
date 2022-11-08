@@ -168,7 +168,7 @@ const Header = ({ currentEnterprise, hearts }) => {
                 </div>
                 {/* 게시판 */}
                 <div className="col-3">
-                  <Link to={`/board/${currentEnterprise.crno}`}>
+                  <Link to={`/board/${currentEnterprise.id}`}>
                     <a className="text-black ">게시판</a>
                   </Link>
                 </div>
