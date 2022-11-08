@@ -25,7 +25,7 @@ ChartJS.register(
   BarController
 );
 
-const Multitype = () => {
+const Multitype = ({ dividendData }) => {
   const labels = ["3년 전", "2년 전", "1년 전"];
   const data = {
     labels,
@@ -34,7 +34,11 @@ const Multitype = () => {
         type: "bar",
         label: "배당금(￦)",
         backgroundColor: "rgb(255, 159, 64)",
-        data: [15, 25, 35],
+        data: [
+          dividendData.bpvtrOnskCashDvdnAmt,
+          dividendData.pvtrOnskCashDvdnAmt,
+          dividendData.crtmOnskCashDvdnAmt,
+        ],
         borderColor: "white",
         borderWidth: 2,
       },
@@ -44,18 +48,26 @@ const Multitype = () => {
         borderColor: "rgb(75, 192, 192)",
         borderWidth: 2,
         fill: false,
-        data: [60, 30, 20],
+        data: [
+          dividendData.bpvtrOnskCashDvdnBnfRt,
+          dividendData.pvtrOnskCashDvdnBnfRt,
+          dividendData.crtmOnskCashDvdnBnfRt,
+        ],
       },
       {
         type: "bar",
         label: "배당성향(%)",
         backgroundColor: "rgb(54, 162, 235)",
-        data: [12, 22, 32],
+        data: [
+          dividendData.bpvtrCashDvdnTndnCtt,
+          dividendData.pvtrCashDvdnTndnCtt,
+          dividendData.crtmCashDvdnTndnCtt,
+        ],
       },
     ],
   };
   return (
-    <div>
+    <div className="col-lg-6">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

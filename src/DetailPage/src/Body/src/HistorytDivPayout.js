@@ -90,94 +90,77 @@ const HistorytDivPayout = ({ dividendData }) => {
   ]; // bpvtrCashDvdnTndnCtt, pvtrCashDvdnTndnCtt, crtmCashDvdnTndnCtt
 
   return (
-    <>
-      <div>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="card mb-4">
-                <div className="card-header">
-                  <i className="fas fa-chart-area me-1"></i>
-                  과거 배당성향(%)
-                </div>
-                <div className="card-body">
-                  <div className="cardstyle3">
-                    {/* 차트 */}
-                    <Bar options={options} data={data} />
-                  </div>
-                  {/* 테이블 */}
-                  <TableContainer component={Paper}>
-                    <Table sx={{ minWidth: 300 }} aria-label="simple table">
-                      <TableHead>
-                        <TableRow>
-                          <TableCell></TableCell>
-                          <TableCell align="right">1년 전</TableCell>
-                          <TableCell align="right">2년 전</TableCell>
-                          <TableCell align="right">3년 전</TableCell>
-                        </TableRow>
-                      </TableHead>
-                      <TableBody>
-                        {rows.map((row) => (
-                          <TableRow
-                            key={row.name}
-                            sx={{
-                              "&:last-child td, &:last-child th": {
-                                border: 0,
-                              },
-                            }}
-                          >
-                            <TableCell component="th" scope="row">
-                              {row.name}
-                            </TableCell>
-                            <TableCell align="right">
-                              {row.now9M_now3Y}%
-                            </TableCell>
-                            <TableCell align="right">
-                              {row.now6M_now2Y}%
-                            </TableCell>
-                            <TableCell align="right">
-                              {row.now3M_now1Y}%
-                            </TableCell>
-                          </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
-                  </TableContainer>
-                  {/* 배당성향이란 무엇일까? */}
-                  <div className="cardstyle">
-                    <strong>배당성향이 무엇일까?</strong>
-                    <br />
-                    <br />
-                    <p>
-                      총 배당금을 순이익으로 나눈 값이에요.
-                      <br /> 기업의 이익에 따라 배당 성향이 바뀌어요!
-                    </p>
-                  </div>
-                  <br />
-                  <div className="cardstyle">
-                    <strong>높은 게 좋을까? 낮은 게 좋을까?</strong>
-                    <br />
-                    <br />
-                    <p>
-                      투자자의 성향 차이!
-                      <br />
-                      <strong>성장주</strong>를 좋아하신다면
-                      <strong> 30%</strong> 이하!
-                      <br />
-                      <strong>배당주</strong>를 좋아하신다면
-                      <strong> 50%</strong> 이상!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <Multitype />
-            </div>
+    <div className="col-lg-6">
+      <div className="card mb-4">
+        <div className="card-header">
+          <i className="fas fa-chart-area me-1"></i>
+          과거 배당성향(%)
+        </div>
+        <div className="card-body">
+          <div className="cardstyle3">
+            {/* 차트 */}
+            <Bar options={options} data={data} />
+          </div>
+          {/* 테이블 */}
+          <TableContainer component={Paper}>
+            <Table sx={{ minWidth: 300 }} aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell></TableCell>
+                  <TableCell align="right">1년 전</TableCell>
+                  <TableCell align="right">2년 전</TableCell>
+                  <TableCell align="right">3년 전</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows.map((row) => (
+                  <TableRow
+                    key={row.name}
+                    sx={{
+                      "&:last-child td, &:last-child th": {
+                        border: 0,
+                      },
+                    }}
+                  >
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                    <TableCell align="right">{row.now9M_now3Y}%</TableCell>
+                    <TableCell align="right">{row.now6M_now2Y}%</TableCell>
+                    <TableCell align="right">{row.now3M_now1Y}%</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          {/* 배당성향이란 무엇일까? */}
+          <div className="cardstyle">
+            <strong>배당성향이 무엇일까?</strong>
+            <br />
+            <br />
+            <p>
+              총 배당금을 순이익으로 나눈 값이에요.
+              <br /> 기업의 이익에 따라 배당 성향이 바뀌어요!
+            </p>
+          </div>
+          <br />
+          <div className="cardstyle">
+            <strong>높은 게 좋을까? 낮은 게 좋을까?</strong>
+            <br />
+            <br />
+            <p>
+              투자자의 성향 차이!
+              <br />
+              <strong>성장주</strong>를 좋아하신다면
+              <strong> 30%</strong> 이하!
+              <br />
+              <strong>배당주</strong>를 좋아하신다면
+              <strong> 50%</strong> 이상!
+            </p>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default HistorytDivPayout;

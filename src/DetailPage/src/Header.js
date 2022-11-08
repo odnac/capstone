@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import http from "../../api/http";
 
-const Header = ({ currentEnterprise }) => {
+const Header = ({ currentEnterprise, hearts }) => {
   const navigate = useNavigate(); // 페이지 이동 시 파라미터 전달
   const [userCompany, setUserCompany] = useState(""); // 검색창에 입력한 기업명 또는 기업번호
 
@@ -91,9 +91,12 @@ const Header = ({ currentEnterprise }) => {
                       aria-labelledby="navbarDarkDropdownMenuLink"
                     >
                       <li>
-                        <a className="dropdown-item">(없음)</a>
+                        {hearts ? (
+                          <a className="dropdown-item">삼성전자</a>
+                        ) : (
+                          <a className="dropdown-item">(없음)</a>
+                        )}
                       </li>
-
                     </ul>
                   </div>
                 </div>

@@ -52,9 +52,8 @@ const StockPriceChart = () => {
     datasets: [
       {
         label: "검색한 기업",
-        // data: [2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000],
-        // data: sortedPriceList.slice(3, 12),
-        data: [],
+        data: [2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000],
+        //data: sortedPriceList.slice(3, 12),
         fill: true,
         borderColor: "rgb(75, 192, 192)",
         tension: 0.3,

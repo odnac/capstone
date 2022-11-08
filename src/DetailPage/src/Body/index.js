@@ -3,11 +3,11 @@ import HistorytDivPayout from "./src/HistorytDivPayout";
 import StockPrice from "./src/StockPrice";
 import { useEffect, useState } from "react";
 import HistoryDiv from "./src/HistoryDiv";
+import Multitype from "./src/Multitype";
 
 import dummyDividend from "../../../DUMMY_DATA/dividendDATA.json";
 
-const Index = ({ currentEnterprise }) => {
-  const [hearts, setheart] = useState();
+const Index = ({ currentEnterprise, hearts, setheart }) => {
   const [dividendData, setDividendData] = useState({
     basDt: "",
     bpvtrCashDvdnTndnCtt: "",
@@ -74,7 +74,12 @@ const Index = ({ currentEnterprise }) => {
         </div>
         {/* 배당성향 */}
         <div style={{ margin: "0 auto", marginTop: "50px" }}>
-          <HistorytDivPayout dividendData={dividendData} />
+          <div className="container">
+            <div className="row">
+              <HistorytDivPayout dividendData={dividendData} />
+              <Multitype dividendData={dividendData} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

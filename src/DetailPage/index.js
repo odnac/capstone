@@ -12,6 +12,7 @@ const Index = () => {
   // const searchParams = new URLSearchParams(location.search);
   // const searchEnterprise = searchParams.get("enterprise");
 
+  const [hearts, setheart] = useState();
   const [currentEnterprise, setCurrentEnterprise] = useState({
     basDt: "",
     crno: "",
@@ -40,8 +41,12 @@ const Index = () => {
 
   return (
     <div>
-      <Header currentEnterprise={currentEnterprise} />
-      <Body currentEnterprise={currentEnterprise} />
+      <Header currentEnterprise={currentEnterprise} hearts={hearts} />
+      <Body
+        currentEnterprise={currentEnterprise}
+        hearts={hearts}
+        setheart={setheart}
+      />
     </div>
   );
 };
