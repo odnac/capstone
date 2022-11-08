@@ -80,17 +80,20 @@
 }
 
 
-.review-area>.container>.z>.review-slide {
+ .review-area>.container>.z>.review-slide {
 	display: inline-block;
 	width: 100%;
 	text-align: left;
-}
+} 
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
 	.review-area>.container>.z>.review-slide {
 		width: 100px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 	}
-}
+}  */
 
 .review-area>.container>.z>.review-slide.res-show {
 	display: inline-block;
@@ -116,6 +119,8 @@
 	font-size: 20px;
 	/* font-weight: bold; */
 	padding: 0 10px;
+	
+
 }
 
 
@@ -142,11 +147,14 @@
 	text-align: left;
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
 	.recommend-area>.container>.R>.recommend-slide {
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 		width: 100px;
 	}
-}
+} */
 
 .recommend-area>.container>.R>.recommend-slide.res-show {
 	display: inline-block;

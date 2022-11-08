@@ -3,7 +3,7 @@ import Search from "./src/Search";
 import Carousel from "./src/Carousel";
 import Loginmodal from "./src/Loginmodal";
 import "./src/Font.css";
-
+import Loginmodal from "./src/Loginmodal";
 const Index = () => {
   return (
     <>
