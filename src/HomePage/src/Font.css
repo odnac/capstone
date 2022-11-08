@@ -51,3 +51,18 @@
 .R{
     font-family: "Nanum";
 }
+
+
+.login_button {
+    position:relative;
+    left: 50px;
+    width: 80%;
+    height: 100%;
+}
+
+.login_button2{
+    margin-top: 5px;
+    position:relative;
+    left: 58px;
+    width: 76%;
+}
