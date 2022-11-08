@@ -31,12 +31,34 @@ const Loginmodal = () => {
             {/* 로그인 모달 내용 */}
             <div className="modal-body">
               <h6 className="modal-sub text-danger">
-                <strong>카카오로 로그인 후 사용 가능합니다.</strong>
+                <strong>소셜 로그인 후 사용 가능합니다.</strong>
               </h6>
 
-              <span className="logo" onClick={handleSocialLogin}>
-                <img src="/img/kakao_login.png" alt="카카오톡" />
+              <span className="login" onClick={handleSocialLogin}>
+                <img
+                  className="login_button"
+                  src="/img/kakao_login.png"
+                  alt="카카오톡"
+                />
               </span>
+
+              <img
+                className="login_button"
+                src="/img/google_login.png"
+                alt="구글"
+              />
+
+              <img
+                className="login_button"
+                src="/img/naver_login.png"
+                alt="네이버"
+              />
+
+              <img
+                className="login_button2"
+                src="/img/github_login.png"
+                alt="깃허브"
+              />
             </div>
           </div>
         </div>
