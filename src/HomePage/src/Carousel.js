@@ -50,7 +50,7 @@ const Carousel = () => {
                     </div>
 
                     <div className="review-slide hide ">
-                      <div className="name">10. 한국금융지주</div>
+                      <div className="name">10.한국금융지주</div>
                     </div>
                   </div>
                 </div>
@@ -102,7 +102,7 @@ const Carousel = () => {
                     </div>
 
                     <div className="recommend-slide hide">
-                      <div className="name">10. POSCO</div>
+                      <div className="name">10.POSCO</div>
                     </div>
                   </div>
                 </div>

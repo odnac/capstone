@@ -91,14 +91,9 @@ const Header = ({ currentEnterprise }) => {
                       aria-labelledby="navbarDarkDropdownMenuLink"
                     >
                       <li>
-                        <a className="dropdown-item">기업1</a>
+                        <a className="dropdown-item">(없음)</a>
                       </li>
-                      <li>
-                        <a className="dropdown-item">기업2</a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item">기업3</a>
-                      </li>
+
                     </ul>
                   </div>
                 </div>
@@ -122,13 +117,16 @@ const Header = ({ currentEnterprise }) => {
                     >
                       {/* 코스피 내용 */}
                       <li>
-                        <a className="dropdown-item">기업1</a>
+                        <a className="dropdown-item">삼성전자</a>
                       </li>
                       <li>
-                        <a className="dropdown-item">기업2</a>
+                        <a className="dropdown-item">LG에너지솔루션</a>
                       </li>
                       <li>
-                        <a className="dropdown-item">기업3</a>
+                        <a className="dropdown-item">삼성바이오로직스</a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item">더보기...</a>
                       </li>
                     </ul>
                   </div>
@@ -151,13 +149,16 @@ const Header = ({ currentEnterprise }) => {
                       aria-labelledby="navbarDarkDropdownMenuLink"
                     >
                       <li>
-                        <a className="dropdown-item">기업1</a>
+                        <a className="dropdown-item">셀트리온헬스케어</a>
                       </li>
                       <li>
-                        <a className="dropdown-item">기업2</a>
+                        <a className="dropdown-item">에코프로비엠</a>
                       </li>
                       <li>
-                        <a className="dropdown-item">기업3</a>
+                        <a className="dropdown-item">엘앤에프</a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item">더보기...</a>
                       </li>
                     </ul>
                   </div>
