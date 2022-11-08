@@ -149,11 +149,23 @@ const HistorytDivPayout = ({ dividendData }) => {
                     <br />
                     <br />
                     <p>
-                      지급 기준일 하루 전에 주식을 매수해야 배당금을 받을 수
-                      있어요!
+                      총 배당금을 순이익으로 나눈 값이에요.
+                      <br /> 기업의 이익에 따라 배당 성향이 바뀌어요!
+                    </p>
+                  </div>
+                  <br />
+                  <div className="cardstyle">
+                    <strong>높은 게 좋을까? 낮은 게 좋을까?</strong>
+                    <br />
+                    <br />
+                    <p>
+                      투자자의 성향 차이!
                       <br />
-                      <strong></strong>
-                      까지 사야해요!
+                      <strong>성장주</strong>를 좋아하신다면
+                      <strong> 30%</strong> 이하!
+                      <br />
+                      <strong>배당주</strong>를 좋아하신다면
+                      <strong> 50%</strong> 이상!
                     </p>
                   </div>
                 </div>

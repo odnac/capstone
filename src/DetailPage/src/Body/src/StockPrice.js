@@ -194,6 +194,8 @@ const StockPriceChart = () => {
               1Y
             </button>
 
+            <br />
+            <br />
             {/* 테이블*/}
             <TableContainer component={Paper}>
               <Table sx={{ minWidth: 650 }} aria-label="simple table">

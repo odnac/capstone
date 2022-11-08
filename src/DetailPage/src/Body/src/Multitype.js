@@ -26,31 +26,31 @@ ChartJS.register(
 );
 
 const Multitype = () => {
-  const labels = ["January", "February", "March", "April", "May", "June"];
+  const labels = ["3년 전", "2년 전", "1년 전"];
   const data = {
     labels,
     datasets: [
       {
         type: "bar",
-        label: "배당금",
+        label: "배당금(￦)",
         backgroundColor: "rgb(255, 159, 64)",
-        data: [15, 25, 35, 45, 55, 65],
+        data: [15, 25, 35],
         borderColor: "white",
         borderWidth: 2,
       },
       {
         type: "line",
-        label: "배당률",
+        label: "배당률(%)",
         borderColor: "rgb(75, 192, 192)",
         borderWidth: 2,
         fill: false,
-        data: [60, 30, 20, 50, 40, 10],
+        data: [60, 30, 20],
       },
       {
         type: "bar",
-        label: "배당성향",
+        label: "배당성향(%)",
         backgroundColor: "rgb(54, 162, 235)",
-        data: [12, 22, 32, 42, 52, 62],
+        data: [12, 22, 32],
       },
     ],
   };
@@ -66,7 +66,16 @@ const Multitype = () => {
               </div>
               <div className="card-body">
                 <Chart type="bar" data={data} />
-                <p>zzzzzzzzzzz</p>
+                <div className="cardstyle">
+                  <strong>혼합차트의 쓰임새!</strong>
+                  <br />
+                  <br />
+                  <p>
+                    비교하고 싶은 지표들을 클릭하여
+                    <br />
+                    데이터들의 상관관계를 알아보세요!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
