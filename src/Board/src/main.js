@@ -28,10 +28,7 @@ const Main = () => {
     e.preventDefault();
 
     http.get(`/lastest?enterprise=${userCompany}`).then((res) => {
-      console.log(res.data);
-
-      const itemList = res.data;
-      if (!itemList.length) return alert("검색 결과가 없습니다.");
+      if (!res.data) return alert("검색 결과가 없습니다.");
       navigate(`/detail?enterprise=${userCompany}`);
     });
   };
@@ -90,7 +87,7 @@ const Main = () => {
       {/* 게시판 */}
       <div className="container mt-5">
         <div className="boardT">
-          <h1>{params.enterprizeId} 게시판</h1>
+          <h1>게시판</h1>
         </div>
         {posts ? (
           <table

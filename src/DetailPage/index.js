@@ -27,7 +27,7 @@ const Index = () => {
     {
       onSuccess: (data) => {
         console.log(data);
-        setCurrentEnterprise(data[0]);
+        setCurrentEnterprise(data);
       },
     }
   );

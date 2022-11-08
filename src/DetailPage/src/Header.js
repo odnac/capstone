@@ -11,10 +11,7 @@ const Header = ({ currentEnterprise, hearts }) => {
     e.preventDefault();
 
     http.get(`/lastest?enterprise=${userCompany}`).then((res) => {
-      console.log(res.data);
-
-      const itemList = res.data;
-      if (!itemList.length) return alert("검색 결과가 없습니다.");
+      if (!res.data) return alert("검색 결과가 없습니다.");
       navigate(`/detail?enterprise=${userCompany}`);
     });
   };
