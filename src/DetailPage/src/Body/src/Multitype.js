@@ -31,14 +31,6 @@ const Multitype = () => {
     labels,
     datasets: [
       {
-        type: "line",
-        label: "주가",
-        borderColor: "rgb(255, 99, 132)",
-        borderWidth: 2,
-        fill: false,
-        data: [10, 20, 30, 40, 50, 60],
-      },
-      {
         type: "bar",
         label: "배당금",
         backgroundColor: "rgb(255, 159, 64)",
@@ -53,14 +45,6 @@ const Multitype = () => {
         borderWidth: 2,
         fill: false,
         data: [60, 30, 20, 50, 40, 10],
-      },
-      {
-        type: "line",
-        label: "기준금리",
-        borderColor: "rgb(153, 102, 255)",
-        borderWidth: 2,
-        fill: false,
-        data: [5, 5, 5, 5, 5, 5],
       },
       {
         type: "bar",
@@ -82,10 +66,7 @@ const Multitype = () => {
               </div>
               <div className="card-body">
                 <Chart type="bar" data={data} />
-                <p>
-                  로그인한 사람만 보여주기도 힘든게 주가는 한달마다 지표가 있고
-                  배당은 분기마다 혹은 연마다 있어서 비교가 어려울거 같은데..
-                </p>
+                <p>zzzzzzzzzzz</p>
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@ const DivInform = ({ currentEnterprise }) => {
               <div className="card mb-4">
                 <div className="card-header">
                   <i className="fas fa-chart-area me-1"></i>
-                  배당 정보
+                  최근 배당 정보
                 </div>
                 <div className="card-body">
                   {/* 아코디언 */}
@@ -105,6 +105,17 @@ const DivInform = ({ currentEnterprise }) => {
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div className="cardstyle">
+                    <strong>다음 배당금 예상하기!</strong>
+                    <br />
+                    <br />
+                    <p>
+                      요
+                      <br />
+                      <strong>아아아아</strong>
+                      ㅇㄹㅇㄹ
+                    </p>
                   </div>
                 </div>
               </div>

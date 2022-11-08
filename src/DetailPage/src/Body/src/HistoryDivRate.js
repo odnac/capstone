@@ -32,7 +32,7 @@ ChartJS.register(
 );
 // 배당률
 const HistoryDivRate = ({ currentEnterprise, dividendData }) => {
-  const labels = ["now-9M || now-3Y", "now-6M || now-2Y", "now-3M || now-1Y"];
+  const labels = ["3년 전", "2년 전", "1년 전"];
 
   const dataA = {
     labels: labels,
@@ -50,10 +50,10 @@ const HistoryDivRate = ({ currentEnterprise, dividendData }) => {
       },
       {
         label: "기준금리(%)",
-        data: [2, 2, 2],
+        data: [1.25, 0.5, 0.75],
         fill: true,
         borderColor: "rgb(0,15,192)",
-        tension: 0.5,
+        tension: 0,
       },
     ],
   };
@@ -72,7 +72,7 @@ const HistoryDivRate = ({ currentEnterprise, dividendData }) => {
       dividendData.pvtrOnskCashDvdnBnfRt,
       dividendData.crtmOnskCashDvdnBnfRt
     ),
-    createData("기준금리", 2, 2, 2),
+    createData("기준금리", 1.25, 0.5, 0.75),
   ];
 
   return (
@@ -84,7 +84,7 @@ const HistoryDivRate = ({ currentEnterprise, dividendData }) => {
               <div className="card mb-4">
                 <div className="card-header">
                   <i className="fas fa-chart-area me-1"></i>
-                  배당률(%)
+                  과거 배당률(%)
                 </div>
                 <div className="card-body">
                   <div className="cardstyle3">
@@ -93,13 +93,13 @@ const HistoryDivRate = ({ currentEnterprise, dividendData }) => {
                   </div>
                   {/* 테이블 */}
                   <TableContainer component={Paper}>
-                    <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <Table sx={{ minWidth: 300 }} aria-label="simple table">
                       <TableHead>
                         <TableRow>
                           <TableCell></TableCell>
-                          <TableCell align="right">now-3M || now-1Y</TableCell>
-                          <TableCell align="right">now-6M || now-2Y</TableCell>
-                          <TableCell align="right">now-9M || now-3Y</TableCell>
+                          <TableCell align="right">1년 전</TableCell>
+                          <TableCell align="right">2년 전</TableCell>
+                          <TableCell align="right">3년 전</TableCell>
                         </TableRow>
                       </TableHead>
                       <TableBody>
@@ -116,13 +116,13 @@ const HistoryDivRate = ({ currentEnterprise, dividendData }) => {
                               {row.name}
                             </TableCell>
                             <TableCell align="right">
-                              {row.now9M_now3Y}
+                              {row.now9M_now3Y}%
                             </TableCell>
                             <TableCell align="right">
-                              {row.now6M_now2Y}
+                              {row.now6M_now2Y}%
                             </TableCell>
                             <TableCell align="right">
-                              {row.now3M_now1Y}
+                              {row.now3M_now1Y}%
                             </TableCell>
                           </TableRow>
                         ))}
@@ -131,13 +131,20 @@ const HistoryDivRate = ({ currentEnterprise, dividendData }) => {
                   </TableContainer>
 
                   <div className="cardstyle">
-                    <strong>어제 매수했다면 배당률이 얼마일까?</strong>
+                    <strong>72의 법칙!</strong>
                     <br />
                     <br />
                     <p>
-                      계산식 : 배당금 / 어제 종가 * 100
+                      배당률로 원금이 2배가 되는 시간을 알 수 있어요!
                       <br />
-                      <strong> 값</strong>입니다.
+                      <strong>
+                        72 / {dividendData.crtmOnskCashDvdnBnfRt} ={" "}
+                        {72 / dividendData.crtmOnskCashDvdnBnfRt}년
+                      </strong>
+                      이 걸려요ㅜㅜ
+                      <br />
+                      <br />
+                      너무 오래 걸려도 걱정마세요! 주가가 올라갈 수 있어요.
                     </p>
                   </div>
                 </div>

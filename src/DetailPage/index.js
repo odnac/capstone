@@ -36,7 +36,7 @@ const Index = () => {
     setCurrentEnterprise(dummyEnterprise);
   }, []);
 
-  if (!window.localStorage.getItem("token")) return <Navigate to="/" />;
+  // if (!window.localStorage.getItem("token")) return <Navigate to="/" />;
 
   return (
     <div>

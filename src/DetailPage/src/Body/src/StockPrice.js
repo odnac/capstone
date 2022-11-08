@@ -6,9 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-
 import dummyPrice from "../../../../DUMMY_DATA/priceData.json";
-
 import { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import {
@@ -22,7 +20,6 @@ import {
   PointElement,
   Filler,
 } from "chart.js";
-import HistoryDiv from "./HistoryDiv";
 
 ChartJS.register(
   Title,
@@ -36,43 +33,11 @@ ChartJS.register(
 );
 // 주가
 const StockPriceChart = () => {
-  /*
-      차트 미로그인 데이터
-  */
-
   const [priceData, setPriceData] = useState([]);
   const [priceList, setPriceList] = useState([]);
-  const [sortedPriceList, setSortedPriceList] = useState([]);
+  const [sortedPriceList, setSortedPriceList] = useState();
 
-  const labels = [
-    "now-8M",
-    "now-7M",
-    "now-6M",
-    "now-5M",
-    "now-4M",
-    "now-3M",
-    "now-2M",
-    "now-1M",
-    "now",
-  ];
-
-  const data = {
-    labels: labels,
-    datasets: [
-      {
-        label: "최근 9개월 주가",
-        data: [...sortedPriceList].splice(3, 9), //[81, 56, 55, 90, 100, 109, 110, 111, 112],
-        fill: true,
-        borderColor: "rgb(75, 192, 192)",
-        tension: 0.3,
-      },
-    ],
-  };
-
-  /*
-      차트 로그인 데이터 - 기간추가 버튼
-  */
-  const [dataA, setDataA] = useState({
+  const [data, setData] = useState({
     labels: [
       "now-8M",
       "now-7M",
@@ -87,7 +52,9 @@ const StockPriceChart = () => {
     datasets: [
       {
         label: "검색한 기업",
-        data: [...sortedPriceList].splice(3, 12), //[81, 56, 55, 90, 100, 109, 110, 111, 112],
+        // data: [2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000],
+        // data: sortedPriceList.slice(3, 12),
+        data: [],
         fill: true,
         borderColor: "rgb(75, 192, 192)",
         tension: 0.3,
@@ -96,12 +63,12 @@ const StockPriceChart = () => {
   });
 
   const onChange3M = () => {
-    setDataA({
+    setData({
       labels: ["now-2M", "now-1M", "now"],
       datasets: [
         {
           label: "최근 3개월 주가",
-          data: [...sortedPriceList].slice(9, 12),
+          data: [...sortedPriceList].splice(9, 12),
           fill: true,
           borderColor: "rgb(75, 192, 192)",
           tension: 0.3,
@@ -111,7 +78,7 @@ const StockPriceChart = () => {
   };
 
   const onChange6M = (e) => {
-    setDataA({
+    setData({
       labels: ["now-5M", "now-4M", "now-3M", "now-2M", "now-1M", "now"],
       datasets: [
         {
@@ -126,7 +93,7 @@ const StockPriceChart = () => {
   };
 
   const onChange9M = (e) => {
-    setDataA({
+    setData({
       labels: [
         "now-8M",
         "now-7M",
@@ -151,7 +118,7 @@ const StockPriceChart = () => {
   };
 
   const onChange1Y = (e) => {
-    setDataA({
+    setData({
       labels: [
         "now-111M",
         "now-10M",
@@ -197,21 +164,23 @@ const StockPriceChart = () => {
     setPriceData(dummyPrice);
     createPriceList(priceData);
     createSortedPriceList(priceData);
-    onChange9M();
   }, [dummyPrice, priceData]);
+
+  // const numberWithCommas = (num) => {
+  //   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  // };
 
   return (
     <div className="col-lg-7">
       <div className="card mb-4">
         <div className="card-header">
           <i className="fas fa-chart-area me-1"></i>
-          주가 선 차트
+          주가 차트
         </div>
         <div className="card-body">
           <div className="cardstyle">
             {/* 차트 */}
-            <Line data={dataA} />
-            {/* 차트 버튼 */}
+            <Line data={data} />
             <button className="btn btn-outline-primary" onClick={onChange3M}>
               3M
             </button>
@@ -224,13 +193,13 @@ const StockPriceChart = () => {
             <button className="btn btn-outline-primary" onClick={onChange1Y}>
               1Y
             </button>
+
             {/* 테이블*/}
             <TableContainer component={Paper}>
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                   <TableRow>
                     <TableCell></TableCell>
-
                     <TableCell align="right">now</TableCell>
                     <TableCell align="right">now-1M</TableCell>
                     <TableCell align="right">now-2M</TableCell>
@@ -276,12 +245,6 @@ const StockPriceChart = () => {
         </div>
       </div>
     </div>
-  );
-
-  return (
-    <>
-      <div></div>
-    </>
   );
 };
 export default StockPriceChart;

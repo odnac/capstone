@@ -42,7 +42,7 @@ const HistorytDivPayout = ({ dividendData }) => {
     },
   };
 
-  const labels = ["now-9M || now-3Y", "now-6M || now-2Y", "'now-3M || now-1Y'"];
+  const labels = ["3년 전", "2년 전", "1년 전"];
   const data = {
     labels: labels,
     datasets: [
@@ -98,7 +98,7 @@ const HistorytDivPayout = ({ dividendData }) => {
               <div className="card mb-4">
                 <div className="card-header">
                   <i className="fas fa-chart-area me-1"></i>
-                  배당성향(%)
+                  과거 배당성향(%)
                 </div>
                 <div className="card-body">
                   <div className="cardstyle3">
@@ -107,13 +107,13 @@ const HistorytDivPayout = ({ dividendData }) => {
                   </div>
                   {/* 테이블 */}
                   <TableContainer component={Paper}>
-                    <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <Table sx={{ minWidth: 300 }} aria-label="simple table">
                       <TableHead>
                         <TableRow>
                           <TableCell></TableCell>
-                          <TableCell align="right">now-3M || now-1Y</TableCell>
-                          <TableCell align="right">now-6M || now-2Y</TableCell>
-                          <TableCell align="right">now-9M || now-3Y</TableCell>
+                          <TableCell align="right">1년 전</TableCell>
+                          <TableCell align="right">2년 전</TableCell>
+                          <TableCell align="right">3년 전</TableCell>
                         </TableRow>
                       </TableHead>
                       <TableBody>
@@ -130,13 +130,13 @@ const HistorytDivPayout = ({ dividendData }) => {
                               {row.name}
                             </TableCell>
                             <TableCell align="right">
-                              {row.now9M_now3Y}
+                              {row.now9M_now3Y}%
                             </TableCell>
                             <TableCell align="right">
-                              {row.now6M_now2Y}
+                              {row.now6M_now2Y}%
                             </TableCell>
                             <TableCell align="right">
-                              {row.now3M_now1Y}
+                              {row.now3M_now1Y}%
                             </TableCell>
                           </TableRow>
                         ))}

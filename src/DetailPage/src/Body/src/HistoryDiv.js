@@ -43,7 +43,7 @@ const HistoryDiv = ({ dividendData }) => {
     },
   };
 
-  const labels = ["now-9M || now-3Y", "now-6M || now-2Y", "now-3M || now-1Y"];
+  const labels = ["3년 전", "2년 전", "1년 전"];
   const data = {
     labels: labels,
     datasets: [
@@ -77,6 +77,10 @@ const HistoryDiv = ({ dividendData }) => {
     ],
   };
 
+  const numberWithCommas = (num) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     <div className="col-lg-5">
       <div className="container">
@@ -85,7 +89,7 @@ const HistoryDiv = ({ dividendData }) => {
             <div className="card mb-4">
               <div className="card-header">
                 <i className="fas fa-chart-area me-1"></i>
-                배당금
+                과거 배당금(￦)
               </div>
               <div className="card-body">
                 <div className="cardstyle3">
@@ -94,13 +98,13 @@ const HistoryDiv = ({ dividendData }) => {
                 </div>
                 {/* 테이블*/}
                 <TableContainer component={Paper}>
-                  <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                  <Table sx={{ minWidth: 300 }} aria-label="simple table">
                     <TableHead>
                       <TableRow>
                         <TableCell></TableCell>
-                        <TableCell align="right">now-3M || now-1Y</TableCell>
-                        <TableCell align="right">now-6M || now-2Y</TableCell>
-                        <TableCell align="right">now-9M || now-3Y</TableCell>
+                        <TableCell align="right">1년 전</TableCell>
+                        <TableCell align="right">2년 전</TableCell>
+                        <TableCell align="right">3년 전</TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
@@ -116,13 +120,13 @@ const HistoryDiv = ({ dividendData }) => {
                         </TableCell>
 
                         <TableCell align="right">
-                          {dividendData.crtmOnskCashDvdnAmt}
+                          {numberWithCommas(dividendData.crtmOnskCashDvdnAmt)}
                         </TableCell>
                         <TableCell align="right">
-                          {dividendData.pvtrOnskCashDvdnAmt}
+                          {numberWithCommas(dividendData.pvtrOnskCashDvdnAmt)}
                         </TableCell>
                         <TableCell align="right">
-                          {dividendData.bpvtrOnskCashDvdnAmt}
+                          {numberWithCommas(dividendData.bpvtrOnskCashDvdnAmt)}
                         </TableCell>
                       </TableRow>
                     </TableBody>
@@ -130,9 +134,10 @@ const HistoryDiv = ({ dividendData }) => {
                 </TableContainer>
                 <div className="cardstyle2">
                   <div className="row">
-                    <strong>받을 배당금 알아보기!</strong>
-                    <br />
-                    <div className="col-7">
+                    <div className="cardstyle">
+                      <strong>받을 배당금 알아보기!</strong>
+                      <br />
+                      <br />
                       <input
                         type="text"
                         className="form-control"
@@ -140,16 +145,12 @@ const HistoryDiv = ({ dividendData }) => {
                         placeholder="몇 주를 갖고있나요?"
                         onChange={onChange}
                       />
+                      <p>
+                        받으실 (세전)배당금은
+                        <br />
+                        <strong> {price}원</strong> 입니다.
+                      </p>
                     </div>
-                    <div className="col-5"></div>
-                    <br />
-                    <br />
-                    <p>
-                      받으실 (세전)배당금은
-                      <br />
-                      <strong> {price}원</strong> 입니다. 여기 배당데이터
-                      넣어야함!
-                    </p>
                   </div>
                 </div>
               </div>
