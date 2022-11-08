@@ -1,11 +1,11 @@
 import HistoryDivRate from "./src/HistoryDivRate";
 import HistorytDivPayout from "./src/HistorytDivPayout";
 import StockPrice from "./src/StockPrice";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import HistoryDiv from "./src/HistoryDiv";
 import Multitype from "./src/Multitype";
-
-import dummyDividend from "../../../DUMMY_DATA/dividendDATA.json";
+import { getEnterpriseDividend } from "../../../api/portable";
+import { useQuery } from "react-query";
 
 const Index = ({ currentEnterprise, hearts, setheart }) => {
   const [dividendData, setDividendData] = useState({
@@ -27,9 +27,17 @@ const Index = ({ currentEnterprise, hearts, setheart }) => {
     setheart(!hearts);
   };
 
-  useEffect(() => {
-    setDividendData(dummyDividend);
-  }, [dummyDividend]);
+  useQuery(
+    ["enterpriseDividend", currentEnterprise.crno],
+    () => getEnterpriseDividend({ enterpriseId: currentEnterprise.crno }),
+    {
+      enabled: !!currentEnterprise.crno,
+      onSuccess: (data) => {
+        console.log(data);
+        setDividendData(data);
+      },
+    }
+  );
 
   return (
     <div>

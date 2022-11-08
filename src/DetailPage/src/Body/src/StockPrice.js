@@ -6,8 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import dummyPrice from "../../../../DUMMY_DATA/priceData.json";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -42,7 +41,7 @@ const StockPriceChart = () => {
 
   const [priceData, setPriceData] = useState([]);
   const [priceList, setPriceList] = useState([]);
-  const [sortedPriceList, setSortedPriceList] = useState();
+  const [sortedPriceList, setSortedPriceList] = useState([]);
 
   const [data, setData] = useState({
     labels: [
@@ -59,8 +58,7 @@ const StockPriceChart = () => {
     datasets: [
       {
         label: "검색한 기업",
-        data: [2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000],
-        //data: sortedPriceList.slice(3, 12),
+        data: sortedPriceList.slice(3, 12),
         fill: true,
         borderColor: "rgb(75, 192, 192)",
         tension: 0.3,
@@ -83,7 +81,7 @@ const StockPriceChart = () => {
     });
   };
 
-  const onChange6M = (e) => {
+  const onChange6M = () => {
     setData({
       labels: ["now-5M", "now-4M", "now-3M", "now-2M", "now-1M", "now"],
       datasets: [
@@ -98,7 +96,7 @@ const StockPriceChart = () => {
     });
   };
 
-  const onChange9M = (e) => {
+  const onChange9M = () => {
     setData({
       labels: [
         "now-8M",
@@ -123,7 +121,7 @@ const StockPriceChart = () => {
     });
   };
 
-  const onChange1Y = (e) => {
+  const onChange1Y = () => {
     setData({
       labels: [
         "now-111M",
@@ -177,17 +175,39 @@ const StockPriceChart = () => {
       onSuccess: (data) => {
         console.log(data);
         setPriceData(data);
-        createPriceList(priceData);
-        createSortedPriceList(priceData);
       },
     }
   );
 
-  // useEffect(() => {
-  //   setPriceData(dummyPrice);
-  //   createPriceList(priceData);
-  //   createSortedPriceList(priceData);
-  // }, [dummyPrice, priceData]);
+  React.useEffect(() => {
+    createPriceList(priceData);
+    createSortedPriceList(priceData);
+  }, [priceData]);
+
+  React.useEffect(() => {
+    setData({
+      labels: [
+        "now-8M",
+        "now-7M",
+        "now-6M",
+        "now-5M",
+        "now-4M",
+        "now-3M",
+        "now-2M",
+        "now-1M",
+        "now",
+      ],
+      datasets: [
+        {
+          label: "검색한 기업",
+          data: sortedPriceList.slice(3, 12),
+          fill: true,
+          borderColor: "rgb(75, 192, 192)",
+          tension: 0.3,
+        },
+      ],
+    });
+  }, [sortedPriceList]);
 
   return (
     <div className="col-lg-7">

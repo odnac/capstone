@@ -7,3 +7,6 @@ export const getEnterprisePriceList = ({ enterpriseName }) =>
   http
     .get(`/lastest/StockSecuritiesInfo?itmsNm=${enterpriseName}`)
     .then((res) => res.data);
+
+export const getEnterpriseDividend = ({ enterpriseId }) =>
+  http.get(`/lastest/disinfo?crno=${enterpriseId}`).then((res) => res.data);

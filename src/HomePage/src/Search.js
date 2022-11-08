@@ -62,7 +62,7 @@ const Search = () => {
                   </div>
                 );
               })
-              .splice(0, 5)}
+              .splice(0, 10)}
           </div>
         </div>
       </div>

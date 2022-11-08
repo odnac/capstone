@@ -1,1003 +1,828 @@
 [
-    {
-        "number" : "005930",
-        "company" : "삼성전자",
-        "law_number":"1301110006246"
-    },
-    {
-        "number" : "000660",
-        "company" : "SK하이닉스",
-        "law_number":"1344110001387"
-        
-    },
-    {
-        "number" : "035420",
-        "company" : "네이버",
-        "law_number":"1101111707178"
-    },
-    {
-        "number" : "207940",
-        "company" : "삼성바이오로직스",
-        "law_number":"1201110566317"
-    },
-    {
-        "number" : "035720",
-        "company" : "카카오",
-        "law_number":"1101111129497"
-    },
-    {
-        "number" : "051910",
-        "company" : "LG화학",
-        "law_number":"1101112207995"
-    },
-    {
-        "number" : "006400",
-        "company" : "삼성SDI",
-        "law_number":"1101110394174"
-    },
-    {
-        "number" : "005380",
-        "company" : "현대차",
-        "law_number":"1101110019962"
-    },
-    {
-        "number" : "323410",
-        "company" : "카카오뱅크",
-        "law_number":"1311110435767"
-    },
-    {
-        "number" : "000270",
-        "company" : "기아",
-        "law_number":"1101110037998"
-    },
-    {
-        "number" : "068270",
-        "company" : "셀트리온",
-        "law_number":"1350110034038"
-    },
-    {
-        "number" : "259960",
-        "company" : "크래프톤",
-        "law_number":"1101113645772"
-    },
-    {
-        "number" : "005490",
-        "company" : "POSCO",
-        "law_number":"1746110000741"
-    },
-    {
-        "number" : "105560",
-        "company" : "KB금융",
-        "law_number":"1101113975517"
-    },
-    {
-        "number" : "012330",
-        "company" : "현대모비스",
-        "law_number":"1101110215536"
-    },
-    {
-        "number" : "302440",
-        "company" : "SK바이오사이언스",
-        "law_number":"1311110523736"
-    },
-    {
-        "number" : "028260",
-        "company" : "삼성물산",
-        "law_number":"1101110015762"
-    },
-    {
-        "number" : "066570",
-        "company" : "LG전자",
-        "law_number":"1101112487050"
-    },
-    {
-        "number" : "096770",
-        "company" : "SK이노베이션",
-        "law_number":"1101113710385"
-    },
-    {
-        "number" : "055550",
-        "company" : "신한지주",
-        "law_number":"1101112322438"
-    },
-    {
-        "number" : "034730",
-        "company" : "SK",
-        "law_number":"1101110769583"
-    },
-    {
-        "number" : "051900",
-        "company" : "LG생활건강",
-        "law_number":"1101112208000"
-    },
-    {
-        "number" : "036570",
-        "company" : "엔씨소프트",
-        "law_number":"1101111387748"
-    },
-    {
-        "number" : "352820",
-        "company" : "하이브",
-        "law_number":"1101113166546"
-    },
-    {
-        "number" : "015760",
-        "company" : "한국전력",
-        "law_number":"1146710001456"
-    },
-    {
-        "number" : "003550",
-        "company" : "LG",
-        "law_number":"1101110003543"
-    },
-    {
-        "number" : "009150",
-        "company" : "삼성전기",
-        "law_number":"1301110001626"
-    },
-    {
-        "number" : "017670",
-        "company" : "SK텔레콤",
-        "law_number":"1101110371346"
-    },
-    {
-        "number" : "032830",
-        "company" : "삼성생명",
-        "law_number":"1101110005953"
-    },
-    {
-        "number" : "086790",
-        "company" : "하나금융지주",
-        "law_number":"1101113352004"
-    },
-    {
-        "number" : "011200",
-        "company" : "HMM",
-        "law_number":"1101110193740"
-    },
-    {
-        "number" : "003670",
-        "company" : "포스코케미칼",
-        "law_number":"1746110001947"
-    },
-    {
-        "number" : "361610",
-        "company" : "SK아이이테크놀로지",
-        "law_number":"1101117064217"
-    },
-    {
-        "number" : "018260",
-        "company" : "삼성에스디에스",
-        "law_number":"1101110398556"
-    },
-    {
-        "number" : "033780",
-        "company" : "KT&G",
-        "law_number":"1601110067804"
-    },
-    {
-        "number" : "034020",
-        "company" : "두산중공업",
-        "law_number":"1942110000943"
-    },
-    {
-        "number" : "251270",
-        "company" : "넷마블",
-        "law_number":"1101114731299"
-    },
-    {
-        "number" : "000810",
-        "company" : "삼성화재",
-        "law_number":"1101110005078"
-    },
-    {
-        "number" : "090430",
-        "company" : "아모레퍼시픽",
-        "law_number":"1101113471036"
-    },
-    {
-        "number" : "010130",
-        "company" : "고려아연",
-        "law_number":"1101110168404"
-    },
-    {
-        "number" : "010950",
-        "company" : "S-Oil",
-        "law_number":"1101110189955"
-    },
-    {
-        "number" : "316140",
-        "company" : "우리금융지주",
-        "law_number":"1101116981206"
-    },
-    {
-        "number" : "003490",
-        "company" : "대한항공",
-        "law_number":"1101110108484"
-    },
-    {
-        "number" : "030200",
-        "company" : "KT",
-        "law_number":"1101111468754"
-    },
-    {
-        "number" : "024110",
-        "company" : "기업은행",
-        "law_number":"1101350000903"
-    },
-    {
-        "number" : "011790",
-        "company" : "SKC",
-        "law_number":"1301110001585"
-    },
-    {
-        "number" : "326030",
-        "company" : "SK바이오팜",
-        "law_number":"1101114570720"
-    },
-    {
-        "number" : "034220",
-        "company" : "LG디스플레이",
-        "law_number":"1101110393134"
-    },
-    {
-        "number" : "018880",
-        "company" : "한온시스템",
-        "law_number":"1347110002206"
-    },
-    {
-        "number" : "011070",
-        "company" : "LG이노텍",
-        "law_number":"1101110192180"
-    },
-    {
-        "number" : "011170",
-        "company" : "롯데케미칼",
-        "law_number":"1101110193196"
-    },
-    {
-        "number" : "009540",
-        "company" : "한국조선해양",
-        "law_number":"1812110000386"
-    },
-    {
-        "number" : "020150",
-        "company" : "일진머티리얼즈",
-        "law_number":"2149110003625"
-    },
-    {
-        "number" : "009830",
-        "company" : "한화솔루션",
-        "law_number":"1101110360935"
-    },
-    {
-        "number" : "032640",
-        "company" : "LG유플러스",
-        "law_number":"1101111296676"
-    },
-    {
-        "number" : "086280",
-        "company" : "현대글로비스",
-        "law_number":"1101112177388"
-    },
-    {
-        "number" : "006800",
-        "company" : "미래에셋증권",
-        "law_number":"1101110011679"
-    },
-    {
-        "number" : "097950",
-        "company" : "CJ제일제당",
-        "law_number":"1101113748253"
-    },
-    {
-        "number" : "021240",
-        "company" : "코웨이",
-        "law_number":"1101110626501"
-    },
-    {
-        "number" : "004020",
-        "company" : "현대제철",
-        "law_number":"1201110001743"
-    },
-    {
-        "number" : "000720",
-        "company" : "현대건설",
-        "law_number":"1101110007909"
-    },
-    {
-        "number" : "035250",
-        "company" : "강원랜드",
-        "law_number":"1449110001666"
-    },
-    {
-        "number" : "011780",
-        "company" : "금호석유",
-        "law_number":"1101110205975"
-    },
-    {
-        "number" : "161390",
-        "company" : "한국타이어앤테크놀로지",
-        "law_number":"1101114952093"
-    },
-    {
-        "number" : "010140",
-        "company" : "삼성중공업",
-        "law_number":"1101110168595"
-    },
-    {
-        "number" : "071050",
-        "company" : "한국금융지주",
-        "law_number":"1101112691651"
-    },
-    {
-        "number" : "267250",
-        "company" : "현대중공업지주",
-        "law_number":"1701110638661"
-    },
-    {
-        "number" : "028050",
-        "company" : "삼성엔지니어링",
-        "law_number":"1101110240509"
-    },
-    {
-        "number" : "139480",
-        "company" : "이마트",
-        "law_number":"1101114594952"
-    },
-    {
-        "number" : "000100",
-        "company" : "유한양행",
-        "law_number":"1101110014409"
-    },
-    {
-        "number" : "271560",
-        "company" : "오리온",
-        "law_number":"1101116417805"
-    },
-    {
-        "number" : "016360",
-        "company" : "삼성증권",
-        "law_number":"1101110335649"
-    },
-    {
-        "number" : "029780",
-        "company" : "삼성카드",
-        "law_number":"1101110346901"
-    },
-    {
-        "number" : "005830",
-        "company" : "DB손해보험",
-        "law_number":"1101110346901"
-    },
-    {
-        "number" : "003410",
-        "company" : "쌍용C&E",
-        "law_number":"1101110037823"
-    },
-    {
-        "number" : "005940",
-        "company" : "NH투자증권",
-        "law_number":"1101110098130"
-    },
-    {
-        "number" : "241560",
-        "company" : "두산밥캣",
-        "law_number":"1101115402237"
-    },
-    {
-        "number" : "078930",
-        "company" : "GS",
-        "law_number":"1101113045112"
-    },
-    {
-        "number" : "008930",
-        "company" : "한미사이언스",
-        "law_number":"1348110003187"
-    },
-    {
-        "number" : "002790",
-        "company" : "아모레G",
-        "law_number":"1101110026644"
-    },
-    {
-        "number" : "014680",
-        "company" : "한솔케미칼",
-        "law_number":"1101110270895"
-    },
-    {
-        "number" : "180640",
-        "company" : "한진칼",
-        "law_number":"1101115197193"
-    },
-    {
-        "number" : "008560",
-        "company" : "메리츠증권",
-        "law_number":"1101110141301"
-    },
-    {
-        "number" : "036460",
-        "company" : "한국가스공사",
-        "law_number":"1146710006125"
-    },
-    {
-        "number" : "000990",
-        "company" : "DB하이텍",
-        "law_number":"1101110026206"
-    },
-    {
-        "number" : "026960",
-        "company" : "동서",
-        "law_number":"1101110180888"
-    },
-    {
-        "number" : "052690",
-        "company" : "한전기술",
-        "law_number":"1101110186307"
-    },
-    {
-        "number" : "006360",
-        "company" : "GS건설",
-        "law_number":"1101110002694"
-    },
-    {
-        "number" : "336260",
-        "company" : "두산퓨얼셀",
-        "law_number":"2149110058935"
-    },
-    {
-        "number" : "004990",
-        "company" : "롯데지주",
-        "law_number":"1101110076300"
-    },
-    {
-        "number" : "128940",
-        "company" : "한미약품",
-        "law_number":"1348110197550"
-    },
-    {
-        "number" : "007070",
-        "company" : "GS리테일",
-        "law_number":"1101110090037"
-    },
-    {
-        "number" : "000120",
-        "company" : "CJ대한통운",
-        "law_number":"1101110006167"
-    },
-    {
-        "number" : "010620",
-        "company" : "현대미포조선",
-        "law_number":"1812110000526"
-    },
-    {
-        "number" : "028670",
-        "company" : "팬오션",
-        "law_number":"1101110004286"
-    },
-    {
-        "number" : "012750",
-        "company" : "에스원",
-        "law_number":"1101110221939"
-    },
-    {
-        "number" : "008770",
-        "company" : "호텔신라",
-        "law_number":"1101110145519"
-    },
-    {
-        "number" : "047810",
-        "company" : "한국항공우주",
-        "law_number":"1101111827570"
-    },
-    {
-        "number" : "272210",
-        "company" : "한화시스템",
-        "law_number":"1760110020640"
-    },
-    {
-        "number" : "298050",
-        "company" : "효성첨단소재",
-        "law_number":"1101116770170"
-    },
-    {
-        "number" : "138930",
-        "company" : "BNK금융지주",
-        "law_number":"1801110750893"
-    },
-    {
-        "number" : "039490",
-        "company" : "키움증권",
-        "law_number":"1101111867948"
-    },
-    {
-        "number" : "010060",
-        "company" : "OCI",
-        "law_number":"1746110000981"
-    },
-    {
-        "number" : "204320",
-        "company" : "만도",
-        "law_number":"1313110140776"
-    },
-    {
-        "number" : "006280",
-        "company" : "녹십자",
-        "law_number":"1101110109854"
-    },
-    {
-        "number" : "088350",
-        "company" : "한화생명",
-        "law_number":"1101110003204"
-    },
-    {
-        "number" : "285130",
-        "company" : "SK케미칼",
-        "law_number":"1311110501021"
-    },
-    {
-        "number" : "030000",
-        "company" : "제일기획",
-        "law_number":"1101110139017"
-    },
-    {
-        "number" : "282330",
-        "company" : "BGF리테일",
-        "law_number":"1101116555770"
-    },
-    {
-        "number" : "042660",
-        "company" : "대우조선해양",
-        "law_number":"1101112095837"
-    },
-    {
-        "number" : "002380",
-        "company" : "KCC",
-        "law_number":"1101110221814"
-    },
-    {
-        "number" : "023530",
-        "company" : "롯데쇼핑",
-        "law_number":"1101110000086"
-    },
-    {
-        "number" : "112610",
-        "company" : "씨에스윈드",
-        "law_number":"1101113509887"
-    },
-    {
-        "number" : "047050",
-        "company" : "포스코인터내셔널",
-        "law_number":"1101112137358"
-    },
-    {
-        "number" : "001040",
-        "company" : "CJ",
-        "law_number":"1101110015639"
-    },
-    {
-        "number" : "000880",
-        "company" : "한화",
-        "law_number":"1101110002959"
-    },
-    {
-        "number" : "047040",
-        "company" : "대우건설",
-        "law_number":"1101112137895"
-    },
-    {
-        "number" : "093370",
-        "company" : "후성",
-        "law_number":"1314110189425"
-    },
-    {
-        "number" : "298020",
-        "company" : "효성티앤씨",
-        "law_number":"1101116770138"
-    },
-    {
-        "number" : "375500",
-        "company" : "DL이앤씨",
-        "law_number":"1101117736808"
-    },
-    {
-        "number" : "001450",
-        "company" : "현대해상",
-        "law_number":"1101110035893"
-    },
-    {
-        "number" : "064350",
-        "company" : "현대로템",
-        "law_number":"1942110036336"
-    },
-    {
-        "number" : "012450",
-        "company" : "한화에어로스페이스",
-        "law_number":"1942110000480"
-    },
-    {
-        "number" : "000080",
-        "company" : "하이트진로",
-        "law_number":"1101110028591"
-    },
-    {
-        "number" : "004170",
-        "company" : "신세계",
-        "law_number":"1101110028848"
-    },
-    {
-        "number" : "081660",
-        "company" : "휠라홀딩스",
-        "law_number":"1101110792667"
-    },
-    {
-        "number" : "004000",
-        "company" : "롯데정밀화학",
-        "law_number":"1812110000013"
-    },
-    {
-        "number" : "009240",
-        "company" : "한샘",
-        "law_number":"1341110003595"
-    },
-    {
-        "number" : "120110",
-        "company" : "코오롱인더",
-        "law_number":"1353110013606"
-    },
-    {
-        "number" : "004800",
-        "company" : "효성",
-        "law_number":"1101110030497"
-    },
-    {
-        "number" : "011210",
-        "company" : "현대위아",
-        "law_number":"1942110000125"
-    },
-    {
-        "number" : "003090",
-        "company" : "대웅",
-        "law_number":"1311110000271"
-    },
-    {
-        "number" : "000150",
-        "company" : "두산",
-        "law_number":"1101110013774"
-    },
-    {
-        "number" : "019170",
-        "company" : "신풍제약",
-        "law_number":"1301110011815"
-    },
-    {
-        "number" : "051600",
-        "company" : "한전KPS",
-        "law_number":"1101110371148"
-    },
-    {
-        "number" : "004370",
-        "company" : "농심",
-        "law_number":"1101110057574"
-    },
-    {
-        "number" : "111770",
-        "company" : "영원무역",
-        "law_number":"1101114129585"
-    },
-    {
-        "number" : "017800",
-        "company" : "현대엘리베이터",
-        "law_number":"1344110001519"
-    },
-    {
-        "number" : "007310",
-        "company" : "오뚜기",
-        "law_number":"1341110002258"
-    },
-    {
-        "number" : "006260",
-        "company" : "LS",
-        "law_number":"1101110003965"
-    },
-    {
-        "number" : "069620",
-        "company" : "대웅제약",
-        "law_number":"1348110075342"
-    },
-    {
-        "number" : "010120",
-        "company" : "LS ELECTRIC",
-        "law_number":"1101110520076"
-    },
-    {
-        "number" : "069960",
-        "company" : "현대백화점",
-        "law_number":"1101112644725"
-    },
-    {
-        "number" : "001440",
-        "company" : "대한전선",
-        "law_number":"1101110035835"
-    },
-    {
-        "number" : "014820",
-        "company" : "동원시스템즈",
-        "law_number":"1341110011712"
-    },
-    {
-        "number" : "007700",
-        "company" : "F&F홀딩스",
-        "law_number":"1101110126783"
-    },
-    {
-        "number" : "000240",
-        "company" : "한국앤컴퍼니",
-        "law_number":"1101110034233"
-    },
-    {
-        "number" : "294870",
-        "company" : "HDC현대산업개발",
-        "law_number":"1101116740008"
-    },
-    {
-        "number" : "001230",
-        "company" : "동국제강",
-        "law_number":"1101110031338"
-    },
-    {
-        "number" : "020560",
-        "company" : "아시아나항공",
-        "law_number":"1101110562804"
-    },
-    {
-        "number" : "010780",
-        "company" : "아이에스동서",
-        "law_number":"1101110208383"
-    },
-    {
-        "number" : "185750",
-        "company" : "종근당",
-        "law_number":"1101115260669"
-    },
-    {
-        "number" : "005300",
-        "company" : "롯데칠성",
-        "law_number":"1101110003684"
-    },
-    {
-        "number" : "013890",
-        "company" : "지누스",
-        "law_number":"1347110002553"
-    },
-    {
-        "number" : "000210",
-        "company" : "DL",
-        "law_number":"1101110084915"
-    },
-    {
-        "number" : "001740",
-        "company" : "SK네트웍스",
-        "law_number":"1301110005199"
-    },
-    {
-        "number" : "005250",
-        "company" : "녹십자홀딩스",
-        "law_number":"1345110000014"
-    },
-    {
-        "number" : "079550",
-        "company" : "LIG넥스원",
-        "law_number":"1101111516933"
-    },
-    {
-        "number" : "000670",
-        "company" : "영풍",
-        "law_number":"1101110003824"
-    },
-    {
-        "number" : "073240",
-        "company" : "금호타이어",
-        "law_number":"1101112810590"
-    },
-    {
-        "number" : "032350",
-        "company" : "롯데관광개발",
-        "law_number":"1101110115504"
-    },
-    {
-        "number" : "004490",
-        "company" : "세방전지",
-        "law_number":"1101110202765"
-    },
-    {
-        "number" : "006650",
-        "company" : "대한유화",
-        "law_number":"1101110024698"
-    },
-    {
-        "number" : "192820",
-        "company" : "코스맥스",
-        "law_number":"1348110294273"
-    },
-    {
-        "number" : "003240",
-        "company" : "태광산업",
-        "law_number":"1101110185276"
-    },
-    {
-        "number" : "192080",
-        "company" : "더블유게임즈",
-        "law_number":"1101114855924"
-    },
-    {
-        "number" : "214320",
-        "company" : "이노션",
-        "law_number":"1101113229097"
-    },
-    {
-        "number" : "009420",
-        "company" : "한올바이오파마",
-        "law_number":"1641110000397"
-    },
-    {
-        "number" : "031430",
-        "company" : "신세계인터내셔날",
-        "law_number":"1101110282402"
-    },
-    {
-        "number" : "016380",
-        "company" : "KG동부제철",
-        "law_number":"1101110393308"
-    },
-    {
-        "number" : "003850",
-        "company" : "보령제약",
-        "law_number":"1101110012560"
-    },
-    {
-        "number" : "001800",
-        "company" : "오리온홀딩스",
-        "law_number":"1101110004690"
-    },
-    {
-        "number" : "001120",
-        "company" : "LX인터내셔널",
-        "law_number":"1101110004632"
-    },
-    {
-        "number" : "241590",
-        "company" : "화승엔터프라이즈",
-        "law_number":"1101115891943"
-    },
-    {
-        "number" : "069260",
-        "company" : "휴켐스",
-        "law_number":"1101112611906"
-    },
-    {
-        "number" : "020000",
-        "company" : "한섬",
-        "law_number":"1101110531578"
-    },
-    {
-        "number" : "003000",
-        "company" : "부광약품",
-        "law_number":"1101110030405"
-    },
-    {
-        "number" : "161890",
-        "company" : "한국콜마",
-        "law_number":"1647110030756"
-    },
-    {
-        "number" : "006120",
-        "company" : "SK디스커버리",
-        "law_number":"1301110005727"
-    },
-    {
-        "number" : "284740",
-        "company" : "쿠쿠홈시스",
-        "law_number":"1355110319406"
-    },
-    {
-        "number" : "079160",
-        "company" : "CJ CGV",
-        "law_number":"1101111673220"
-    },
-    {
-        "number" : "103140",
-        "company" : "풍산",
-        "law_number":"1313110083497"
-    },
-    {
-        "number" : "000070",
-        "company" : "삼양홀딩스",
-        "law_number":"1101110026181"
-    },
-    {
-        "number" : "105630",
-        "company" : "한세실업",
-        "law_number":"1201110484303"
-    },
-    {
-        "number" : "005440",
-        "company" : "현대그린푸드",
-        "law_number":"1101110095201"
-    },
-    {
-        "number" : "006040",
-        "company" : "동원산업",
-        "law_number":"1101110003098"
-    },
-    {
-        "number" : "003520",
-        "company" : "영진약품",
-        "law_number":"1101110043127"
-    },
-    {
-        "number" : "001680",
-        "company" : "대상",
-        "law_number":"1101110327125"
-    },
-    {
-        "number" : "114090",
-        "company" : "GKL",
-        "law_number":"1101113301457"
-    },
-    {
-        "number" : "057050",
-        "company" : "현대홈쇼핑",
-        "law_number":"1101112248882"
-    },
-    {
-        "number" : "049770",
-        "company" : "동원F&B",
-        "law_number":"1101112101816"
-    },
-    {
-        "number" : "383800",
-        "company" : "LX홀딩스",
-        "law_number":"1101117875359"
-    },
-    {
-        "number" : "192400",
-        "company" : "쿠쿠홀딩스",
-        "law_number":"1845110000634"
-    },
-    {
-        "number" : "002350",
-        "company" : "넥센타이어",
-        "law_number":"1101110014219"
-    },
-    {
-        "number" : "064960",
-        "company" : "SNT모티브",
-        "law_number":"1801110396069"
-    },
-    {
-        "number" : "003230",
-        "company" : "삼양식품",
-        "law_number":"1101110034308"
-    },
-    {
-        "number" : "042670",
-        "company" : "현대두산인프라코어",
-        "law_number":"1201110234469"
-    },
-    {
-        "number" : "071840",
-        "company" : "롯데하이마트",
-        "law_number":"1101110532633"
-    },
-    {
-        "number" : "007570",
-        "company" : "일양약품",
-        "law_number":"1101110124802"
-    },
-    {
-        "number" : "108670",
-        "company" : "LX하우시스",
-        "law_number":"1101114071207"
-    }
-    ]
+  { "company": "BGF" },
+  { "company": "BGF리테일" },
+  { "company": "BNK금융지주" },
+  { "company": "BYC" },
+  { "company": "CJ" },
+  { "company": "CJ CGV" },
+  { "company": "CJ대한통운" },
+  { "company": "CJ씨푸드" },
+  { "company": "CJ제일제당" },
+  { "company": "CS홀딩스" },
+  { "company": "DB" },
+  { "company": "DB금융투자" },
+  { "company": "DB손해보험" },
+  { "company": "DB하이텍" },
+  { "company": "DGB금융지주" },
+  { "company": "DI동일" },
+  { "company": "DL" },
+  { "company": "DL건설" },
+  { "company": "DL이앤씨" },
+  { "company": "DN오토모티브" },
+  { "company": "DRB동일" },
+  { "company": "DSR" },
+  { "company": "DSR제강" },
+  { "company": "E1" },
+  { "company": "F&F" },
+  { "company": "F&F홀딩스" },
+  { "company": "GKL" },
+  { "company": "GS" },
+  { "company": "GS건설" },
+  { "company": "GS글로벌" },
+  { "company": "GS리테일" },
+  { "company": "HDC" },
+  { "company": "HDC랩스" },
+  { "company": "HDC현대EP" },
+  { "company": "HDC현대산업개발" },
+  { "company": "HD현대" },
+  { "company": "HJ중공업" },
+  { "company": "BGF리테일" },
+  { "company": "BNK금융지주" },
+  { "company": "BYC" },
+  { "company": "CJ" },
+  { "company": "CJ CGV" },
+  { "company": "CJ대한통운" },
+  { "company": "CJ씨푸드" },
+  { "company": "CJ제일제당" },
+  { "company": "CS홀딩스" },
+  { "company": "DB" },
+  { "company": "DB금융투자" },
+  { "company": "DB손해보험" },
+  { "company": "DB하이텍" },
+  { "company": "DGB금융지주" },
+  { "company": "DI동일" },
+  { "company": "DL" },
+  { "company": "DL건설" },
+  { "company": "DL이앤씨" },
+  { "company": "DN오토모티브" },
+  { "company": "DRB동일" },
+  { "company": "DSR" },
+  { "company": "DSR제강" },
+  { "company": "E1" },
+  { "company": "F&F" },
+  { "company": "F&F홀딩스" },
+  { "company": "GKL" },
+  { "company": "GS" },
+  { "company": "GS건설" },
+  { "company": "GS글로벌" },
+  { "company": "GS리테일" },
+  { "company": "HDC" },
+  { "company": "HDC랩스" },
+  { "company": "HDC현대EP" },
+  { "company": "HDC현대산업개발" },
+  { "company": "HD현대" },
+  { "company": "HL D&I" },
+  { "company": "HLB글로벌" },
+  { "company": "HL만도" },
+  { "company": "HL홀딩스" },
+  { "company": "HMM" },
+  { "company": "HSD엔진" },
+  { "company": "IHQ" },
+  { "company": "JB금융지주" },
+  { "company": "JW생명과학" },
+  { "company": "JW중외제약" },
+  { "company": "JW홀딩스" },
+  { "company": "KB금융" },
+  { "company": "KCC" },
+  { "company": "KCC글라스" },
+  { "company": "KCTC" },
+  { "company": "KC그린홀딩스" },
+  { "company": "KC코트렐" },
+  { "company": "KEC" },
+  { "company": "KG스틸" },
+  { "company": "KG케미칼" },
+  { "company": "KH 필룩스" },
+  { "company": "KISCO홀딩스" },
+  { "company": "KPX케미칼" },
+  { "company": "KPX홀딩스" },
+  { "company": "KR모터스" },
+  { "company": "KSS해운" },
+  { "company": "KT" },
+  { "company": "KT&G" },
+  { "company": "KTcs" },
+  { "company": "KTis" },
+  { "company": "LF" },
+  { "company": "LG" },
+  { "company": "LG디스플레이" },
+  { "company": "LG생활건강" },
+  { "company": "HN" },
+  { "company": "LG에너지솔루션" },
+  { "company": "LG유플러스" },
+  { "company": "LG이노텍" },
+  { "company": "LG전자" },
+  { "company": "LG헬로비전" },
+  { "company": "LG화학" },
+  { "company": "LIG넥스원" },
+  { "company": "LS" },
+  { "company": "LS ELECTRIC" },
+  { "company": "LS네트웍스" },
+  { "company": "LS전선아시아" },
+  { "company": "LX세미콘" },
+  { "company": "LX인터내셔널" },
+  { "company": "LX하우시스" },
+  { "company": "LX홀딩스" },
+  { "company": "MH에탄올" },
+  { "company": "NH투자증권" },
+  { "company": "NICE" },
+  { "company": "NI스틸" },
+  { "company": "NPC" },
+  { "company": "OCI" },
+  { "company": "PI첨단소재" },
+  { "company": "POSCO홀딩스" },
+  { "company": "S-Oil" },
+  { "company": "SBS" },
+  { "company": "SGC에너지" },
+  { "company": "SG글로벌" },
+  { "company": "SG세계물산" },
+  { "company": "SHD" },
+  { "company": "SH에너지화학" },
+  { "company": "SK" },
+  { "company": "SKC" },
+  { "company": "SK가스" },
+  { "company": "SK네트웍스" },
+  { "company": "SK디스커버리" },
+  { "company": "SK디앤디" },
+  { "company": "SK렌터카" },
+  { "company": "SK바이오사이언스" },
+  { "company": "SK바이오팜" },
+  { "company": "SK스퀘어" },
+  { "company": "SK아이이테크놀로지" },
+  { "company": "SK이노베이션" },
+  { "company": "SK증권" },
+  { "company": "SK케미칼" },
+  { "company": "SK텔레콤" },
+  { "company": "SK하이닉스" },
+  { "company": "SNT모티브" },
+  { "company": "SNT에너지" },
+  { "company": "SNT중공업" },
+  { "company": "SNT홀딩스" },
+  { "company": "SPC삼립" },
+  { "company": "STX" },
+  { "company": "STX엔진" },
+  { "company": "STX중공업" },
+  { "company": "SUN&L" },
+  { "company": "TBH글로벌" },
+  { "company": "TCC스틸" },
+  { "company": "TKG휴켐스" },
+  { "company": "TYM" },
+  { "company": "WISCOM" },
+  { "company": "YG PLUS" },
+  { "company": "가온전선" },
+  { "company": "강남제비스코" },
+  { "company": "강원랜드" },
+  { "company": "갤럭시아에스엠" },
+  { "company": "경농" },
+  { "company": "경동나비엔" },
+  { "company": "경동도시가스" },
+  { "company": "경동인베스트" },
+  { "company": "경방" },
+  { "company": "경보제약" },
+  { "company": "경인양행" },
+  { "company": "경인전자" },
+  { "company": "계룡건설" },
+  { "company": "계양전기" },
+  { "company": "고려산업" },
+  { "company": "고려아연" },
+  { "company": "고려제강" },
+  { "company": "광동제약" },
+  { "company": "광명전기" },
+  { "company": "광전자" },
+  { "company": "광주신세계" },
+  { "company": "교보증권" },
+  { "company": "교촌에프앤비" },
+  { "company": "국도화학" },
+  { "company": "국동" },
+  { "company": "국보" },
+  { "company": "국제약품" },
+  { "company": "그린케미칼" },
+  { "company": "극동유화" },
+  { "company": "금강공업" },
+  { "company": "금비" },
+  { "company": "금양" },
+  { "company": "금호건설" },
+  { "company": "금호석유" },
+  { "company": "금호에이치티" },
+  { "company": "금호전기" },
+  { "company": "금호타이어" },
+  { "company": "기신정기" },
+  { "company": "기아" },
+  { "company": "기업은행" },
+  { "company": "까뮤이앤씨" },
+  { "company": "깨끗한나라" },
+  { "company": "남광토건" },
+  { "company": "남선알미늄" },
+  { "company": "남성" },
+  { "company": "남양유업" },
+  { "company": "남해화학" },
+  { "company": "넥센" },
+  { "company": "넥센타이어" },
+  { "company": "넷마블" },
+  { "company": "노루페인트" },
+  { "company": "노루홀딩스" },
+  { "company": "녹십자" },
+  { "company": "녹십자홀딩스" },
+  { "company": "농심" },
+  { "company": "농심홀딩스" },
+  { "company": "다스코" },
+  { "company": "다올투자증권" },
+  { "company": "다우기술" },
+  { "company": "다이나믹디자인" },
+  { "company": "대교" },
+  { "company": "대구백화점" },
+  { "company": "대덕" },
+  { "company": "대덕전자" },
+  { "company": "대동" },
+  { "company": "대동전자" },
+  { "company": "대림B&Co" },
+  { "company": "대림통상" },
+  { "company": "대상" },
+  { "company": "대상홀딩스" },
+  { "company": "대성산업" },
+  { "company": "대성에너지" },
+  { "company": "대성홀딩스" },
+  { "company": "대신증권" },
+  { "company": "대양금속" },
+  { "company": "대영포장" },
+  { "company": "대우건설" },
+  { "company": "대우부품" },
+  { "company": "대우조선해양" },
+  { "company": "대웅" },
+  { "company": "대웅제약" },
+  { "company": "대원강업" },
+  { "company": "대원전선" },
+  { "company": "대원제약" },
+  { "company": "대원화성" },
+  { "company": "대유에이텍" },
+  { "company": "대유플러스" },
+  { "company": "대창" },
+  { "company": "대창단조" },
+  { "company": "대한방직" },
+  { "company": "대한유화" },
+  { "company": "대한전선" },
+  { "company": "대한제강" },
+  { "company": "대한제당" },
+  { "company": "대한제분" },
+  { "company": "대한항공" },
+  { "company": "대한해운" },
+  { "company": "대한화섬" },
+  { "company": "대현" },
+  { "company": "대호에이엘" },
+  { "company": "더블유게임즈" },
+  { "company": "더존비즈온" },
+  { "company": "덕성" },
+  { "company": "덕양산업" },
+  { "company": "덴티움" },
+  { "company": "도화엔지니어링" },
+  { "company": "동국제강" },
+  { "company": "동남합성" },
+  { "company": "동방" },
+  { "company": "동방아그로" },
+  { "company": "동부건설" },
+  { "company": "동서" },
+  { "company": "동성제약" },
+  { "company": "동성케미컬" },
+  { "company": "동아쏘시오홀딩스" },
+  { "company": "동아에스티" },
+  { "company": "동아지질" },
+  { "company": "동아타이어" },
+  { "company": "동양" },
+  { "company": "동양고속" },
+  { "company": "동양생명" },
+  { "company": "동양철관" },
+  { "company": "동양피스톤" },
+  { "company": "동원F&B" },
+  { "company": "동원금속" },
+  { "company": "동원산업" },
+  { "company": "동원수산" },
+  { "company": "동원시스템즈" },
+  { "company": "동일고무벨트" },
+  { "company": "동일산업" },
+  { "company": "동일제강" },
+  { "company": "동화약품" },
+  { "company": "두산" },
+  { "company": "두산밥캣" },
+  { "company": "두산에너빌리티" },
+  { "company": "두산퓨얼셀" },
+  { "company": "두올" },
+  { "company": "드림텍" },
+  { "company": "디씨엠" },
+  { "company": "디아이" },
+  { "company": "디아이씨" },
+  { "company": "디와이" },
+  { "company": "디와이파워" },
+  { "company": "락앤락" },
+  { "company": "롯데관광개발" },
+  { "company": "롯데렌탈" },
+  { "company": "롯데손해보험" },
+  { "company": "롯데쇼핑" },
+  { "company": "롯데정밀화학" },
+  { "company": "롯데정보통신" },
+  { "company": "롯데제과" },
+  { "company": "롯데지주" },
+  { "company": "롯데칠성" },
+  { "company": "롯데케미칼" },
+  { "company": "롯데하이마트" },
+  { "company": "마니커" },
+  { "company": "만호제강" },
+  { "company": "메리츠금융지주" },
+  { "company": "메리츠증권" },
+  { "company": "메리츠화재" },
+  { "company": "메타랩스" },
+  { "company": "명문제약" },
+  { "company": "명신산업" },
+  { "company": "모나리자" },
+  { "company": "모나미" },
+  { "company": "모토닉" },
+  { "company": "무림P&P" },
+  { "company": "무림페이퍼" },
+  { "company": "무학" },
+  { "company": "문배철강" },
+  { "company": "미래산업" },
+  { "company": "미래아이앤지" },
+  { "company": "미래에셋생명" },
+  { "company": "미래에셋증권" },
+  { "company": "미원상사" },
+  { "company": "미원에스씨" },
+  { "company": "미원홀딩스" },
+  { "company": "미원화학" },
+  { "company": "미창석유" },
+  { "company": "방림" },
+  { "company": "백광산업" },
+  { "company": "백산" },
+  { "company": "범양건영" },
+  { "company": "벽산" },
+  { "company": "보락" },
+  { "company": "보령" },
+  { "company": "보해양조" },
+  { "company": "부광약품" },
+  { "company": "부국증권" },
+  { "company": "부국철강" },
+  { "company": "부산산업" },
+  { "company": "부산주공" },
+  { "company": "비비안" },
+  { "company": "비상교육" },
+  { "company": "비케이탑스" },
+  { "company": "빙그레" },
+  { "company": "사조대림" },
+  { "company": "사조동아원" },
+  { "company": "사조산업" },
+  { "company": "사조씨푸드" },
+  { "company": "사조오양" },
+  { "company": "삼부토건" },
+  { "company": "삼성SDI" },
+  { "company": "삼성공조" },
+  { "company": "삼성물산" },
+  { "company": "삼성바이오로직스" },
+  { "company": "삼성생명" },
+  { "company": "삼성에스디에스" },
+  { "company": "삼성엔지니어링" },
+  { "company": "삼성전기" },
+  { "company": "삼성전자" },
+  { "company": "삼성제약" },
+  { "company": "삼성중공업" },
+  { "company": "삼성증권" },
+  { "company": "삼성출판사" },
+  { "company": "삼성카드" },
+  { "company": "삼성화재" },
+  { "company": "삼아알미늄" },
+  { "company": "삼양사" },
+  { "company": "삼양식품" },
+  { "company": "삼양통상" },
+  { "company": "삼양패키징" },
+  { "company": "삼양홀딩스" },
+  { "company": "삼영무역" },
+  { "company": "삼영전자" },
+  { "company": "삼영화학" },
+  { "company": "삼원강재" },
+  { "company": "삼익THK" },
+  { "company": "삼익악기" },
+  { "company": "삼일씨엔에스" },
+  { "company": "삼일제약" },
+  { "company": "삼정펄프" },
+  { "company": "삼진제약" },
+  { "company": "삼천리" },
+  { "company": "삼호개발" },
+  { "company": "삼화왕관" },
+  { "company": "삼화전기" },
+  { "company": "삼화전자" },
+  { "company": "삼화콘덴서" },
+  { "company": "삼화페인트" },
+  { "company": "상상인증권" },
+  { "company": "상신브레이크" },
+  { "company": "새론오토모티브" },
+  { "company": "샘표" },
+  { "company": "샘표식품" },
+  { "company": "서연" },
+  { "company": "서연이화" },
+  { "company": "서울가스" },
+  { "company": "서울식품" },
+  { "company": "서원" },
+  { "company": "서흥" },
+  { "company": "선도전기" },
+  { "company": "선진" },
+  { "company": "성문전자" },
+  { "company": "성보화학" },
+  { "company": "성신양회" },
+  { "company": "성안" },
+  { "company": "성창기업지주" },
+  { "company": "세기상사" },
+  { "company": "세방" },
+  { "company": "세방전지" },
+  { "company": "세아베스틸지주" },
+  { "company": "세아제강" },
+  { "company": "세아제강지주" },
+  { "company": "세아특수강" },
+  { "company": "세아홀딩스" },
+  { "company": "세우글로벌" },
+  { "company": "세원이앤씨" },
+  { "company": "세원정공" },
+  { "company": "세이브존I&C" },
+  { "company": "세종공업" },
+  { "company": "세진중공업" },
+  { "company": "세하" },
+  { "company": "센트랄모텍" },
+  { "company": "센트럴인사이트" },
+  { "company": "셀트리온" },
+  { "company": "솔루스첨단소재" },
+  { "company": "솔루엠" },
+  { "company": "송원산업" },
+  { "company": "수산인더스트리" },
+  { "company": "수산중공업" },
+  { "company": "스카이라이프" },
+  { "company": "스틱인베스트먼트" },
+  { "company": "시디즈" },
+  { "company": "신대양제지" },
+  { "company": "신도리코" },
+  { "company": "신라교역" },
+  { "company": "신성이엔지" },
+  { "company": "신성통상" },
+  { "company": "신세계" },
+  { "company": "신세계 I&C" },
+  { "company": "신세계건설" },
+  { "company": "신세계인터내셔날" },
+  { "company": "신세계푸드" },
+  { "company": "신송홀딩스" },
+  { "company": "신영와코루" },
+  { "company": "신영증권" },
+  { "company": "신원" },
+  { "company": "신일전자" },
+  { "company": "신풍" },
+  { "company": "신풍제약" },
+  { "company": "신한지주" },
+  { "company": "신흥" },
+  { "company": "쌍방울" },
+  { "company": "쌍용C&E" },
+  { "company": "쌍용차" },
+  { "company": "써니전자" },
+  { "company": "쎌마테라퓨틱스" },
+  { "company": "쏘카" },
+  { "company": "씨아이테크" },
+  { "company": "씨에스윈드" },
+  { "company": "아남전자" },
+  { "company": "아모레G" },
+  { "company": "아모레퍼시픽" },
+  { "company": "아세아" },
+  { "company": "아세아시멘트" },
+  { "company": "아세아제지" },
+  { "company": "아센디오" },
+  { "company": "아시아나IDT" },
+  { "company": "아시아나항공" },
+  { "company": "아이마켓코리아" },
+  { "company": "아이에스동서" },
+  { "company": "아주스틸" },
+  { "company": "알루코" },
+  { "company": "애경산업" },
+  { "company": "애경케미칼" },
+  { "company": "에넥스" },
+  { "company": "에스디바이오센서" },
+  { "company": "에스엘" },
+  { "company": "에스엠벡셀" },
+  { "company": "에스원" },
+  { "company": "에쓰씨엔지니어링" },
+  { "company": "에어부산" },
+  { "company": "에이블씨엔씨" },
+  { "company": "에이엔피" },
+  { "company": "에이프로젠" },
+  { "company": "에이프로젠제약" },
+  { "company": "에이플러스에셋" },
+  { "company": "엔씨소프트" },
+  { "company": "엔에이치스팩19호" },
+  { "company": "엔케이" },
+  { "company": "엘브이엠씨홀딩스" },
+  { "company": "엠씨넥스" },
+  { "company": "영보화학" },
+  { "company": "영원무역" },
+  { "company": "영원무역홀딩스" },
+  { "company": "영진약품" },
+  { "company": "영풍" },
+  { "company": "영풍제지" },
+  { "company": "영화금속" },
+  { "company": "영흥" },
+  { "company": "예스코홀딩스" },
+  { "company": "오뚜기" },
+  { "company": "오리엔트바이오" },
+  { "company": "오리온" },
+  { "company": "오리온홀딩스" },
+  { "company": "와이투솔루션" },
+  { "company": "용평리조트" },
+  { "company": "우리금융지주" },
+  { "company": "우리종금" },
+  { "company": "우성" },
+  { "company": "우신시스템" },
+  { "company": "우진" },
+  { "company": "우진아이엔에스" },
+  { "company": "우진플라임" },
+  { "company": "웅진" },
+  { "company": "웅진씽크빅" },
+  { "company": "원림" },
+  { "company": "웰바이오텍" },
+  { "company": "윌비스" },
+  { "company": "유나이티드제약" },
+  { "company": "유니드" },
+  { "company": "유니온" },
+  { "company": "유니온머티리얼" },
+  { "company": "유니켐" },
+  { "company": "유니퀘스트" },
+  { "company": "유성기업" },
+  { "company": "유수홀딩스" },
+  { "company": "유안타증권" },
+  { "company": "유엔젤" },
+  { "company": "유유제약" },
+  { "company": "유진투자증권" },
+  { "company": "유한양행" },
+  { "company": "유화증권" },
+  { "company": "율촌화학" },
+  { "company": "이건산업" },
+  { "company": "이구산업" },
+  { "company": "이노션" },
+  { "company": "이마트" },
+  { "company": "이수페타시스" },
+  { "company": "이수화학" },
+  { "company": "이스타코" },
+  { "company": "이아이디" },
+  { "company": "이엔플러스" },
+  { "company": "이연제약" },
+  { "company": "이월드" },
+  { "company": "이화산업" },
+  { "company": "인디에프" },
+  { "company": "인바이오젠" },
+  { "company": "인스코비" },
+  { "company": "인지컨트롤스" },
+  { "company": "인천도시가스" },
+  { "company": "인터지스" },
+  { "company": "인팩" },
+  { "company": "일동제약" },
+  { "company": "일동홀딩스" },
+  { "company": "일성건설" },
+  { "company": "일성신약" },
+  { "company": "일신방직" },
+  { "company": "일신석재" },
+  { "company": "일양약품" },
+  { "company": "일정실업" },
+  { "company": "일진다이아" },
+  { "company": "일진디스플" },
+  { "company": "일진머티리얼즈" },
+  { "company": "일진전기" },
+  { "company": "일진하이솔루스" },
+  { "company": "일진홀딩스" },
+  { "company": "잇츠한불" },
+  { "company": "자이에스앤디" },
+  { "company": "자화전자" },
+  { "company": "전방" },
+  { "company": "제이에스코퍼레이션" },
+  { "company": "제이준코스메틱" },
+  { "company": "제일기획" },
+  { "company": "제일약품" },
+  { "company": "제일연마" },
+  { "company": "제일파마홀딩스" },
+  { "company": "제주은행" },
+  { "company": "제주항공" },
+  { "company": "조광페인트" },
+  { "company": "조광피혁" },
+  { "company": "조비" },
+  { "company": "조선내화" },
+  { "company": "조선선재" },
+  { "company": "조일알미늄" },
+  { "company": "조흥" },
+  { "company": "종근당" },
+  { "company": "종근당바이오" },
+  { "company": "종근당홀딩스" },
+  { "company": "주연테크" },
+  { "company": "지누스" },
+  { "company": "지엠비코리아" },
+  { "company": "지역난방공사" },
+  { "company": "지투알" },
+  { "company": "진도" },
+  { "company": "진양산업" },
+  { "company": "진양폴리" },
+  { "company": "진양홀딩스" },
+  { "company": "진양화학" },
+  { "company": "진에어" },
+  { "company": "진원생명과학" },
+  { "company": "진흥기업" },
+  { "company": "참엔지니어링" },
+  { "company": "천일고속" },
+  { "company": "체시스" },
+  { "company": "초록뱀헬스케어" },
+  { "company": "카카오" },
+  { "company": "카카오뱅크" },
+  { "company": "카카오페이" },
+  { "company": "카프로" },
+  { "company": "컨버즈" },
+  { "company": "케이비아이동국실업" },
+  { "company": "케이씨" },
+  { "company": "케이씨텍" },
+  { "company": "케이카" },
+  { "company": "코리아써키트" },
+  { "company": "코리안리" },
+  { "company": "코스맥스" },
+  { "company": "코스맥스비티아이" },
+  { "company": "코스모신소재" },
+  { "company": "코스모화학" },
+  { "company": "코아스" },
+  { "company": "코오롱" },
+  { "company": "코오롱글로벌" },
+  { "company": "코오롱인더" },
+  { "company": "코오롱플라스틱" },
+  { "company": "코웨이" },
+  { "company": "콘텐트리중앙" },
+  { "company": "콤텍시스템" },
+  { "company": "쿠쿠홀딩스" },
+  { "company": "쿠쿠홈시스" },
+  { "company": "큐로" },
+  { "company": "크라운제과" },
+  { "company": "크라운해태홀딩스" },
+  { "company": "크래프톤" },
+  { "company": "키다리스튜디오" },
+  { "company": "키움증권" },
+  { "company": "태경비케이" },
+  { "company": "태경산업" },
+  { "company": "태경케미컬" },
+  { "company": "태광산업" },
+  { "company": "태림포장" },
+  { "company": "태양금속" },
+  { "company": "태영건설" },
+  { "company": "태원물산" },
+  { "company": "태평양물산" },
+  { "company": "테이팩스" },
+  { "company": "텔코웨어" },
+  { "company": "토니모리" },
+  { "company": "티에이치엔" },
+  { "company": "티와이홀딩스" },
+  { "company": "티웨이항공" },
+  { "company": "티웨이홀딩스" },
+  { "company": "파미셀" },
+  { "company": "팜스코" },
+  { "company": "팜젠사이언스" },
+  { "company": "팬오션" },
+  { "company": "퍼스텍" },
+  { "company": "퍼시스" },
+  { "company": "페이퍼코리아" },
+  { "company": "평화산업" },
+  { "company": "평화홀딩스" },
+  { "company": "포스코스틸리온" },
+  { "company": "포스코인터내셔널" },
+  { "company": "포스코케미칼" },
+  { "company": "풀무원" },
+  { "company": "풍산" },
+  { "company": "풍산홀딩스" },
+  { "company": "프레스티지바이오파마" },
+  { "company": "플레이그램" },
+  { "company": "하나금융지주" },
+  { "company": "하나제약" },
+  { "company": "하나투어" },
+  { "company": "하이브" },
+  { "company": "하이스틸" },
+  { "company": "하이트론" },
+  { "company": "하이트진로" },
+  { "company": "하이트진로홀딩스" },
+  { "company": "한국가스공사" },
+  { "company": "한국공항" },
+  { "company": "한국금융지주" },
+  { "company": "한국내화" },
+  { "company": "한국단자" },
+  { "company": "한국석유" },
+  { "company": "한국수출포장" },
+  { "company": "한국쉘석유" },
+  { "company": "한국앤컴퍼니" },
+  { "company": "한국자산신탁" },
+  { "company": "한국전력" },
+  { "company": "한국전자홀딩스" },
+  { "company": "한국조선해양" },
+  { "company": "한국종합기술" },
+  { "company": "한국주강" },
+  { "company": "한국주철관" },
+  { "company": "한국철강" },
+  { "company": "한국카본" },
+  { "company": "한국콜마" },
+  { "company": "한국콜마홀딩스" },
+  { "company": "한국타이어앤테크놀로지" },
+  { "company": "한국토지신탁" },
+  { "company": "한국특강" },
+  { "company": "한국프랜지" },
+  { "company": "한국항공우주" },
+  { "company": "한국화장품" },
+  { "company": "한국화장품제조" },
+  { "company": "한농화성" },
+  { "company": "한독" },
+  { "company": "한미글로벌" },
+  { "company": "한미반도체" },
+  { "company": "한미사이언스" },
+  { "company": "한미약품" },
+  { "company": "한샘" },
+  { "company": "한섬" },
+  { "company": "한성기업" },
+  { "company": "한세실업" },
+  { "company": "한세엠케이" },
+  { "company": "한세예스24홀딩스" },
+  { "company": "한솔PNS" },
+  { "company": "한솔로지스틱스" },
+  { "company": "한솔제지" },
+  { "company": "한솔케미칼" },
+  { "company": "한솔테크닉스" },
+  { "company": "한솔홀딩스" },
+  { "company": "한솔홈데코" },
+  { "company": "한신공영" },
+  { "company": "한신기계" },
+  { "company": "한양증권" },
+  { "company": "한온시스템" },
+  { "company": "한올바이오파마" },
+  { "company": "한익스프레스" },
+  { "company": "한일시멘트" },
+  { "company": "한일철강" },
+  { "company": "한일현대시멘트" },
+  { "company": "한일홀딩스" },
+  { "company": "한전KPS" },
+  { "company": "한전기술" },
+  { "company": "한전산업" },
+  { "company": "한진" },
+  { "company": "한진중공업홀딩스" },
+  { "company": "한진칼" },
+  { "company": "한창" },
+  { "company": "한창제지" },
+  { "company": "한컴라이프케어" },
+  { "company": "한화" },
+  { "company": "한화생명" },
+  { "company": "한화손해보험" },
+  { "company": "한화솔루션" },
+  { "company": "한화시스템" },
+  { "company": "한화에어로스페이스" },
+  { "company": "한화투자증권" },
+  { "company": "해성디에스" },
+  { "company": "해태제과식품" },
+  { "company": "핸즈코퍼레이션" },
+  { "company": "현대건설" },
+  { "company": "현대건설기계" },
+  { "company": "현대그린푸드" },
+  { "company": "현대글로비스" },
+  { "company": "현대두산인프라코어" },
+  { "company": "현대로템" },
+  { "company": "현대리바트" },
+  { "company": "현대모비스" },
+  { "company": "현대미포조선" },
+  { "company": "현대백화점" },
+  { "company": "현대비앤지스틸" },
+  { "company": "현대약품" },
+  { "company": "현대에너지솔루션" },
+  { "company": "현대엘리베이" },
+  { "company": "현대오토에버" },
+  { "company": "현대위아" },
+  { "company": "현대일렉트릭" },
+  { "company": "현대제철" },
+  { "company": "현대중공업" },
+  { "company": "현대차" },
+  { "company": "현대차증권" },
+  { "company": "현대코퍼레이션" },
+  { "company": "현대코퍼레이션홀딩스" },
+  { "company": "현대퓨처넷" },
+  { "company": "현대해상" },
+  { "company": "현대홈쇼핑" },
+  { "company": "형지엘리트" },
+  { "company": "혜인" },
+  { "company": "호전실업" },
+  { "company": "호텔신라" },
+  { "company": "화성산업" },
+  { "company": "화승알앤에이" },
+  { "company": "화승엔터프라이즈" },
+  { "company": "화승인더" },
+  { "company": "화승코퍼레이션" },
+  { "company": "화신" },
+  { "company": "화인베스틸" },
+  { "company": "화천기계" },
+  { "company": "화천기공" },
+  { "company": "환인제약" },
+  { "company": "황금에스티" },
+  { "company": "효성" },
+  { "company": "효성ITX" },
+  { "company": "효성중공업" },
+  { "company": "효성첨단소재" },
+  { "company": "효성티앤씨" },
+  { "company": "효성화학" },
+  { "company": "후성" },
+  { "company": "휠라홀딩스" },
+  { "company": "휴니드" },
+  { "company": "휴비스" },
+  { "company": "휴스틸" },
+  { "company": "흥국화재" },
+  { "company": "흥아해운" }
+]
