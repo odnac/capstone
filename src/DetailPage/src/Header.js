@@ -71,7 +71,7 @@ const Header = ({ currentEnterprise, hearts }) => {
 
               {/* 관심기업 */}
               <div className="row">
-                <div className="col-3">
+                <div className="col-4">
                   <div className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
@@ -99,7 +99,7 @@ const Header = ({ currentEnterprise, hearts }) => {
                 </div>
 
                 {/* 코스피 */}
-                <div className="col-3">
+                <div className="col-4">
                   <div className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
@@ -132,7 +132,7 @@ const Header = ({ currentEnterprise, hearts }) => {
                   </div>
                 </div>
                 {/* 코스닥 */}
-                <div className="col-3">
+                {/* <div className="col-3">
                   <div className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
@@ -162,9 +162,9 @@ const Header = ({ currentEnterprise, hearts }) => {
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
                 {/* 게시판 */}
-                <div className="col-3">
+                <div className="col-4">
                   <Link to={`/board/${currentEnterprise.id}`}>
                     <a className="text-black ">게시판</a>
                   </Link>
